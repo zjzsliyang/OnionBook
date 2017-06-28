@@ -106,3 +106,13 @@
   - 用户退单后扣除用户积分
 - 活动折扣
   - 用户下单后修改价格
+
+## Database Design
+
+### E-R Diagram
+
+![ERDiagram](Res/Export/ERDiagram.png)
+
+### Database Model
+
+![DatabaseModel](Res/Export/DatabaseModel.png)
