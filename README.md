@@ -55,18 +55,18 @@
 
 
 
-## Book type
+## Book type 
 
 | 文学   | 流行   | 文化   | 生活   | 经管   | 科技   |
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | 小说   | 漫画   | 历史   | 旅行   | 经济   | 科普   |
-| 随笔   | 绘本   | 心里   | 摄影   | 管理   | 科学   |
-| 散文   | 言情   | 社会   | 没事   | 金融   | 交互   |
+| 随笔   | 绘本   | 心理   | 摄影   | 管理   | 科学   |
+| 散文   | 言情   | 社会   | 美食   | 金融   | 交互   |
 | 诗歌   | 推理   | 哲学   | 健康   | 投资   | 编程   |
 | 童话   | 科幻   | 艺术   | 教育   | 营销   | 算法   |
-| 杂文   | 武侠   | 政治   | 家具   | 理财   | 通信   |
-| 儿童   | 青春   | 建筑   | 职场   | 股票   | 互联网  |
-| 名著   | 悬疑   | 宗教   | 两性   | 广告   | 神经网络 |
+| 杂文   | 武侠   | 政治   | 家居   | 理财   | 通信   |
+| 儿童   | 青春   | 建筑   | 职场   | 股票   | 程序   |
+| 名著   | 悬疑   | 宗教   | 两性   | 广告   | 互联网  |
 
 ## Front-end(provisional)
 
@@ -76,20 +76,28 @@
 | ------ | ---------------------------------------- | -------------------------- | ---------------------------------------- |
 | 主页     | /onionbook/home                          |                            | 1. 各一级分类的5本打折的图书：名字、折前价格、折后价格、图片、评分；2. 10本最新出版的图书：名字、折前价格、折后价格、图片、评分；3. 销量前5的图书：名字、折前价格、折后价格、图片、评分（要知道分别排第几、并且排好顺序）；3. 评分前40的图书：名字、折前价格、折后价格、图片（要知道分别排第几、并且排好顺序）；4.  图书销量（总和）最高的作者：名字、简介、图片、写所有的其他书：名字、折前价格、折后价格、图片、评分；5. 广告：图片。 |
 | 登陆     | /onionbook/login/                        | 1. 客户：客户编号、密码              | 登陆是否成功                                   |
-| 注册     | /onionbook/register/                     | 1. 客户：客户编号、密码              | 用户id是否重复                                 |
+| 注册     | /onionbook/register/                     | 1. 客户：客户姓名、密码              | 返回                                       |
 | 搜索结果页面 | /onionbook/search/?standard=bookname&keyword=书名/ | 1. 搜索标准（图书）；2 . 关键词：书名     | 所有搜索结果的图书：名字、折前价格、折后价格、图片、评分、销量；         |
 |        | /onionbook/search/?standard=author&keyword=作者/ | 1. 搜索标准（作者）；2 . 关键词：作者     | 所有搜索结果的图书：名字、折前价格、折后价格、图片、评分、销量；         |
 |        | /onionbook/search/?standard=publisher&keyword=出版社/ | 1. 搜索标准（出版社）；2 . 关键词：出版社   | 所有搜索结果的图书：名字、折前价格、折后价格、图片、评分、销量；         |
 |        | /onionbook/search/?standard=isbn&keyword=ISBN号/ | 1. 搜索标准（ISBN）；2 . 关键词：ISBN | 所有搜索结果的图书：名字、折前价格、折后价格、图片、评分、销量；         |
 | 分类页面   | /onionbook/type/?typename=类别名/           | 类别                        | 所有搜索结果的图书：名字、折前价格、折后价格、图片、评分、销量；         |
 | 商品详细信息 | /onionbook/bookdetail/?id=图书编号/          | 图书编号                       | 图书：名字、isbn、折前价格、折后价格、出版商、页数、销量、库存、图片、作者名字、第一二级分类、所有评论：客户编号、评分、内容、时间。 |
-| 下订单    | /onionbook/order/orderdetail/?id=订单编号/   |                            |                                          |
-| 支付     | /onionbook/order/pay/?id=订单编号/           |                            |                                          |
-| 订单完成   | /onionbook/order/complete/               |                            |                                          |
-| 账户中心   | /onionbook/accountcenter/?id=客户编号/       |                            |                                          |
-| 购物车    | /onionbook/accountcenter/cart/?id=客户编号/  |                            |                                          |
-| 收藏     | /onionbook/accountcenter/star/?id=客户编号/  |                            |                                          |
-| 历史订单列表 | /onionbook/accoutcenter/orderlist/?id=客户编号/ |                            |                                          |
+| 创建订单   | /onionbook/order/createorder/            |                            |                                          |
+| 支付     | /onionbook/order/pay/?id=订单编号/           | 订单编号                       |                                          |
+| 订单完成   | /onionbook/order/complete/               |                            | 支付是否完成                                   |
+| 账户中心   | /onionbook/accountcenter/?id=客户编号/       | 客户编号                       |                                          |
+| 购物车    | /onionbook/accountcenter/cart/?id=客户编号/  | 客户编号                       |                                          |
+| 收藏     | /onionbook/accountcenter/star/?id=客户编号/  | 客户编号                       |                                          |
+| 历史订单列表 | /onionbook/accoutcenter/orderlist/?id=客户编号/ | 客户编号                       |                                          |
+
+#### 其他操作
+
+| 操作   | 前端->后端 | 后端->前端 |
+| ---- | ------ | ------ |
+| 作者   |        |        |
+
+
 
 ## Back-end
 
