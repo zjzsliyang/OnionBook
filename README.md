@@ -15,8 +15,8 @@
 | Front-end                                | Back-end                                 | Database                                 |
 | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
 | 1552651 [王依睿](https://github.com/Charon0622) | 1552618 [姜逸之](https://github.com/Ginufet) | 1453645 [罗忠金](https://github.com/tjluozhongjin) |
-| 1552745 刘一宁                              | 1552701 [王晓文](https://github.com/WANGXiaowen0904) | 1451228 [杨国辉](https://github.com/Yghifi) |
-| 1552726 余行健                              | 1454091 [倪政](https://github.com/frank1129) | 1552649 杜若衡                              |
+| 1552745 [刘一宁](https://github.com/Eclear) | 1552701 [王晓文](https://github.com/WANGXiaowen0904) | 1451228 [杨国辉](https://github.com/Yghifi) |
+| 1552726 [余行健](https://github.com/ThomasFisher196) | 1454091 [倪政](https://github.com/frank1129) | 1552649 [杜若衡](https://github.com/Wortspieldrh) |
 
 ## Prerequisites
 
