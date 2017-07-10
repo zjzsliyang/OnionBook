@@ -78,7 +78,7 @@ a.meanmenu-reveal{display:none}
 .mean-remove{display:none!important}
 .mean-container .mean-bar::after {
   color: #ffffff;
-  content: "CATEGORIES";
+  content: "所有类别";
   font-size: 17px;
   left: 5%;
   position: absolute;

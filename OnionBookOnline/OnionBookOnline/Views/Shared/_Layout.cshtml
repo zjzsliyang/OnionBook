@@ -1,1 +1,437 @@
-﻿@RenderBody()
+﻿<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>OnionBook | 洋葱书城</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="~/Images/onion.png" />
+    <!-- Place favicon.ico in the root directory -->
+    <!-- all css here -->
+    <!-- bootstrap.min.css -->
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <!-- font-awesome.min.css -->
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css">
+    <!-- owl.carousel.css -->
+    <link rel="stylesheet" href="~/Content/owl.carousel.css">
+    <!-- owl.carousel.css -->
+    <link rel="stylesheet" href="~/Content/meanmenu.min.css">
+    <!-- shortcode/shortcodes.css -->
+    <link rel="stylesheet" href="~/Content/shortcode/shortcodes.css">
+    <!-- nivo-slider.css -->
+    <link rel="stylesheet" href="~/Content/nivo-slider.css">
+    <!-- style.css -->
+    <link rel="stylesheet" href="~/Content/style.css">
+    <!-- responsive.css -->
+    <link rel="stylesheet" href="~/Content/responsive.css">
+    <script src="~/Scripts/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+    <!-- header -->
+    <header>
+        <!-- header-top-area-start -->
+        <div class="header-top-area black-bg ptb-7 hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-4">
+                        <div class="header-top-left">
+                            <span>Onion Book Online Store | 洋葱在线书城</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-8">
+                        <div class="header-top-right">
+                            <ul>
+                                <li class="slide-toggle">
+                                    <a href="#"><i class="fa fa-user">我的账户</i></a>
+                                    <ul class="show-toggle">
+                                        <li>
+                                            <a href="#">登录</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">注册</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- header-top-area-end -->
+        <!-- header-bottom-area-start -->
+        <div class="header-bottom-area bg-color-1 ptb-25">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div class="logo">
+                            <a href="index.html"><img src="~/Images/logo.png" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                        <div class="header-bottom-middle">
+                            <div class="search-box">
+                                <form action="#">
+                                    <select name="#" id="select">
+                                        <option value="40">书名</option>
+                                        <option value="41">作者</option>
+                                        <option value="42">出版社</option>
+                                        <option value="47">ISBN</option>
+                                    </select>
+                                    <input type="text" placeholder="搜索..." />
+                                    <button><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="header-bottom-right">
+                            <div class="left-cart">
+                                <div class="header-compire">
+                                    <a href="#"><i class="fa fa-heart"></i>收藏夹 0 </a>
+                                </div>
+                            </div>
+                            <div class="shop-cart-area">
+                                <div class="top-cart-wrapper">
+                                    <div class="block-cart">
+                                        <div class="top-cart-title">
+                                            <a href="#">
+                                                <span class="title-cart">购物车</span>
+                                                <span class="count-item">2 个项目</span>
+                                                <span class="price">￥444.00</span>
+                                            </a>
+                                        </div>
+                                        <div class="top-cart-content">
+                                            <ol class="mini-products-list">
+                                                <!-- single item -->
+                                                <li>
+                                                    <a class="product-image" href="product-details.html">
+                                                        <img alt="" src="~/Images/cart/1.jpg">
+                                                    </a>
+                                                    <div class="product-details">
+                                                        <p class="cartproduct-name">
+                                                            <a href="product-details.html">Pellentesque habitant </a>
+                                                        </p>
+                                                        <strong class="qty">数量:1</strong>
+                                                        <span class="sig-price">$222.00</span>
+                                                    </div>
+                                                    <div class="pro-action">
+                                                        <a class="btn-remove" href="#">remove</a>
+                                                    </div>
+                                                </li>
+                                                <!-- single item -->
+                                            </ol>
+                                            <div class="top-subtotal">
+                                                总计:
+                                                <span class="sig-price">￥444.00</span>
+                                            </div>
+                                            <div class="cart-actions">
+                                                <button><span>结账</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header-bottom-area-end -->
+    </header>
+    <!-- header -->
+    <!-- mainmenu-area-start -->
+    <div class="mainmenu-area bg-color-2 hidden-xs hidden-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="mainmenu-left visible-lg  visible-md">
+                        <div class="product-menu-title">
+                            <h2>
+                                所有类别
+                                <i class="fa fa-arrow-circle-down"></i>
+                            </h2>
+                        </div>
+                        <div class="product_vmegamenu">
+                            <ul>
+                                <li>
+                                    <a href="#" class="hover-icon"><img src="~/Images/menu-l/2.png" alt="" />经管</a>
+                                    <div class="vmegamenu vmegamenu2">
+                                        <span>
+                                            <a href="#">经济</a>
+                                            <a href="#">管理</a>
+                                            <a href="#">金融</a>
+                                            <a href="#">投资</a>
+                                            <a href="#">营销</a>
+                                            <a href="#">理财</a>
+                                            <a href="#">股票</a>
+                                            <a href="#">广告</a>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover-icon"><img src="~/Images/menu-l/3.png" alt="" />生活</a>
+                                    <div class="vmegamenu vmegamenu2">
+                                        <span>
+                                            <a href="#">旅行</a>
+                                            <a href="#">摄影</a>
+                                            <a href="#">美食</a>
+                                            <a href="#">健康</a>
+                                            <a href="#">教育</a>
+                                            <a href="#">家居</a>
+                                            <a href="#">职场</a>
+                                            <a href="#">两性</a>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover-icon"><img src="~/Images/menu-l/5.png" alt="" />文化</a>
+                                    <div class="vmegamenu vmegamenu2">
+                                        <span>
+                                            <a href="#">历史</a>
+                                            <a href="#">心理</a>
+                                            <a href="#">社会</a>
+                                            <a href="#">哲学</a>
+                                            <a href="#">艺术</a>
+                                            <a href="#">政治</a>
+                                            <a href="#">建筑</a>
+                                            <a href="#">宗教</a>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover-icon"><img src="~/Images/menu-l/6.png" alt="" />科技</a>
+                                    <div class="vmegamenu vmegamenu2">
+                                        <span>
+                                            <a href="#">科普</a>
+                                            <a href="#">科学</a>
+                                            <a href="#">交互</a>
+                                            <a href="#">编程</a>
+                                            <a href="#">算法</a>
+                                            <a href="#">通信</a>
+                                            <a href="#">程序</a>
+                                            <a href="#">互联网</a>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover-icon"><img src="~/Images/menu-l/12.png" alt="" />流行</a>
+                                    <div class="vmegamenu vmegamenu2">
+                                        <span>
+                                            <a href="#">漫画</a>
+                                            <a href="#">绘本</a>
+                                            <a href="#">言情</a>
+                                            <a href="#">推理</a>
+                                            <a href="#">科幻</a>
+                                            <a href="#">武侠</a>
+                                            <a href="#">青春</a>
+                                            <a href="#">悬疑</a>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover-icon"><img src="~/Images/menu-l/8.png" alt="" />文学</a>
+                                    <div class="vmegamenu vmegamenu2">
+                                        <span>
+                                            <a href="#">小说</a>
+                                            <a href="#">随笔</a>
+                                            <a href="#">散文</a>
+                                            <a href="#">诗歌</a>
+                                            <a href="#">童话</a>
+                                            <a href="#">杂文</a>
+                                            <a href="#">儿童</a>
+                                            <a href="#">名著</a>
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9">
+                    <div class="mainmenu">
+                        <nav>
+                            <ul>
+                                <li class="active">
+                                    <a href="index.html">主页</a>
+                                </li>
+                                <li>
+                                    <a href="shop.html">畅销书</a>
+                                </li>
+                                <li>
+                                    <a href="shop.html">新书</a>
+                                </li>
+                                <li>
+                                    <a href="#">个人中心</a>
+                                    <ul>
+                                        <li>
+                                            <a href="wishlist.html">收藏夹</a>
+                                        </li>
+                                        <li>
+                                            <a href="cart.html">购物车</a>
+                                        </li>
+                                        <li>
+                                            <a href="account.html">我的订单</a>
+                                        </li>
+                                        <li>
+                                            <a href="shop.html">我的包裹</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="about.html">关于我们</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- mobile-menu-start -->
+    <div class="mobile-menu-area hidden-md hidden-lg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mobile-menu">
+                        <nav id="mobile-menu">
+                            <ul>
+                                <li class="active">
+                                    <a href="#">经管</a>
+                                    <ul>
+                                        <li> <a href="#">经济</a></li>
+                                        <li> <a href="#">管理</a></li>
+                                        <li> <a href="#">金融</a></li>
+                                        <li> <a href="#">投资</a></li>
+                                        <li> <a href="#">营销</a></li>
+                                        <li> <a href="#">理财</a></li>
+                                        <li> <a href="#">股票</a></li>
+                                        <li> <a href="#">广告</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">生活</a>
+                                    <ul>
+                                        <li> <a href="#">旅行</a></li>
+                                        <li> <a href="#">摄影</a></li>
+                                        <li> <a href="#">美食</a></li>
+                                        <li> <a href="#">健康</a></li>
+                                        <li> <a href="#">教育</a></li>
+                                        <li> <a href="#">家居</a></li>
+                                        <li> <a href="#">职场</a></li>
+                                        <li> <a href="#">两性</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">文化</a>
+                                    <ul>
+                                        <li> <a href="#">历史</a></li>
+                                        <li> <a href="#">心理</a></li>
+                                        <li> <a href="#">社会</a></li>
+                                        <li> <a href="#">哲学</a></li>
+                                        <li> <a href="#">艺术</a></li>
+                                        <li> <a href="#">政治</a></li>
+                                        <li> <a href="#">建筑</a></li>
+                                        <li> <a href="#">宗教</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">科技</a>
+                                    <ul>
+                                        <li> <a href="#">科普</a></li>
+                                        <li> <a href="#">科学</a></li>
+                                        <li> <a href="#">交互</a></li>
+                                        <li> <a href="#">编程</a></li>
+                                        <li> <a href="#">算法</a></li>
+                                        <li> <a href="#">通信</a></li>
+                                        <li> <a href="#">程序</a></li>
+                                        <li> <a href="#">互联网</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">流行</a>
+                                    <ul>
+                                        <li> <a href="#">漫画</a></li>
+                                        <li> <a href="#">绘本</a></li>
+                                        <li> <a href="#">言情</a></li>
+                                        <li> <a href="#">推理</a></li>
+                                        <li> <a href="#">科幻</a></li>
+                                        <li> <a href="#">武侠</a></li>
+                                        <li> <a href="#">青春</a></li>
+                                        <li> <a href="#">悬疑</a></li>
+                                    </ul>   
+                                </li> 
+                                <li>
+                                    <a href="#">文学</a>
+                                    <ul>
+                                        <li> <a href="#">小说</a></li>
+                                        <li> <a href="#">随笔</a></li>
+                                        <li> <a href="#">散文</a></li>
+                                        <li> <a href="#">诗歌</a></li>
+                                        <li> <a href="#">童话</a></li>
+                                        <li> <a href="#">杂文</a></li>
+                                        <li> <a href="#">儿童</a></li>
+                                        <li> <a href="#">名著</a></li>
+                                    </ul>
+                                </li> 
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- mobile-menu-end -->
+    <!-- mainmenu-area-end -->
+
+        @RenderBody()
+
+
+        <!-- copyright-area-start -->
+        <div class="copyright-area text-center bg-color-3">
+            <div class="container">
+                <div class="copyright-border ptb-30">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="copyright text-left">
+                                <p>
+                                    Copyright
+                                    <a href="#">OnionBook</a>. All Rights Reserved
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- copyright-area-end -->
+        <!-- all js here -->
+        <!-- jquery-1.12.0 -->
+        <script src="~/Scripts/vendor/jquery-1.12.0.min.js"></script>
+        <!-- bootstrap.min.js -->
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <!-- nivo.slider.js -->
+        <script src="~/Scripts/jquery.nivo.slider.pack.js"></script>
+        <!-- jquery-ui.min.js -->
+        <script src="~/Scripts/jquery-ui.min.js"></script>
+        <!-- jquery.magnific-popup.min.js -->
+        <script src="~/Scripts/jquery.magnific-popup.min.js"></script>
+        <!-- jquery.meanmenu.min.js -->
+        <script src="~/Scripts/jquery.meanmenu.js"></script>
+        <!-- jquery.scrollup.min.js-->
+        <script src="~/Scripts/jquery.scrollup.min.js"></script>
+        <!-- owl.carousel.min.js -->
+        <script src="~/Scripts/owl.carousel.min.js"></script>
+        <!-- plugins.js -->
+        <script src="~/Scripts/plugins.js"></script>
+        <!-- main.js -->
+        <script src="~/Scripts/main.js"></script>
+</body>
+</html>
