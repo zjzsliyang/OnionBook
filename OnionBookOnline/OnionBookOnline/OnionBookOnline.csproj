@@ -214,6 +214,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Index\home_lunbo_1.jpg" />
+    <Content Include="Images\Index\home_lunbo_2.jpg" />
+    <Content Include="Images\Index\home_lunbo_3.jpg" />
+    <Content Include="Images\Index\home_lunbo_4.jpg" />
+    <Content Include="Images\Index\home_lunbo_5.jpg" />
+    <Content Include="Images\Index\home_lunbo_6.jpg" />
+    <Content Include="Images\Index\home_lunbo_7.jpg" />
+    <Content Include="Images\Index\home_lunbo_8.jpg" />
+    <Content Include="Images\Index\home_paihangbang.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
