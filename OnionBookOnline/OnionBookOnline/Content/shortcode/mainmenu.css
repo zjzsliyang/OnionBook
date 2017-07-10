@@ -100,7 +100,7 @@ NOTE: This is mainmenu style file. All mainmenu related style included in this f
 .product_vmegamenu ul li .vmegamenu span {
   float: left;
   padding: 15px;
-  width: 25%;
+  width: 100%;
 }
 .product_vmegamenu ul li .vmegamenu span s {
     display: block;
@@ -108,7 +108,7 @@ NOTE: This is mainmenu style file. All mainmenu related style included in this f
 .product_vmegamenu ul li .vmegamenu span > a {
   font-size: 14px;
   font-weight: 400;
-  padding: 7px 15px;
+  padding: 7px 0px 7px 15px;
   position: relative;
   text-transform: capitalize;
 }
@@ -136,11 +136,11 @@ NOTE: This is mainmenu style file. All mainmenu related style included in this f
   text-transform: uppercase;
 }
 .product_vmegamenu ul li .vmegamenu2{
-	width:400px;
+	width:140px;
 }
 .product_vmegamenu ul li .vmegamenu2 span {
   padding: 15px;
-  width:50%;
+  width:100%;
 }
 
 /* mainmenu */
@@ -187,7 +187,7 @@ NOTE: This is mainmenu style file. All mainmenu related style included in this f
 }
 .mainmenu ul li > ul li{
 	display:block;
-} 
+}
 .mainmenu ul li > ul li > a {
 	color: #666666;
 	padding:  6px 0;
@@ -196,7 +196,7 @@ NOTE: This is mainmenu style file. All mainmenu related style included in this f
 }
 .mainmenu ul li > ul li > a:hover{
 	color:#F4A137;
-} 
+}
 
 /* home-2 */
 .mainmenu-area-2 {
@@ -205,7 +205,7 @@ NOTE: This is mainmenu style file. All mainmenu related style included in this f
 .mainmenu-area-2 .mainmenu ul li a, .mainmenu-area-3 .mainmenu ul li a{
   color: #333;
 }
-.mainmenu-area-2 .mainmenu ul li:hover > a, .mainmenu-area-2 .mainmenu ul li.active > a, .mainmenu-area-3 .mainmenu ul li:hover > a, .mainmenu-area-3 .mainmenu ul li.active > a  {color:#F4A137} 
+.mainmenu-area-2 .mainmenu ul li:hover > a, .mainmenu-area-2 .mainmenu ul li.active > a, .mainmenu-area-3 .mainmenu ul li:hover > a, .mainmenu-area-3 .mainmenu ul li.active > a  {color:#F4A137}
 .mainmenu-area-2 .product-menu-title {
   background: #ffffff none repeat scroll 0 0;
   border-top: 2px solid#F4A137;
