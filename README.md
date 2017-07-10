@@ -57,21 +57,24 @@
 
 ### Page URL
 
-| pages  |         URLs         |
-| :----: | :------------------: |
-|   主页   |      /onionbook      |
-|   登陆   |  /onionbook/login/   |
-|   注册   | /onionbook/register/ |
-|  分类页面  |                      |
-| 搜索结果页面 |                      |
-| 商品详细信息 |                      |
-|  下订单   |                      |
-|   支付   |                      |
-|  订单完成  |                      |
-|  个人中心  |                      |
-|  购物车   |                      |
-|   收藏   |                      |
-| 历史订单列表 |                      |
+| Pages  | URL                                      | Front->End | End->Front                               |
+| :----- | :--------------------------------------- | ---------- | ---------------------------------------- |
+| 主页     | /onionbook                               |            | 1. 各一级分类最新出版的4本图书：名字、折前价格、折后价格、图片；2. 所有销量前10的图书：名字、折前价格、折后价格、图片（要知道分别排第几）；3. 所有评分前10的图书：名字、折前价格、折后价格、图片（要知道分别排第几）；4. 各一级分类销量前10的图书：名字、折前价格、折后价格（要知道分别排第几）；5. 各一级分类评分前10的图书：名字、折前价格、折后价格（要知道分别排第几）；6. 各二级分类评分前10的图书、名字、折前价格、折后价格（要知道分别排第几）；7.  图书销量（总和）最高的作者：名字、简介、图片、写所有的其他书 |
+| 登陆     | /onionbook/login/                        |            |                                          |
+| 注册     | /onionbook/register/                     |            |                                          |
+| 搜索结果页面 | /onionbook/search/?standard=bookname&keyword=书名/ |            |                                          |
+|        | /onionbook/search/?standard=author&keyword=作者/ |            |                                          |
+|        | /onionbook/search/?standard=publisher&keyword=出版社/ |            |                                          |
+|        | /onionbook/search/?standard=isbn&keyword=ISBN号/ |            |                                          |
+| 分类页面   | /onionbook/type/?typename=类别名/           |            |                                          |
+| 商品详细信息 | /onionbook/bookdetail/?id=图书编号/          |            |                                          |
+| 下订单    | /onionbook/order/orderdetail/?id=订单编号/   |            |                                          |
+| 支付     | /onionbook/order/pay/?id=订单编号/           |            |                                          |
+| 订单完成   | /onionbook/order/complete/               |            |                                          |
+| 账户中心   | /onionbook/accountcenter/?id=客户编号/       |            |                                          |
+| 购物车    | /onionbook/accountcenter/cart/?id=客户编号/  |            |                                          |
+| 收藏     | /onionbook/accountcenter/star/?id=客户编号/  |            |                                          |
+| 历史订单列表 | /onionbook/accoutcenter/orderlist/?id=客户编号/ |            |                                          |
 
 ## Back-end
 
