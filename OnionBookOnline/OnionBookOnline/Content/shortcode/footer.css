@@ -1,0 +1,120 @@
+/* -----------------------------------
+Template:  Theme Name
+
+NOTE: This is Footer style file. All footer related style included in this file.
+
+--------------------------------------*/
+/* footer-top-area */
+.footer-title h4 {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 30px;
+  text-transform: uppercase;
+}
+.contact-info li {
+  color: #ffffff;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+.contact-info li:last-child {
+  padding-bottom: 0;
+}
+.contact-info li .contact-icon {
+  float: left;
+}
+.contact-info li .contact-icon i {
+  color: #FF9900;
+  font-size: 20px;
+}
+.contact-info li .contact-text {
+  margin-left: 35px;
+}
+.contact-info li .contact-text span {
+  display: block;
+}
+.contact-text a span {
+  color: #ffffff;
+}
+.contact-text a span:hover{color:#FF9900} 
+
+
+.list-unstyled ul li a {
+  color: #ffffff;
+  line-height: 25px;
+  padding-left: 15px;
+  position: relative;
+  transition: all 300ms ease-in-out 0s;
+}
+.list-unstyled ul li a:hover{color:#FF9900}
+.list-unstyled ul li a::before {
+  background: #f4a137 none repeat scroll 0 0;
+  border: 0 none;
+  border-radius: 100%;
+  content: "";
+  height: 6px;
+  left: 0;
+  position: absolute;
+  top: 6px;
+  width: 6px;
+}
+
+.single-img {
+  float: left;
+  margin: 2px;
+  max-width: 83px;
+  position: relative;
+}
+.single-img:before{
+  background: rgba(255, 255, 255, 0.37) none repeat scroll 0 0;
+  content: "";
+  height: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 0;	
+}
+.single-img:hover::before {
+  height: 100%;
+  opacity: 1;
+  transition: all 300ms ease-in-out 0s;
+  width: 100%;
+}
+/* footer-bottom-area */
+.footer-bottom-area{
+  border-bottom: 1px solid #666666;
+  border-top: 1px solid #666666;	
+}
+.single-footer-menu ul li {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.single-footer-menu ul li a{
+  border-right: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 13px;
+  font-style: initial;
+  padding: 0 10px 0 8px;	
+}
+.single-footer-menu ul li a:hover{color:#FF9900}
+.single-footer-menu ul li a:last-child {
+  border: 0 none;
+  padding-right: 0;
+}
+.single-footer-menu span {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* copyright */
+.copyright.text-left > p {
+  margin: 0;
+  margin-top: 3px;
+  color: #fff;
+}
+.copyright-border {
+  border-top: 1px solid #666;
+}

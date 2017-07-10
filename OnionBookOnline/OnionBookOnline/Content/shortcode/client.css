@@ -1,0 +1,38 @@
+/* -----------------------------------
+Template:  Theme Name
+
+NOTE: This is client style file. All client related style included in this file.
+
+--------------------------------------*/
+.single-client a p{
+  border-bottom: 1px solid #eeeeee;
+  color: #666666;
+  display: block;
+  margin: 10px 5px 15px;
+  padding: 15px;
+  text-align: left;
+}
+.clint-img {
+  overflow: hidden;
+  padding: 0 15px 25px;
+}
+.client-img-left {
+  float: left;
+  width: 40%;
+}
+.client-name{
+	float: left;
+	width: 60%;
+}
+.client-name span {
+  display: block;
+  margin-left: 20px;
+  margin-top: 31px;
+}
+
+/* home-2 */
+.client-2 .clint-img {
+  width: 45%;
+  padding-top: 22px;
+  margin-bottom: 30px;
+}

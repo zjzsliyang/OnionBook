@@ -1,0 +1,234 @@
+/* -----------------------------------
+Template:  Theme Name
+
+NOTE: This is mainmenu style file. All mainmenu related style included in this file.
+
+--------------------------------------*/
+/* home-1 */
+
+.mainmenu-area {
+    margin-bottom: 16px;
+}
+.mainmenu-left {
+    position: relative;
+}
+.product-menu-title {
+  background: #444444 none repeat scroll 0 0;
+  cursor: pointer;
+  padding: 3px 16px;
+}
+.product-menu-title h2 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 48px;
+    margin: 0;
+    text-transform: uppercase;
+}
+.product-menu-title h2 i {
+  float: right;
+  margin-top: 17px;
+}
+.product-menu-title h2:before {
+    content: "\f03c";
+    font-family: FontAwesome;
+    font-weight: 400;
+    margin-right: 15px;
+}
+.product_vmegamenu {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #eaeaea;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 2222222;
+}
+.product_vmegamenu ul {} .product_vmegamenu ul li {
+    position: relative;
+}
+.product_vmegamenu ul li:last-child {
+    border: none;
+}
+.product_vmegamenu ul li a {
+  color: #6f6f6f;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0;
+  position: relative;
+  text-transform: capitalize;
+}
+.product_vmegamenu ul li a:hover{
+	color:#F4A137;
+}
+.find .product_vmegamenu ul li a {
+    padding: 12px 10px;
+}
+.product_vmegamenu ul li a.hover-icon::after {
+  content: "";
+  font-family: FontAwesome;
+  font-size: 18px;
+  position: absolute;
+  right: 15px;
+  top: 8px;
+}
+.product_vmegamenu ul li a img {
+    margin-right: 10px;
+}
+.product_vmegamenu ul li .vmegamenu {
+	background: #fff none repeat scroll 0 0;
+	border: 1px solid #eaeaea;
+	box-shadow: 0 0 5px -1px #666666;
+	left: 100%;
+	position: absolute;
+	top: 0;
+	width: 770px;
+	opacity: 0;
+	z-index: 99222222222222;
+	left:300px;
+	-webkit-transition: all .5s ease 0s;
+	transition: all .5s ease 0s;
+	visibility:hidden;
+	padding:10px 20px;
+}
+.product_vmegamenu ul li:hover .vmegamenu {
+    opacity: 1;
+	left:262px;
+	visibility:visible;
+}
+.product_vmegamenu ul li .vmegamenu span {
+  float: left;
+  padding: 15px;
+  width: 25%;
+}
+.product_vmegamenu ul li .vmegamenu span s {
+    display: block;
+}
+.product_vmegamenu ul li .vmegamenu span > a {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 7px 15px;
+  position: relative;
+  text-transform: capitalize;
+}
+.product_vmegamenu ul li .vmegamenu span a::before {
+  content: "";
+  font-family: FontAwesome;
+  font-size: 12px;
+  left: 0px;
+  position: absolute;
+  top: 7px;
+}
+.product_vmegamenu ul li .vmegamenu span a:hover{
+	color:#F4A137;
+}
+.product_vmegamenu ul li .vmegamenu span a.vgema-title::before {
+  display: none;
+}
+.product_vmegamenu ul li .vmegamenu span a.vgema-title {
+  border-bottom: 1px solid #eaeaea;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  padding-left: 0;
+  text-transform: uppercase;
+}
+.product_vmegamenu ul li .vmegamenu2{
+	width:400px;
+}
+.product_vmegamenu ul li .vmegamenu2 span {
+  padding: 15px;
+  width:50%;
+}
+
+/* mainmenu */
+.mainmenu ul li {
+    display: inline-block;
+    position: relative;
+}
+.mainmenu ul li a {
+  color: #ffffff;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 17px 15px;
+  text-transform: capitalize;
+  transition:all .3s;
+}
+.mainmenu ul li:hover > a, .mainmenu ul li.active > a{
+	color:#F4A137;
+}
+.mainmenu ul li:first-child a {
+  padding-left: 0;
+}
+.mainmenu ul li ul{
+    background: #ffffff none repeat scroll 0 0;
+    border-top: 3px solid #F4A137;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    transform: scaleY(0);
+    transform-origin: 0 0 0;
+    transition: all 0.4s ease 0s;
+    z-index: 99999999;
+    padding: 25px 15px;
+    visibility: hidden;
+    text-align: left;
+	width:220px;
+}
+.mainmenu ul li:hover > ul{
+	opacity:1;
+	visibility:visible;
+	transform:scaleY(1);
+}
+.mainmenu ul li > ul li{
+	display:block;
+} 
+.mainmenu ul li > ul li > a {
+	color: #666666;
+	padding:  6px 0;
+	text-transform: capitalize;
+	font-weight: 500;
+}
+.mainmenu ul li > ul li > a:hover{
+	color:#F4A137;
+} 
+
+/* home-2 */
+.mainmenu-area-2 {
+  box-shadow: 0 0 1px 0 #e5e5e5 inset, 0 0 0 1px #e5e5e5 inset;
+}
+.mainmenu-area-2 .mainmenu ul li a, .mainmenu-area-3 .mainmenu ul li a{
+  color: #333;
+}
+.mainmenu-area-2 .mainmenu ul li:hover > a, .mainmenu-area-2 .mainmenu ul li.active > a, .mainmenu-area-3 .mainmenu ul li:hover > a, .mainmenu-area-3 .mainmenu ul li.active > a  {color:#F4A137} 
+.mainmenu-area-2 .product-menu-title {
+  background: #ffffff none repeat scroll 0 0;
+  border-top: 2px solid#F4A137;
+}
+.mainmenu-area-2 .product-menu-title h2{color: #333}
+.mainmenu-area-2 .product_vmegamenu ul > li:hover > a {
+  background: #F4A137;
+  color: #fff;
+}
+.mainmenu-area-2 .mainmenu > ul  li{
+  border-right: 1px solid #dedede;
+}
+
+/* home-3 */
+.mainmenu-area-3{margin-bottom:0;}
+.mainmenu-area-3 .product-menu-title {
+  background: #F4A137 none repeat scroll 0 0;
+}
+.mainmenu-area-3 .product_vmegamenu {
+  display: none;
+}
+
+/* home-4 */
+.mainmenu-area-4 .product-menu-title {
+  background: #F4A137 none repeat scroll 0 0;
+}
