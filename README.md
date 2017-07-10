@@ -57,21 +57,22 @@
 
 ### Page URL
 
-| pages  |         URLs         |
-| :----: | :------------------: |
-|   主页   |      /onionbook      |
-|   登陆   |  /onionbook/login/   |
-|   注册   | /onionbook/register/ |
-|  分类页面  |                      |
-| 搜索结果页面 |                      |
-| 商品详细信息 |                      |
-|  下订单   |                      |
-|   支付   |                      |
-|  订单完成  |                      |
-|  个人中心  |                      |
-|  购物车   |                      |
-|   收藏   |                      |
-| 历史订单列表 |                      |
+| pages  |                   URLs                   |
+| :----: | :--------------------------------------: |
+|   主页   |                /onionbook                |
+|   登陆   |            /onionbook/login/             |
+|   注册   |           /onionbook/register/           |
+|  分类页面  | /onionbook/type/?standard=bookname&keyword=书名/ |
+| 搜索结果页面 |                                          |
+|        |                                          |
+| 商品详细信息 |                                          |
+|  下订单   |                                          |
+|   支付   |                                          |
+|  订单完成  |                                          |
+|  个人中心  |                                          |
+|  购物车   |                                          |
+|   收藏   |                                          |
+| 历史订单列表 |                                          |
 
 ## Back-end
 
