@@ -83,19 +83,19 @@
 |        | /onionbook/search/?standard=isbn&keyword=ISBN号/ | 1. 搜索标准（ISBN）；2 . 关键词：ISBN | 所有搜索结果的图书：名字、折前价格、折后价格、图片、评分、销量；         |
 | 分类页面   | /onionbook/type/?typename=类别名/           | 类别                        | 所有搜索结果的图书：名字、折前价格、折后价格、图片、评分、销量；         |
 | 商品详细信息 | /onionbook/bookdetail/?id=图书编号/          | 图书编号                       | 图书：名字、isbn、折前价格、折后价格、出版商、页数、销量、库存、图片、作者名字、第一二级分类、所有评论：客户编号、评分、内容、时间。 |
-| 创建订单   | /onionbook/order/createorder/            |                            |                                          |
-| 支付     | /onionbook/order/pay/?id=订单编号/           | 订单编号                       |                                          |
+| 创建订单   | /onionbook/order/createorder/            | 商品编号、数量                    | 是否创建成功                                   |
+| 支付     | /onionbook/order/pay/?id=订单编号/           | 订单编号                       | 是否支付成功                                   |
 | 订单完成   | /onionbook/order/complete/               |                            | 支付是否完成                                   |
-| 账户中心   | /onionbook/accountcenter/?id=客户编号/       | 客户编号                       |                                          |
-| 购物车    | /onionbook/accountcenter/cart/?id=客户编号/  | 客户编号                       |                                          |
-| 收藏     | /onionbook/accountcenter/star/?id=客户编号/  | 客户编号                       |                                          |
-| 历史订单列表 | /onionbook/accoutcenter/orderlist/?id=客户编号/ | 客户编号                       |                                          |
+| 账户中心   | /onionbook/accountcenter/?id=客户编号/       | 客户编号                       | 客户：姓名、邮件、头像、账户余额、积分                      |
+| 购物车    | /onionbook/accountcenter/cart/?id=客户编号/  | 客户编号                       | 所有商品：图片、名字、数量、折后价格                       |
+| 收藏     | /onionbook/accountcenter/star/?id=客户编号/  | 客户编号                       | 所有商品：图片、名字、作者、出版商、折后价格                   |
+| 历史订单列表 | /onionbook/accoutcenter/orderlist/?id=客户编号/ | 客户编号                       | 所有订单：编号、状态、总价；每个订单所有商品：图片、名字、数量、折后价格。    |
 
 #### 其他操作
 
 | 操作   | 前端->后端 | 后端->前端 |
 | ---- | ------ | ------ |
-| 作者   |        |        |
+|      |        |        |
 
 
 
