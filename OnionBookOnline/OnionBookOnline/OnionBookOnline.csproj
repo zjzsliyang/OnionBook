@@ -294,6 +294,7 @@
     <Content Include="Views\Account\Cart.cshtml" />
     <Content Include="Views\Account\Star.cshtml" />
     <Content Include="Views\Account\Orderlist.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
