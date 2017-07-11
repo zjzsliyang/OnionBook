@@ -52,6 +52,11 @@ namespace OnionBookOnline.Controllers
             }
         }
 
+        public ActionResult Orderlist()
+        {
+            return View;
+        }
+
         public ActionResult Cart()
         {
             return View();
