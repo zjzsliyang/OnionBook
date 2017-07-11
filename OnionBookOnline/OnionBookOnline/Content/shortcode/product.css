@@ -467,22 +467,16 @@ margin-right: 10px;}
   padding: 0 15px;
 }
 .share-icon a:hover{color:#fff;}
-.facebook{}
-.facebook:hover{color:#fff;border-color:#00aaf0}
-.facebook i{color: #00aaf0;;}
-.facebook:hover i{color: #fff;;}
+.weibo{}
+.weibo:hover{color:#fff;border-color:#00aaf0}
+.weibo i{color: #DD202D}
+.weibo:hover i{color: #fff}
 .share-icon a i {
   margin-right: 3px;
 }
-.twitter:hover{color:#fff;border-color:#435F9F}
-.twitter i{color:#435F9F}
-.twitter:hover i{color:#fff}
-.google:hover{color:#fff;border-color:#E04B34}
-.google i{color:#E04B34}
-.google:hover i{color:#fff}
-.pinterest:hover{color:#fff;border-color:#CE1F21}
-.pinterest i{color:#CE1F21}
-.pinterest:hover i{color:#fff}
+.wechat:hover{color:#fff;border-color:#435F9F}
+.wechat i{color:#A3E16C}
+.wechat:hover i{color:#fff}
 .pro-info-tab {
   border-bottom: 1px solid #ddd;
 }

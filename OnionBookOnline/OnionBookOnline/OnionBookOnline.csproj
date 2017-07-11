@@ -295,11 +295,11 @@
     <Content Include="Views\Account\Star.cshtml" />
     <Content Include="Views\Account\Orderlist.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Book\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\Index\" />
-    <Folder Include="Views\Book\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
