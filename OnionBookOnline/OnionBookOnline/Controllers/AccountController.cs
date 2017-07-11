@@ -52,6 +52,11 @@ namespace OnionBookOnline.Controllers
             }
         }
 
+        public ActionResult Cart()
+        {
+            return View();
+        }
+
         //
         // GET: /Account/Login
         [AllowAnonymous]
