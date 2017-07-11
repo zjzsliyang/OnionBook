@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -208,26 +209,43 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\jquery-ui.min.css" />
+    <Content Include="Content\magnific-popup.css" />
+    <Content Include="Content\meanmenu.min.css" />
+    <Content Include="Content\nivo-slider.css" />
+    <Content Include="Content\owl.carousel.css" />
+    <Content Include="Content\responsive.css" />
+    <Content Include="Content\shortcode\blog.css" />
+    <Content Include="Content\shortcode\client.css" />
+    <Content Include="Content\shortcode\default.css" />
+    <Content Include="Content\shortcode\footer.css" />
+    <Content Include="Content\shortcode\header.css" />
+    <Content Include="Content\shortcode\mainmenu.css" />
+    <Content Include="Content\shortcode\other-page.css" />
+    <Content Include="Content\shortcode\product-tab.css" />
+    <Content Include="Content\shortcode\product.css" />
+    <Content Include="Content\shortcode\shortcodes.css" />
+    <Content Include="Content\shortcode\slider.css" />
+    <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\Index\home_lunbo_1.jpg" />
-    <Content Include="Images\Index\home_lunbo_2.jpg" />
-    <Content Include="Images\Index\home_lunbo_3.jpg" />
-    <Content Include="Images\Index\home_lunbo_4.jpg" />
-    <Content Include="Images\Index\home_lunbo_5.jpg" />
-    <Content Include="Images\Index\home_lunbo_6.jpg" />
-    <Content Include="Images\Index\home_lunbo_7.jpg" />
-    <Content Include="Images\Index\home_lunbo_8.jpg" />
-    <Content Include="Images\Index\home_paihangbang.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -251,7 +269,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -274,9 +291,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Account\Cart.cshtml" />
+    <Content Include="Views\Account\Star.cshtml" />
+    <Content Include="Views\Account\Orderlist.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Book\Index.cshtml" />
+    <Content Include="Views\Book\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\Index\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

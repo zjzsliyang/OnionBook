@@ -1,0 +1,139 @@
+/* -----------------------------------
+Template:  Theme Name
+
+NOTE: This is Slider style file. All Slider related style included in this file.
+
+--------------------------------------*/
+.nivo-caption {
+  background: #000000 none repeat scroll 0 0;
+  bottom: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding:0!important;
+  position: absolute;
+  width: 100%;
+  z-index: 8;
+}
+.slider-progress {
+  animation: 5000ms ease-in-out 0s normal none 1 running myfirst;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 5px;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.nivo-directionNav a {
+  background: #3c3c3c none repeat scroll 0 0;
+  font-size: 20px;
+  height: 65px;
+  line-height: 64px;
+  margin: auto 10px;
+  text-align: center;
+  width: 37px;
+  color: #fff;
+}
+.nivo-directionNav a {
+  opacity: 0;
+  visibility: hidden;
+}
+.main-slider:hover .nivo-directionNav a{opacity:1;visibility:visible} 
+.nivo-directionNav a {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 9;
+  transform:translateY(-50%);
+}
+.nivo-directionNav a:hover{opacity:.6}
+
+
+.slider-single-img a {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+   transition:all .5s; 
+}
+ 
+.slider-single-img .img_a {
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  transform:scale(3);
+  transition:all .7s;
+}
+.slider-single-img:hover .img_a{
+	transform:scale(1);
+	opacity:1;
+	transition:all .5s;
+}
+
+/* home-3 */
+.slider-area-3 .nivo-caption {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  bottom: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  left: 0;
+  opacity: 1;
+  overflow: hidden;
+  padding: 5px 10px;
+  position: absolute;
+  width: 100%;
+  z-index: 8;
+  height: 100%;
+}
+.slider-area-3 .middle-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.slider-area-3 .middle-text h1 {
+  color: #ffffff;
+  font-family: "Opensans",sans-serif;
+  font-size: 60px;
+  font-weight: bolder;
+  letter-spacing: 10px;
+  position: relative;
+  text-transform: uppercase;
+}
+.slider-area-3 .middle-text h2{
+  color: #4db4e4;
+  display: block;
+  font-size: 36px;
+  font-weight: bolder;
+  line-height: 40px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  max-width: 250px;
+  text-transform: uppercase;
+}
+.slide-all-animate-1 {
+    animation-name: bounceInRight;
+    -webkit-animation-name: bounceInRight;
+    animation-delay: .5s;
+    -webkit-animation-delay: .5s;
+}
+.slide-all-animate-2 {
+    animation-name: bounceInLeft;
+    -webkit-animation-name: bounceInLeft;
+    animation-delay: .9s;
+    -webkit-animation-delay: .9s;
+}
+
+
+
+
+
+
+
+
+
+

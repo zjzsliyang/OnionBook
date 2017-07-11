@@ -1,0 +1,401 @@
+/* -----------------------------------
+Template:  Theme Name
+
+NOTE: This is Header style file. All Header related style included in this file.
+
+--------------------------------------*/
+/* home-1 */
+.header-top-left {
+  margin-top: 4px;
+}
+.header-top-left span {
+  color: #ffffff;
+}
+.header-top-left span a {
+  color: #bdbdbd;
+  font-weight: 600;
+  margin-right: 5px;
+}
+.header-top-left span a:hover{
+	color: #f0f0f0;
+}
+
+.header-top-right {
+    text-align: right;
+}
+.header-top-right ul {
+	display: inline-block;
+	margin-left: 10px;
+	position:relative;
+  
+}
+.header-top-right ul li{
+	position:relative;
+}
+.header-top-right ul li a {
+	color: #bdbdbd;
+	display:block;
+  transition: all 300ms ease-in-out 0s;
+font-weight:600;  
+}
+.header-top-right ul li a i {
+  color: #ffffff;
+  padding-right:3px;
+}
+.header-top-right ul li a:hover{
+	color:#fff;
+}
+.header-top-right ul li ul.show-toggle {
+  background: #444444 none repeat scroll 0 0;
+  border-image: none;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  top: 32px;
+  width: 115px;
+  z-index: 11111;
+}
+.header-top-right ul li ul.show-toggle li a {
+  color: #555555;
+  font-weight: 600;
+  line-height: 30px;
+  padding: 4px 10px;
+  text-align: center;
+  background:#fff;
+  text-transform:capitalize;
+}
+.header-top-right ul li ul.show-toggle li:hover a{
+	background:#555;
+	color:#fff;
+}
+
+.header-top-right ul li ul {
+	background: #ffffff none repeat scroll 0 0;
+	padding:0px;
+	position: absolute;
+	right: 0;
+	top: 36px;
+	width: 120px;
+	z-index: 11111;
+	margin-left: 0;
+	text-align: center;
+	display:none;
+	text-transform:uppercase;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+}
+.header-top-right ul li ul li{
+	color:#636363;
+}
+.header-top-right ul li ul li a {
+	color: #636363;
+	display: block;
+	font-size: 12px;
+	overflow: hidden;
+	padding: 4px 5px;
+	text-transform: uppercase;
+}
+.header-top-right ul li ul li a > i{
+	transition:all .3s;
+	color:#555;
+} 
+.header-top-right ul li ul li:hover a > i{color:#fff;}
+.header-top-right ul li.slide-toggle-2, .header-top-right ul li.slide-toggle-3 {
+  border: 1px solid #aaaaaa;
+  color: #bdbdbd;
+  font-weight: 600;
+  padding: 4px 10px;
+}
+.header-top-right ul li ul li a:hover{
+	background:#555;
+	color:#fff;
+}
+
+/* header-bottom-middle */
+.top-search .tex_top_skype,  .top-search .tex_top_email {
+  color: #f4a137;
+  cursor: pointer;
+  font-size: 14px;
+  padding-right: 35px;
+}
+header .top-search .tex_top_skype span, header .top-search .tex_top_email span {
+  color: #bdbdbd;
+}
+header .top-search i.fa {
+  padding-right: 3px;
+}
+
+.search-box {
+  margin-top: 17px;
+}
+.search-box form {
+  border: medium none;
+  position: relative;
+}
+.search-box form select#select {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+  color: #999999;
+  height: 100%;
+  padding: 0 8px;
+  position: absolute;
+  width: 165px;
+}
+.search-box form select#select option {
+  color: #333333;
+  font-weight: 300;
+  padding: 2px 10px;
+}
+.search-box form input {
+  background: #171717 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 10px;
+  height: 50px;
+  padding-left: 180px;
+  width: 100%;
+  padding-right: 60px;
+}
+.search-box form button {
+  background: #f4a137 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 0 6px 6px 0;
+  color: #ffffff;
+  font-size: 23px;
+  height:100%;
+  position: absolute;
+  right: 0;
+  width: 55px;
+  top:0;
+}
+.logo {
+  margin-top: 13px;
+}
+.header-bottom-middle{width:60%;float:left;}
+.header-bottom-right{width:40%;float:left;}
+.header-bottom-right .left-cart{
+	position:relative;
+}
+.header-bottom-right .left-cart .header-compire {
+  left: 45px;
+  position: absolute;
+  text-align: left;
+  top: 33px;
+  width: 27%;
+}
+.top-search {
+  line-height: 0;
+}
+.header-bottom-right .left-cart .header-compire a{
+  color: #bdbdbd;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: all 300ms ease-in-out 0s;	
+}
+.header-bottom-right .left-cart .header-compire a:hover{
+	color:#fff;
+}
+.block-cart:hover .top-cart-title a{
+	color:#F4A137;
+}
+.shop-cart-area {
+  float: right;
+  position: relative;
+  width: 65%;
+}
+.top-cart-wrapper {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 23px;
+  vertical-align: middle;
+}
+.top-cart-title a {
+  color: #ffffff;
+  display: block;
+  position: absolute;
+  text-align: left;
+  top: 14px;
+}
+.top-cart-title {
+  border: 0 none;
+  box-shadow: none;
+  font-size: 12px;
+  height: 65px;
+  margin-top: 0;
+  padding-left: 70px;
+  position: relative;
+  text-align: center;
+  vertical-align: top;
+}
+.top-cart-title a .title-cart {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+.count-item {
+	color: #bdbdbd;
+	display: inline-block;
+	font-size: 12px; 
+}
+.top-cart-title .price {
+    font-size: 12px;
+	color:#bdbdbd;
+}
+.block-cart {
+  display: inline-block;
+  position: relative;
+  width: 165px;
+}
+.top-cart-content {
+	border-top:3px solid #F4A137;
+    background: #ffffff none repeat scroll 0 0;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    top: 100%;
+    transform: scaleY(0);
+    transform-origin: 0 0 0;
+    transition: all 0.3s ease 0s;
+    width: 290px;
+    visibility: hidden;
+    z-index: 99999999;
+}
+.block-cart:hover .top-cart-content,
+.cartbox-style-2:hover .top-cart-content {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+}
+.mini-products-list .product-image {
+    float: left;
+    width: 30%;
+    display: block;
+}
+.mini-products-list {
+  padding: 0;
+}
+.mini-products-list li {
+    display: block;
+    margin-bottom: 15px;
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+.product-details {
+    float: left;
+    padding: 0 0px 0 15px;
+    width: 55%;
+}
+.pro-action {
+    float: left;
+    padding-top: 10px;
+    text-align: right;
+    width: 15%;
+}
+.cartproduct-name {
+    line-height: 20px !important;
+    margin: 5px 0;
+}
+.cartproduct-name a {
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+}
+.cartproduct-name a:hover {
+    color: #F4A137;
+}
+strong.qty {
+    color: #9d9d9d;
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+}
+.sig-price {
+    color: #F4A137;
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.top-subtotal {
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    color: #333333;
+    font-size: 13px;
+    margin: 15px 0 0;
+    padding: 15px 10px;
+    text-transform: capitalize;
+}
+.top-subtotal .sig-price {
+    float: right;
+}
+.top-cart-content .cart-actions {
+    margin: 20px 0 0;
+    padding: 0;
+}
+.top-cart-content .cart-actions button {
+    display: block;
+    width: 100%;
+    padding: 0;
+	border:none;
+}
+.top-cart-content .cart-actions button span {
+    background: #F4A137 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 0;
+    color: #ffffff;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    width: 100%;
+    transition: 0.3s;
+}
+.top-cart-content .cart-actions button:hover span {
+    background: #424242 none repeat scroll 0 0;
+}
+
+
+/* home-2 */
+.shop-cart-area-2 .top-cart-title-2 a span {
+  color: #333333;
+}
+.shop-cart-area-2 .top-cart-title-2:hover span.title-cart{color:#F4A137}
+.header-bottom-area-2 .header-bottom-right .header-compire a {
+  color: #333333;
+}
+.header-bottom-area-2 .header-bottom-right .header-compire a:hover{color:#F4A137}
+.header-bottom-area-2 span.tex_top_email span, .header-bottom-area-2 span.tex_top_skype span{color:#333}
+.header-bottom-area-2 .header-bottom-middle .search-box form input {
+  background: #ffffff none repeat scroll 0 0;
+  border: 2px solid #F4A137;
+}
+.header-bottom-area-2 .search-box input[placeholder] {
+  color: #000 !important;
+}
+
+/* home-4 */
+.header-area-4 .header-top-left span {
+  color: #333333;
+}
+.header-area-4 .header-top-left span a {
+  color: #333333;
+}
+
+.header-area-4 .header-top-right ul li a{
+	color:#333;
+}
+.header-area-4 .header-top-right ul > li > a:hover{color:#F4A137}
+.header-area-4 .header-top-right ul li a i {
+  color: #333;
+}
+.header-area-4 .header-top-right ul li ul li a:hover {
+  color:#fff;
+}
