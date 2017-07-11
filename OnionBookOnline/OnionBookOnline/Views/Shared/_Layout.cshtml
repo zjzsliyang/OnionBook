@@ -80,14 +80,14 @@
                     <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                         <div class="header-bottom-middle">
                             <div class="search-box">
-                                <form action="#">
-                                    <select name="#" id="select">
-                                        <option value="40">书名</option>
-                                        <option value="41">作者</option>
-                                        <option value="42">出版社</option>
-                                        <option value="47">ISBN</option>
+                                <form action="~/book/search/">
+                                    <select name="standard" id="select">
+                                        <option value="bookname">书名</option>
+                                        <option value="author">作者</option>
+                                        <option value="publisher">出版社</option>
+                                        <option value="isbn">ISBN</option>
                                     </select>
-                                    <input type="text" placeholder="搜索..." />
+                                    <input type="text" placeholder="搜索..." name="keywords" />
                                     <button><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
@@ -95,14 +95,14 @@
                         <div class="header-bottom-right">
                             <div class="left-cart">
                                 <div class="header-compire">
-                                    <a href="#"><i class="fa fa-heart"></i>收藏夹 0 </a>
+                                    <a href="~/account/star"><i class="fa fa-heart"></i>收藏夹</a>
                                 </div>
                             </div>
                             <div class="shop-cart-area">
                                 <div class="top-cart-wrapper">
                                     <div class="block-cart">
                                         <div class="top-cart-title">
-                                            <a href="#">
+                                            <a href="~/account/cart">
                                                 <span class="title-cart">购物车</span>
                                                 <span class="count-item">2 个项目</span>
                                                 <span class="price">￥444.00</span>
@@ -159,7 +159,7 @@
                                 <i class="fa fa-arrow-circle-down"></i>
                             </h2>
                         </div>
-                        <div class="product_vmegamenu" style="display: none;">
+                        <div class="product_vmegamenu">
                             <ul>
                                 <li>
                                     <a href="#" class="hover-icon"><img src="~/Images/menu-l/2.png" alt="" />经管</a>
@@ -260,33 +260,19 @@
                         <nav>
                             <ul>
                                 <li class="active">
-                                    <a href="../home/index">主页</a>
+                                    <a href="~/">主页</a>
                                 </li>
                                 <li>
-                                    <a href="shop.html">畅销书</a>
+                                    <a href="~/book/top">畅销书</a>
                                 </li>
                                 <li>
-                                    <a href="shop.html">新书</a>
+                                    <a href="~/book/new">新书</a>
                                 </li>
                                 <li>
-                                    <a href="#">个人中心</a>
-                                    <ul>
-                                        <li>
-                                            <a href="../account/wishlist.html">收藏夹</a>
-                                        </li>
-                                        <li>
-                                            <a href="../account/cart.html">购物车</a>
-                                        </li>
-                                        <li>
-                                            <a href="../account/orderlist.html">我的订单</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">我的包裹</a>
-                                        </li>
-                                    </ul>
+                                    <a href="~/account/orderlist">历史订单</a>
                                 </li>
                                 <li>
-                                    <a href="about.html">关于我们</a>
+                                    <a href="~/home/contact">关于我们</a>
                                 </li>
                             </ul>
                         </nav>
@@ -416,6 +402,12 @@
     </div>
     <!-- copyright-area-end -->
     <!-- all js here -->
+
+    <script>
+        if (window.location.href != "http://localhost:52570/") {
+            document.getElementsByClassName('product_vmegamenu')[0].style.display = 'none';
+        }
+    </script>
     <!-- jquery-1.12.0 -->
     <script src="~/Scripts/vendor/jquery-1.12.0.min.js"></script>
     <!-- bootstrap.min.js -->
