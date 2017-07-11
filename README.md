@@ -86,16 +86,16 @@
 | 创建订单   | /onionbook/order/createorder/            | 商品编号、数量                    | 是否创建成功                                   |
 | 支付     | /onionbook/order/pay/?id=订单编号/           | 订单编号                       | 是否支付成功                                   |
 | 订单完成   | /onionbook/order/complete/               |                            | 支付是否完成                                   |
-| 账户中心   | /onionbook/accountcenter/?id=客户编号/       | 客户编号                       | 客户：姓名、邮件、头像、账户余额、积分                      |
-| 购物车    | /onionbook/accountcenter/cart/?id=客户编号/  | 客户编号                       | 所有商品：图片、名字、数量、折后价格                       |
-| 收藏     | /onionbook/accountcenter/star/?id=客户编号/  | 客户编号                       | 所有商品：图片、名字、作者、出版商、折后价格                   |
-| 历史订单列表 | /onionbook/accoutcenter/orderlist/?id=客户编号/ | 客户编号                       | 所有订单：编号、状态、总价；每个订单所有商品：图片、名字、数量、折后价格。    |
+| 账户中心   | /onionbook/account/?id=客户编号/             | 客户编号                       | 客户：姓名、邮件、头像、账户余额、积分                      |
+| 购物车    | /onionbook/accountr/cart/?id=客户编号/       | 客户编号                       | 所有商品：图片、名字、数量、折后价格                       |
+| 收藏     | /onionbook/account/star/?id=客户编号/        | 客户编号                       | 所有商品：图片、名字、作者、出版商、折后价格                   |
+| 历史订单列表 | /onionbook/accout/orderlist/?id=客户编号/    | 客户编号                       | 所有订单：编号、状态、总价；每个订单所有商品：图片、名字、数量、折后价格。    |
 
 #### 其他操作
 
-| 操作   | 前端->后端 | 后端->前端 |
-| ---- | ------ | ------ |
-|      |        |        |
+| 操作    | 前端->后端  | 后端->前端 |
+| ----- | ------- | ------ |
+| 加入购物车 | 商品编号、数量 | 加入是否成功 |
 
 
 
