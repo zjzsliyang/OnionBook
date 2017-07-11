@@ -4,14 +4,107 @@
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<!-- map-area start -->
+<div class="map-area">
+    <div id="googleMap" style="width:100%;height:410px;"></div>
+</div>
+<!-- map-area end -->
+<!-- contact-area start -->
+<div class="contact-area contuct-us-page">
+    <div class="container">
+        <div class="row">
+            <!-- contact-info start -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="contact-info">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li>
+                            <i class="fa fa-map-marker"></i> <strong>地址</strong>
+                           上海市嘉定区曹安公路4800号同济大学
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i> <strong>邮箱</strong>
+                           zjzsliyang@gmail.com
+                        </li>
+                        <li>
+                            <i class="fa fa-gavel"></i> <strong>GitHub</strong>
+                            <a href="https://github.com/zjzsliyang/OnionBook">OnionBook</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- contact-info end -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="contact-form res">
+                    <h3><i class="fa fa-envelope-o"></i>建议</h3>
+                    <div class="row">
+                        <form id="contact-form" action="mail.php" method="post">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input name="name" placeholder="姓名" type="text">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input name="email" placeholder="邮箱" type="email">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <input name="subject" placeholder="主题" type="text">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <textarea name="message" id="message" cols="30" rows="10" placeholder="内容"></textarea>
+                                <button type="submit">提交</button>
+                            </div>
+                        </form>
+                        <p class="form-messege"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- contact-area end -->
+<!-- newletter-area-start -->
+<div class="newletter-area ptb-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="newletter-logo">
+                    <a href="#"><img src="img/logo.png" alt="" /></a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="subscribe-form">
+                    <form action="#">
+                        <input placeholder="电子邮件..." type="text" />
+                        <button class="subscribe">订阅</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="subscribe-social text-right">
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+			function initialize() {
+			  var mapOptions = {
+				zoom: 15,
+				scrollwheel: false,
+				center: new google.maps.LatLng(31.2858616, 121.2086886)
+			  };
+			  var map = new google.maps.Map(document.getElementById('googleMap'),
+				  mapOptions);
+			  var marker = new google.maps.Marker({
+				position: map.getCenter(),
+				animation:google.maps.Animation.BOUNCE,
+				icon: 'img/map-icon.png',
+				map: map
+			  });
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+    </script>	
