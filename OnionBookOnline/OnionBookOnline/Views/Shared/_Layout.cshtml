@@ -52,10 +52,10 @@
                                     <a href="#"><i class="fa fa-user">我的账户</i></a>
                                     <ul class="show-toggle">
                                         <li>
-                                            <a href="#">登录</a>
+                                            <a href="../Account/Login">登录</a>
                                         </li>
                                         <li>
-                                            <a href="#">注册</a>
+                                            <a href="../Account/Register">注册</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -366,8 +366,8 @@
                                         <li> <a href="#">武侠</a></li>
                                         <li> <a href="#">青春</a></li>
                                         <li> <a href="#">悬疑</a></li>
-                                    </ul>   
-                                </li> 
+                                    </ul>
+                                </li>
                                 <li>
                                     <a href="#">文学</a>
                                     <ul>
@@ -380,7 +380,7 @@
                                         <li> <a href="#">儿童</a></li>
                                         <li> <a href="#">名著</a></li>
                                     </ul>
-                                </li> 
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -391,47 +391,50 @@
     <!-- mobile-menu-end -->
     <!-- mainmenu-area-end -->
 
+    <section>
         @RenderBody()
+    </section>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
 
-
-        <!-- copyright-area-start -->
-        <div class="copyright-area text-center bg-color-3">
-            <div class="container">
-                <div class="copyright-border ptb-30">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <div class="copyright text-left">
-                                <p>
-                                    Copyright
-                                    <a href="#">OnionBook</a>. All Rights Reserved
-                                </p>
-                            </div>
+    <!-- copyright-area-start -->
+    <div class="copyright-area text-center bg-color-3">
+        <div class="container">
+            <div class="copyright-border ptb-30">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="copyright text-left">
+                            <p>
+                                Copyright
+                                <a href="#">OnionBook</a>. All Rights Reserved
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- copyright-area-end -->
-        <!-- all js here -->
-        <!-- jquery-1.12.0 -->
-        <script src="~/Scripts/vendor/jquery-1.12.0.min.js"></script>
-        <!-- bootstrap.min.js -->
-        <script src="~/Scripts/bootstrap.min.js"></script>
-        <!-- nivo.slider.js -->
-        <script src="~/Scripts/jquery.nivo.slider.pack.js"></script>
-        <!-- jquery-ui.min.js -->
-        <script src="~/Scripts/jquery-ui.min.js"></script>
-        <!-- jquery.magnific-popup.min.js -->
-        <script src="~/Scripts/jquery.magnific-popup.min.js"></script>
-        <!-- jquery.meanmenu.min.js -->
-        <script src="~/Scripts/jquery.meanmenu.js"></script>
-        <!-- jquery.scrollup.min.js-->
-        <script src="~/Scripts/jquery.scrollup.min.js"></script>
-        <!-- owl.carousel.min.js -->
-        <script src="~/Scripts/owl.carousel.min.js"></script>
-        <!-- plugins.js -->
-        <script src="~/Scripts/plugins.js"></script>
-        <!-- main.js -->
-        <script src="~/Scripts/main.js"></script>
+    </div>
+    <!-- copyright-area-end -->
+    <!-- all js here -->
+    <!-- jquery-1.12.0 -->
+    <script src="~/Scripts/vendor/jquery-1.12.0.min.js"></script>
+    <!-- bootstrap.min.js -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!-- nivo.slider.js -->
+    <script src="~/Scripts/jquery.nivo.slider.pack.js"></script>
+    <!-- jquery-ui.min.js -->
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <!-- jquery.magnific-popup.min.js -->
+    <script src="~/Scripts/jquery.magnific-popup.min.js"></script>
+    <!-- jquery.meanmenu.min.js -->
+    <script src="~/Scripts/jquery.meanmenu.js"></script>
+    <!-- jquery.scrollup.min.js-->
+    <script src="~/Scripts/jquery.scrollup.min.js"></script>
+    <!-- owl.carousel.min.js -->
+    <script src="~/Scripts/owl.carousel.min.js"></script>
+    <!-- plugins.js -->
+    <script src="~/Scripts/plugins.js"></script>
+    <!-- main.js -->
+    <script src="~/Scripts/main.js"></script>
 </body>
 </html>
