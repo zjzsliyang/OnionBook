@@ -1,0 +1,240 @@
+﻿/*-----------------------------------------------------------------------------------
+
+    Template Name: Rapiden - eCommerce Electronics Template
+    Template URI: https://devitems.com/html/rapiden-preview
+    Description: This is Rapiden eCommerce Electronics Template
+    Author: HasTech
+    Author URI: https://devitems.com
+
+-----------------------------------------------------------------------------------
+    
+    CSS INDEX
+    ===================
+	
+    1. Default css (css/shortcode/default.css)
+    2. Header css (css/shortcode/header.css)
+    3. Slider css (css/shortcode/slider.css)
+    4. Footer css (css/shortcode/footer.css)
+    5. Blog css (css/shortcode/blog.css)
+    6. Client css (css/shortcode/client.css)
+    7. Mainmenu css (css/shortcode/mainmenu.css)
+    8. Other page css (css/shortcode/other-page.css)
+    9. Product css (css/shortcode/product.css)
+    10. Product tab css (css/shortcode/product-tab.css)
+    
+    
+-----------------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700,800');
+html, body {height: 100%;font-family: 'Open Sans', sans-serif;background:#F7F7F7}
+.floatleft {float:left}
+.floatright {float:right}
+.alignleft {float:left;margin-right:15px;margin-bottom: 15px}
+.alignright {float:right;margin-left:15px;margin-bottom: 15px}
+.aligncenter {display:block;margin:0 auto 15px}
+a:focus {outline:0px solid}
+img {max-width:100%;height:auto}
+.fix {overflow:hidden}
+p {
+    margin:0 0 15px;
+    font-size: 14px;
+    line-height: 24px;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px;
+  color:#444444;
+}
+a {transition: all 0.3s ease 0s;text-decoration:none;}
+a:hover {
+  color: #F4A137;
+  text-decoration: none;
+}
+a:active, a:hover {
+  outline: 0 none;
+}
+ul{
+list-style: outside none none;
+margin: 0;
+padding: 0
+}
+.clear{clear:both}
+body {
+  color: #666666;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;	
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+.search-box input[placeholder] {
+  color: #ffffff!important;
+}
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+.top-cart-title{background: rgba(0, 0, 0, 0) url("img/cart/top-cart.png") no-repeat scroll 0 50%;}
+.top-cart-title-2{background: rgba(0, 0, 0, 0) url("img/cart/top-cart2.png") no-repeat scroll 0 50%;}
+.btn-remove {
+    background: #404040 url("img/cart/btn_remove.png") no-repeat scroll 0 0;
+    display: block;
+    font-size: 0;
+    height: 15px;
+    line-height: 0;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 15px;
+    float: right;
+    margin-left: 3px;
+}
+.btn-remove:hover {
+    background: #F4A137 url("img/cart/btn_remove.png") no-repeat scroll 0 0;
+}
+.newletter-area {
+  background: url(img/bg-1.jpg)no-repeat scroll center center / cover;
+}
+.subscribe-social a {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 20px;
+  height: 55px;
+  line-height: 48px;
+  margin-right: 6px;
+  text-align: center;
+  transition: all 300ms ease-in-out 0s;
+  width: 55px;
+}
+.subscribe-social a:hover {
+  background: #fff;
+  color: #444;
+}
+.subscribe-social a i {
+  font-size: 20px;
+}
+#scrollUp {
+  background: #F4A137 none repeat scroll 0 0;
+  border-radius: 50%;
+  bottom: 30px;
+  color: #ffffff;
+  height: 50px;
+  line-height: 52px;
+  right: 30px;
+  text-align: center;
+  width: 50px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);  
+}
+#googleMap {
+  height: 350px!important;
+}
+#scrollUp i{
+  font-size: 24px;	
+}
+#scrollUp:hover{background:#FF5313;color#fff;} 
+
+.single-tab-item {
+  float: left;
+  width: 33.3333%;
+  overflow: hidden;
+}
+
+/* social_block */
+
+#social_block {
+  position: fixed;
+  right: 0;
+  top: 15%;
+  transform: translateX(140px);
+  width: 190px;
+  z-index: 10050000;
+}
+#social_block ul li {
+  list-style: outside none none;
+}
+#social_block ul li a {
+  border: 0 none;
+  border-radius: 3px;
+  color: #ffffff;
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  padding: 0;
+  width: 185px;
+  text-transform:capitalize;
+  text-align:center;
+}
+#social_block ul li a:hover {
+  transform: translateX(-131px);
+  transition: all 300ms ease-in 0s;
+}
+
+#social_block ul li a::before {
+  border-right: 1px solid #ffffff;
+  display: inline-block;
+  float: left;
+  font-family: "FontAwesome";
+  font-size: 20px;
+  font-weight: normal;
+  width: 50px;
+}
+#social_block ul .facebook a {
+  background: #425f9c none repeat scroll 0 0;
+}
+#social_block ul .facebook a::before {
+  content: "";
+  transition: all 300ms ease-in 0s;
+}
+#social_block ul .twitter a {
+  background: #00aced none repeat scroll 0 0;
+}
+#social_block ul .twitter a::before {
+  content: "";
+}
+#social_block ul .rss a {
+  background: #ff9900 none repeat scroll 0 0;
+  text-transform:uppercase;
+}
+#social_block ul .rss a::before {
+  content: "";
+}
+#social_block ul .youtube a {
+  background: #e22d26 none repeat scroll 0 0;
+}
+#social_block ul .youtube a::before {
+  content: "";
+}
+#social_block ul .google-plus a {
+  background: #ed5757 none repeat scroll 0 0;
+}
+#social_block ul .google-plus a::before {
+  content: "";
+}
+#social_block ul .pinterest a {
+  background: #c21a21 none repeat scroll 0 0;
+}
+#social_block ul .pinterest a::before {
+  content: "";
+}
+.wishlist-share ul li a.facebook{background: url("img/icon/facebook.png") no-repeat scroll 0 0;}
+.wishlist-share ul li a.twitter{background: url("img/icon/twitter.png") no-repeat scroll 0 0;}
+.wishlist-share ul li a.pinterest{background: url("img/icon/pinterest.jpg") no-repeat scroll 0 0;}
+.wishlist-share ul li a.googleplus{background: url("img/icon/googleplus.jpg") no-repeat scroll 0 0;}
+.wishlist-share ul li a.email{background: url("img/icon/email.jpg") no-repeat scroll 0 0;}
+.wishlist-share ul li a{}
+.wishlist-share ul li a{}
+.wishlist-share ul li a:hover{background-position: left bottom;}
+.blog-page-area {
+  background: #ffffff none repeat scroll 0 0;
+}

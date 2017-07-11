@@ -1,0 +1,1103 @@
+/* -----------------------------------
+Template:  Theme Name
+
+NOTE: This is other-page style file. All other-pagee related style included in this file.
+
+--------------------------------------*/
+/* ----------------------
+1.chechout-page
+2.compare-page 
+3. wishlist-area
+4. Account page
+5. cart page
+6. Contact page
+------------------------- */
+
+/*---------------------- 
+chechout-page 
+----------------------*/
+.checkout-page .product_vmegamenu {
+  display: none;
+}
+.breadcrumb > li {
+  display: inline-block;
+  font-size: 14px;
+}
+.coupon-area{}
+.coupon-accordion{}
+.coupon-accordion h3 {
+  background-color: #f7f6f7;
+  border-top: 3px solid #F4A137;
+  color: #515151;
+  font-size: 14px;
+  font-weight: 400;
+  list-style: outside none none !important;
+  margin: 0 0 2em !important;
+  padding: 1em 2em 1em 3.5em !important;
+  position: relative;
+  width: auto;
+}
+.coupon-accordion h3::before {
+  color: #1e85be;
+  content: "\f114";
+  display: inline-block;
+  font-family: fontawesome;
+  left: 1.5em;
+  position: absolute;
+  top: 1em;
+}
+.coupon-accordion span {
+  cursor: pointer;color: #6f6f6f;
+}
+.coupon-accordion span:hover, p.lost-password a:hover {
+  color: #F4A137;
+}
+.coupon-content {
+  border: 1px solid #e5e5e5;
+  display: none;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.coupon-info{}
+.coupon-info p.coupon-text{margin-bottom:15px}
+.coupon-info p{margin-bottom:0}
+.coupon-info p.form-row-first{}
+.coupon-info p.form-row-first label,.coupon-info p.form-row-last label{display: block;}
+.coupon-info p.form-row-first label span.required,.coupon-info p.form-row-last label span.required{
+color: red;
+font-weight: 700;}
+.coupon-info p.form-row-first input,.coupon-info p.form-row-last input{border: 1px solid #e5e5e5;
+height: 36px;
+margin: 0 0 14px;
+max-width: 100%;
+padding: 0 0 0 10px;
+width: 370px;
+background:#fff;
+}
+
+.coupon-info p.form-row-last{}
+.coupon-info p.form-row input[type="submit"]:hover, p.checkout-coupon input[type="submit"]:hover {
+  background: #F4A137 none repeat scroll 0 0;
+}
+.coupon-info p.form-row input[type="checkbox"] {
+  height: inherit;
+  position: relative;
+  top: 2px;
+  width: inherit;
+}
+.form-row > label {
+  margin-top: 7px;
+}
+p.lost-password{
+margin-top: 15px;}
+p.lost-password a{color: #6f6f6f;}
+p.checkout-coupon{}
+p.checkout-coupon input[type=text]{height: 36px;
+padding-left: 10px;
+width: 170px;}
+p.checkout-coupon input[type="submit"] {
+  background: #333 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 0;
+  color: #fff;
+  height: 36px;
+  margin-left: 6px;
+  padding: 5px 10px;
+  transition: all 0.3s ease 0s;
+  width: inherit;
+}
+.coupon-checkout-content {
+  margin-bottom: 30px;
+  display:none;
+}
+.checkout-area {
+  margin-bottom: 30px;
+}
+.checkbox-form{}
+.checkbox-form h3 {
+  border-bottom: 1px solid #e5e5e5;
+  color: #333333;
+  font-size: 30px;
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  width: 100%;
+}
+.country-select{margin-bottom: 30px;
+position: relative;}
+.country-select label,.checkout-form-list label{
+	color: #333;
+	font-family: Montserrat,Arial,Helvetica,sans-serif;
+	margin: 0 0 5px;
+	display:block
+}
+.country-select label span.required,.checkout-form-list label span.required{color:red}
+.country-select select {
+  -moz-appearance: none;
+  background: #ffffff none repeat scroll 0 0;
+  border: 1px solid #dddddd;
+  height: 32px;
+  padding-left: 10px;
+  width: 100%;
+}
+.country-select::before {
+  content: "\f107 ";
+  display: inline-block;
+  font-family: fontawesome;
+  font-size: 20px;
+  position: absolute;
+  right: 12px;
+  top: 31px;
+}
+.checkout-form-list{margin-bottom: 30px;}
+.checkout-form-list label{color: #333;}
+.checkout-form-list label span.required{}
+.checkout-form-list input[type=text],.checkout-form-list input[type=password],.checkout-form-list input[type=email]{background: #fff none repeat scroll 0 0;
+border: 1px solid #e5e5e5;
+border-radius: 0;
+height: 42px;
+width: 100%;
+padding: 0 0 0 10px;}
+.checkout-form-list{}
+.checkout-form-list input[type="checkbox"] {
+  display: inline-block;
+  height: inherit;
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+  width: inherit;
+}
+.ship-different-title input {
+  height: inherit;
+  line-height: normal;
+  margin: 4px 0 0;
+  position: relative;
+  top: 1px;
+  width: 30px;
+}
+.create-acc label {
+  color: #333;
+  display: inline-block;
+}
+.checkout-form-list input[type=password]{}
+.create-account{display:none}
+.ship-different-title{}
+.ship-different-title h3 label{display: inline-block;
+margin-right: 20px;}
+.ship-different-title input{}
+.order-notes{}
+.order-notes textarea{
+height: 90px;
+padding: 15px;width:100%}
+#ship-box-info{display:none}
+
+.your-order{background: #f2f2f2 none repeat scroll 0 0;
+padding: 30px 40px 45px;}
+.your-order h3 {
+  border-bottom: 1px solid #d8d8d8;
+  color: #333333;
+  font-size: 30px;
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  width: 100%;
+}
+.your-order-table table{
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+	border: medium none;
+	width: 100%;
+}
+.your-order-table table th, .your-order-table table td {
+  border-bottom: 1px solid #d8d8d8;
+  border-right: medium none;
+  font-size: 14px;
+  padding: 15px 0;
+  text-align: center;
+}
+.your-order-table table th{border-top: medium none;
+font-family: Montserrat,Arial,Helvetica,sans-serif;
+font-weight: normal;
+text-align: center;
+text-transform: uppercase;
+vertical-align: middle;
+white-space: nowrap;
+width: 250px;}
+.your-order-table table .shipping ul li input{position: relative;
+top: 2px;}
+.your-order-table table .shipping  th{vertical-align: top;}
+.your-order-table table .order-total th{border-bottom: medium none;
+font-size: 18px;}
+.your-order-table table .order-total td{border-bottom: medium none;}
+.your-order-table table tr.cart_item:hover{background:#F9F9F9}
+.your-order-table table tr.order-total td span {
+  color: #F4A137;
+  font-size: 20px;
+}
+.your-order-table table{}
+.payment-method {
+  margin-top: 40px;
+}
+.payment-accordion{}
+.payment-accordion h3{border-bottom: 0 none;
+margin-bottom: 10px;
+padding-bottom: 0;}
+.payment-accordion h3 a{color: #6f6f6f;
+font-size: 14px;
+padding-left: 25px;
+position: relative;
+text-transform: capitalize;text-decoration:none}
+.payment-accordion h3 a:before,.payment-accordion h3.open a:after{
+	content: "?";
+	display: inline-block;
+	font-family: fontawesome;
+	font-size: 20px;
+	left: 0;
+	position: absolute;
+	top: -2px;
+}
+.payment-accordion h3.open a:after{content: "\f056";}
+.payment-content{}
+.payment-content p{font-size: 13px;}
+.payment-accordion img {
+  height: 60px;
+  margin-left: 15px;
+}
+.order-button-payment{}
+.order-button-payment input {
+  background: #F4A137 none repeat scroll 0 0;
+  border: medium none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  height: 50px;
+  margin: 20px 0 0;
+  padding: 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+.order-button-payment input:hover{background:#444}
+.buttons-cart input, .coupon input[type="submit"], .buttons-cart a, .coupon-info p.form-row input[type="submit"] {
+  background: #252525 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #fff;
+  display: inline-block;
+  float: left;
+  font-size: 12px;
+  font-weight: 700;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 15px;
+  padding: 0 15px;
+  text-shadow: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  white-space: nowrap;
+  width: inherit;
+}
+.checkbox-form textarea {
+  background: #fff;
+}
+
+/*---------------------- 
+2.compare-page 
+----------------------*/
+.table-content table th, .table-content table td {
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+}
+.table-content table {
+  background: #ffffff none repeat scroll 0 0;
+  border-color: #e5e5e5;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  text-align: center;
+  width: 100%;
+}
+.compare-area .table-content table {
+    margin: 0;
+}
+.compare-area table th {
+    color: #333333;
+    font-weight: 600;
+    max-width: 204px;
+    min-width: 205px;
+    overflow: hidden;
+    text-align: left;
+    text-transform: uppercase;
+    width: 205px;
+    font-size: 16px;
+    padding: 10px;
+}
+.compare-area table td {
+    text-align: center;
+    padding: 10px;
+}
+.compare-area table .remove td,
+.compare-area table .image td,
+.compare-area table .title td,
+.compare-area table .price td,
+.compare-area table .add-to-cart td,
+.compare-area table .description td,
+.compare-area table .stock td {
+    background: #f7f7f7 none repeat scroll 0 0;
+    border-bottom: 0 none;
+}
+.compare-area table .remove td a {
+    color: #747373;
+    text-decoration: none;
+}
+.compare-area table .remove td a span {
+    border-radius: 100%;
+    color: red;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 600;
+    height: 1em;
+    line-height: 0.81em;
+    text-align: center;
+    text-decoration: none;
+    width: 1em;
+}
+.compare-area table .remove td a:hover span {
+    background-color: red;
+    color: #ffffff;
+}
+.compare-area table .image td {
+    height: 186px;
+    padding-top: 4px;
+}
+.compare-area table .image td img {
+    background: #f7f7f7 none repeat scroll 0 0;
+    border: 1px solid #dadada;
+    height: auto;
+    margin-bottom: 20px;
+    max-width: none;
+    padding: 3px;
+}
+.compare-area table .title td {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+}
+.compare-area table .new-price {
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 4px;
+}
+.compare-area table .old-price {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #7b7b7b;
+}
+.compare-area table .add-to-cart td a {
+    background-color: #4f4f4f;
+    border: 0 none;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: normal;
+    line-height: normal;
+    margin: 10px 0;
+    padding: 5px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+.compare-area table .add-to-cart td a:hover {
+    background-color: #F4A137;
+}
+.compare-area table .add-to-cart td,
+.compare-area table .description td,
+.compare-area table .stock td,
+.compare-area table .price2 td {
+    border-bottom: 1px solid #d6d6d6;
+}
+.compare-area table .description td p {
+    font-size: 14px;
+    line-height: 20px;
+}
+.compare-area table .stock td {
+    color: #009900;
+}
+.product-thumbnail img {
+  width: 100%;
+}
+
+.search-block-content > form {
+  margin: 0;
+}
+
+/*----------------------------------- 
+3. wishlist-area
+-------------------------------------*/
+.wishlist-area{}
+.wishlist-content{}
+.wishlist-title {
+    text-transform: capitalize;
+}
+.wishlist-title h2{}
+.wishlist-table{}
+.wishlist-table table {
+  background: #ffffff none repeat scroll 0 0;
+  border-color: #e8e8e9;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  margin: 20px 0 60px;
+  width: 100%;
+  margin-top: 0;
+}
+.wishlist-table table{}
+.wishlist-table table th {
+    font-weight: 600;
+}
+.product-name a {
+    color: #333333;
+}
+.product-name a:hover {
+    color: #F4A137;
+}
+
+.wishlist-table table th, .wishlist-table table td {
+	border-bottom: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
+	font-size: 14px;
+	padding: 15px 10px;
+	text-align: center;
+}
+.wishlist-table table .product-remove {
+	padding: 0 15px;
+	width: 20px;
+}
+.wishlist-table table .product-remove > a {
+  color: #333333;
+  font-size: 25px;
+}
+.wishlist-table table .product-remove > a:hover{
+	color:#F4A137;
+}
+.wishlist-table table .product-thumbnail {
+    width: 150px;
+}
+.wishlist-table table td.product-price .amount {
+    font-weight: 700;
+}
+.wishlist-table table .wishlist-in-stock {
+    color: #F4A137;
+}
+.wishlist-table table .product-add-to-cart > a {
+	background: #000 none repeat scroll 0 0;
+	color: #fff;
+	display: block;
+	font-weight: 700;
+	padding: 10px 56px;
+	text-transform: uppercase;
+	width: 260px;
+}
+.wishlist-table table .product-add-to-cart > a:hover {
+    background: #F4A137;
+}
+.wishlist-table table .product-add-to-cart {
+    width: 240px;
+}
+.wishlist-table table
+.wishlist-table table
+.wishlist-share{}
+h3.wishlist-share-title{}
+.wishlist-share {
+  margin-bottom: 16px;
+  margin-top: 20px;
+}
+h4.wishlist-share-title {
+    margin-bottom: 10px;
+}
+.wishlist-share ul{}
+.wishlist-share ul li {
+	display: inline-block;
+	height: 21px;
+	margin-left: 0;
+	margin-right: 0;
+}
+.wishlist-share ul li a{
+	background-position: left top;
+	border: medium none;
+	display: inline-block;
+	height: 21px;
+	width: 21px;
+}
+/* -----------------------------
+	4. Account page
+ ------------------------------*/
+  .account-area.pt-30 {
+  background: #fff;
+}
+.entry-title {
+    padding-bottom: 30px;
+}
+.entry-title h2 {
+    font-size: 20px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.account-info {
+    overflow: hidden;
+}
+.form-fields {
+    border-color: #e8e8e9 #e8e8e9 -moz-use-text-color;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    float: left;
+    padding: 20px 25px;
+    width: 100%;
+}
+.form-fields h2 {
+    border-bottom: 1px solid #e8e8e9;
+    font-size: 18px;
+    margin: 0 0 15px;
+    padding: 0 0 5px;
+    text-transform: uppercase;
+}
+.form-fields p label {
+    display: block;
+    font-weight: 400;
+    margin: 0 0 5px;
+}
+.form-fields p input {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e8e8e9;
+    border-radius: 0;
+    height: 32px;
+    padding: 0 0 0 10px;
+    width: 100%;
+}
+.form-action {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border-color: #e8e8e9;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    float: left;
+    padding: 15px 10px;
+    width: 100%;
+}
+.form-action .lost_password{
+    color: #777;
+}
+.form-action .lost_password:hover {
+    color: #F4A137;
+}
+.required {
+  color: #ff0000;
+}
+.form-action .lost_password {
+  color: #666666;
+  float: left;
+  line-height: 36px;
+  margin: 0;
+}
+.form-action input[type="checkbox"] {
+  display: inline-block;
+  float: left;
+  height: 0;
+  margin-left: 28px;
+  margin-top: 12px;
+  width: 34px;
+}
+.form-action > label {
+  line-height: 35px;
+}
+.form-action input[type="submit"] {
+    background: #252525 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 0;
+    box-shadow: none;
+    color: #fff;
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    text-shadow: none;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+	width:100px;
+}
+.form-action input[type="submit"]:hover {
+    background: #F4A137;
+}
+/*=========================== 
+5. cart page
+============================= */
+.cart-main-area {
+} 
+.shipping_method input {
+  background: #eceff8 none repeat scroll 0 0;
+  border: 2px solid #eceff8;
+  box-shadow: none;
+  color: #626262;
+  font-size: 14px;
+  height: 45px;
+  padding-left: 10px;
+  width: inherit;
+}
+.cart-title-area{
+	padding-top: 30px;
+}
+.car-header-title{}
+.car-header-title h2{
+	font-size: 20px;
+	margin: 0;
+	text-transform: uppercase;
+}
+.table-content{}
+.table-content table{
+	background: #fff none repeat scroll 0 0;
+	border-color: #e5e5e5;
+	border-radius: 0;
+	border-style: solid;
+	border-width: 1px 0 0 1px;
+	margin: 0 0 40px;
+	text-align: center;
+	width: 100%;
+}
+.table-content table{}
+.table-content table th{
+	border-top: medium none;
+	padding: 20px 10px;
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.table-content table th,.table-content table td{
+	border-bottom: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
+}
+.table-content table td{
+	border-top: medium none;
+	padding: 20px 10px;
+	vertical-align: middle;font-size: 13px;
+}
+.table-content table td input{
+	background: #e5e5e5 none repeat scroll 0 0;
+	border: medium none;
+	border-radius: 3px;
+	color: #6f6f6f;
+	font-size: 15px;
+	font-weight: normal;
+	height: 40px;
+	padding: 0 5px 0 10px;
+	width: 60px;
+}
+.table-content table td.product-subtotal{
+	font-size: 14px;
+	font-weight: bold;
+	width: 120px;
+}
+.table-content table td.product-name a{
+	font-size: 14px;
+	font-weight: 400;
+	margin-left: 10px;
+	color: #333;
+}
+.table-content table td.product-name{
+	width: 270px;
+}
+.table-content table td.product-thumbnail{
+	width: 130px;
+}
+.table-content table td.product-remove i{
+	color: #919191;
+	display: inline-block;
+	font-size: 20px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	width: 40px;
+}
+.table-content table .product-price .amount {
+  font-size: 15px;
+  font-weight: 700;
+}
+.table-content table td.product-remove i:hover {
+  color: #F4A137;
+}
+.table-content table td.product-quantity{width: 180px;}
+.table-content table td.product-remove{width: 150px;}
+.table-content table td.product-price{width: 130px;}
+.table-content table td.product-name a:hover, .buttons-cart a:hover {
+  color: #F4A137;
+}
+.product-thumbnail img {
+  width: 100%;
+}
+.buttons-cart{margin-bottom: 30px;
+overflow: hidden;}
+.buttons-cart input, .coupon input[type="submit"], .buttons-cart a, .coupon-info p.form-row input[type="submit"] {
+  background: #252525 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #fff;
+  display: inline-block;
+  float: left;
+  font-size: 12px;
+  font-weight: 700;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 15px;
+  padding: 0 15px;
+  text-shadow: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  white-space: nowrap;
+  width: inherit;
+}
+.wc-proceed-to-checkout {
+  clear: both;
+  display: block;
+}
+.billing-fields.row {
+  margin-bottom: 24px;
+}
+.breadcrumb-area .breadcrumb {
+  padding: 8px 0 !important;
+}
+.buttons-cart input:hover, .coupon input[type="submit"]:hover, .buttons-cart a:hover {
+  background: #F4A137 none repeat scroll 0 0;
+  color: #fff;
+}
+.buttons-cart a {
+  color: #fff;
+  float: left;
+  height: 40px;
+  line-height: 40px;
+}
+.coupon {
+  overflow: hidden;
+  padding-bottom: 5px;
+}
+.coupon h3{
+	margin: 0 0 10px;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.coupon p{}
+.coupon input[type="text"] {
+  background: #ffffff none repeat scroll 0 0;
+  border: 1px solid #e5e5e5;
+  float: left;
+  height: 40px;
+  margin: 0 6px 20px 0;
+  max-width: 100%;
+  padding: 0 0 0 10px;
+  width: 170px;
+}
+.coupon input[type=submit]{}
+.cart_totals{
+	float: left;
+	text-align: right;
+	width: 100%;
+}
+.cart_totals h2 {
+  border-bottom: 2px solid #333333;
+  color: #333333;
+  display: inline-block;
+  font-size: 30px;
+  margin: 0 0 35px;
+  text-transform: uppercase;
+}
+.cart_totals table{
+	border: medium none;
+	float: right;
+	margin: 0;
+	text-align: right;
+}
+.cart_totals table th{
+	border: medium none;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0 20px 12px 0;
+	text-align: right;
+	text-transform: uppercase;
+	vertical-align: top;
+}
+.cart_totals table td{
+	border: medium none;
+	padding: 0 0 12px;
+	vertical-align: top;
+}
+.cart_totals table{}
+.cart_totals table td .amount {
+	color: #F4A137;
+	float: right;
+	font-size: 13px;
+	font-weight: bold;
+	margin-left: 5px;
+	text-align: right;
+	text-transform: uppercase;
+}
+.cart_totals table td ul#shipping_method{
+	list-style: outside none none;
+	margin: 0;
+	padding: 0;
+}
+.cart_totals table td ul#shipping_method li{
+	float: left;
+	margin: 0 0 10px;
+	padding: 0;
+	text-indent: 0;
+	width: 100%;
+}
+.cart_totals table td ul#shipping_method li input{margin: 0;
+position: relative;
+top: 2px;}
+.cart_totals table{}
+a.shipping-calculator-button{
+	font-weight: bold;
+	color: #6f6f6f;
+}
+a.shipping-calculator-button:hover{
+	color:#83CBDC
+}
+.cart_totals table tr.order-total th,.cart_totals table tr.order-total .amount{
+	font-size: 20px;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+.cart_totals table tr.order-total .amount{}
+.wc-proceed-to-checkout a {
+  background: #F4A137 none repeat scroll 0 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 20px;
+  padding: 0 30px;
+  text-transform: none;
+}
+.wc-proceed-to-checkout a:hover {
+  background: #252525 none repeat scroll 0 0;
+  color: #fff;
+}
+/* account-area */
+.login-area{}
+.login-area input {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #eceff8;
+}
+.login-area select {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #eceff8;
+}
+#billing_address_2{margin-top:15px}
+#rememberme {
+  float: left;
+  height: inherit;
+  margin-top: 7px;
+  width: 30px;
+}
+label.inline > a {
+  color: #F4A137;
+}
+.theme-button {
+  width: 150px;
+}
+.theme-button:hover {
+  background: #F4A137; color:#fff;border-color:#F4A137
+}
+.centered-title h2 {
+  color: #202020;
+  display: inline-block;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  position: relative;
+  text-transform: capitalize;
+}
+.centered-title em {
+  font-family: "Lato",sans-serif;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+.login-form {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 30px;
+  padding: 25px 30px;
+  width: 100%;
+}
+.login-form input {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #eceff8;
+}
+.lost_password > a {
+  color: #F4A137;
+}
+.contact-form input[type="text"], .contact-form input[type="email"] {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #eceff8;
+  margin-bottom: 16px;
+}
+.contact-form textarea {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #eceff8;
+}
+.contact-form input[type="submit"] {
+  background: #252525 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 0;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  height: 40px;
+  margin-top: 16px;
+  padding: 0 15px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  width: 140px;
+}
+.contact-info h3, .contact-form h3 {
+  border-bottom: 2px solid #e8e8e9 !important;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.contact-info ul li i {
+  font-size: 16px;
+  margin-right: 5px;
+  width: 20px;
+}
+.login-area.pt-30 {
+  background: #fff;
+}
+/* ----------------------------------
+	6. Contact page
+ ------------------------------------*/
+
+.mainmenu-area.contact-us {
+    margin-bottom: 0;
+}
+.contact-area {
+    padding: 40px 0;
+}
+.contact-info h3,
+.contact-info h3, .contact-form h3 {
+  border-bottom: 2px solid #e8e8e9;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+  color: #333;
+}
+.contact-info h3:before {
+    content: "\f007";
+    display: inline-block;
+    font-family: FontAwesome;
+    margin-right: 5px;
+    vertical-align: text-bottom;
+}
+.contuct-us-page .contact-info ul li {
+  color: #333333;
+  border-bottom: 1px solid #e8e8e9;
+}
+.contuct-us-page .contact-info ul li {
+    float: left;
+    font-size: 12px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.contact-info ul li a {
+  color: #333;
+}
+.contact-info ul li i {
+    font-size: 16px;
+    margin-right: 5px;
+    width: 20px;
+}
+.contact-form input[type="text"], .contact-form input[type="email"] {
+  border: 1px solid #cccccc;
+  border-radius: 0;
+  height: 50px;
+  margin-bottom: 16px;
+  padding-left: 20px;
+  width: 100%;
+  background: #fff;
+}
+.contact-form textarea#message {
+  border: 1px solid #cccccc;
+  border-radius: 0;
+  height: 180px;
+  padding: 20px;
+  width: 100%;
+  background: #fff;
+}
+.contact-form input[type="submit"] {
+    background: #252525;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 15px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.contact-form input[type="submit"]:hover {
+    background: #f4a137;
+}
+.contact-form form button {
+  background: #252525 none repeat scroll 0 0;
+  border: 0 none;
+  color: #ffffff;
+  font-weight: 700;
+  height: 40px;
+  margin-top: 15px;
+  padding: 0 25px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+.contact-form form button:hover{
+	background:#F4A137;
+}
+.contuct-us-page .contact-info ul li {
+  color: #333;
+}
+
+.about-content > p {
+  font-family: proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
