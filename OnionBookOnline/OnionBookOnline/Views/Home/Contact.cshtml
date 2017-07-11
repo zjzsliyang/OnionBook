@@ -20,11 +20,11 @@
                     <ul>
                         <li>
                             <i class="fa fa-map-marker"></i> <strong>地址</strong>
-                           上海市嘉定区曹安公路4800号同济大学
+                            上海市嘉定区曹安公路4800号同济大学
                         </li>
                         <li>
                             <i class="fa fa-envelope"></i> <strong>邮箱</strong>
-                           zjzsliyang@gmail.com
+                            zjzsliyang@gmail.com
                         </li>
                         <li>
                             <i class="fa fa-gavel"></i> <strong>GitHub</strong>
@@ -36,7 +36,7 @@
             <!-- contact-info end -->
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="contact-form res">
-                    <h3><i class="fa fa-envelope-o"></i>建议</h3>
+                    <h3><i class="fa fa-envelope-o"></i> 建议</h3>
                     <div class="row">
                         <form id="contact-form" action="mail.php" method="post">
                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -67,7 +67,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="newletter-logo">
-                    <a href="#"><img src="img/logo.png" alt="" /></a>
+                    <a href="#"><img src="~/Images/logo2.png" alt="" /></a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -78,33 +78,25 @@
                     </form>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="subscribe-social text-right">
-                    <a href="#"><i class="fa fa-youtube"></i></a>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                </div>
-            </div>
         </div>
     </div>
 
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
-			function initialize() {
-			  var mapOptions = {
-				zoom: 15,
-				scrollwheel: false,
-				center: new google.maps.LatLng(31.2858616, 121.2086886)
-			  };
-			  var map = new google.maps.Map(document.getElementById('googleMap'),
-				  mapOptions);
-			  var marker = new google.maps.Marker({
-				position: map.getCenter(),
-				animation:google.maps.Animation.BOUNCE,
-				icon: 'img/map-icon.png',
-				map: map
-			  });
-			}
-			google.maps.event.addDomListener(window, 'load', initialize);
-    </script>	
+        function initialize() {
+            var mapOptions = {
+                zoom: 15,
+                scrollwheel: false,
+                center: new google.maps.LatLng(31.2858616, 121.2086886)
+            };
+            var map = new google.maps.Map(document.getElementById('googleMap'),
+                mapOptions);
+            var marker = new google.maps.Marker({
+                position: map.getCenter(),
+                animation: google.maps.Animation.BOUNCE,
+                icon: 'img/map-icon.png',
+                map: map
+            });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
