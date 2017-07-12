@@ -2,7 +2,7 @@
 
 42028903 Summer2017 Database Systems(Course Design) by Shijin YUAN @ SSE, TJU
 
-![](https://img.shields.io/badge/.NET-4.5.2-blue.svg) 
+![](https://img.shields.io/badge/.NET-4.5.2-blue.svg) ![test](https://img.shields.io/badge/test-passing-brightgreen.svg)
 
 ------
 
@@ -24,6 +24,14 @@
 - Oracle Database 12c
 - Visual Studio 2015(alt: 2013, 2017)
 
+## How to Run
+
+1. Clone the Repository
+2. Change Directory(cd) to ``OnionBookOnline`` folder
+3. Open ``OnionBookOnline.sln`` with Visual Studio(test passing on 2015 & 2017 version)
+4. Restore the package with NuGet
+5. Run with Google Chrome(recommended)
+
 ## Functionality
 
 | 用户                 | 管理员            | 系统         |
@@ -41,7 +49,7 @@
 | 购买记录（查看历史订单）       |                |            |
 | 收货地址（添加、移除、查看）     |                |            |
 
-## Database Design
+## Database
 
 ### E-R Diagram
 
@@ -51,9 +59,7 @@
 
 ![DatabaseModel](Res/Export/DatabaseModel.png)
 
-
-
-## Book type 
+### Book Type
 
 | 文学   | 流行   | 文化   | 生活   | 经管   | 科技   |
 | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -65,6 +71,12 @@
 | 杂文   | 武侠   | 政治   | 家居   | 理财   | 通信   |
 | 儿童   | 青春   | 建筑   | 职场   | 股票   | 程序   |
 | 名著   | 悬疑   | 宗教   | 两性   | 广告   | 互联网  |
+
+## Back-end
+
+### Database Connection
+
+
 
 ## Front-end(provisional)
 
@@ -90,15 +102,9 @@
 | 收藏     | /onionbook/account/star/?id=客户编号/        | 客户编号                       | 所有商品：图片、名字、作者、出版商、折后价格                   |
 | 历史订单列表 | /onionbook/accout/orderlist/?id=客户编号/    | 客户编号                       | 所有订单：编号、状态、总价；每个订单所有商品：图片、名字、数量、折后价格。    |
 
-#### 其他操作
+### Others
 
 | 操作    | 前端->后端  | 后端->前端 |
 | ----- | ------- | ------ |
 | 加入购物车 | 商品编号、数量 | 加入是否成功 |
-
-
-
-## Back-end
-
-
 
