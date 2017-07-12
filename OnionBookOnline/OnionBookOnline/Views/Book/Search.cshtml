@@ -1,4 +1,6 @@
-﻿<!-- breadcrumb start -->
+﻿@model OnionBookOnline.Models.BookViewModel
+
+<!-- breadcrumb start -->
 <div class="breadcrumb-area">
     <div class="container">
         <ol class="breadcrumb">
@@ -93,10 +95,11 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-9 col-sm-8">
                 <h2 class="page-heading mt-40">
-                    <span class="cat-name">Sofa</span>
-                    <span class="heading-counter">There are 13 products.</span>
+                    <span class="cat-name">@ViewBag.keywords</span>
+                    <span class="heading-counter">找到 @Model.srcBook.Count 项。</span>
                 </h2>
                 <div class="shop-page-bar">
                     <div>

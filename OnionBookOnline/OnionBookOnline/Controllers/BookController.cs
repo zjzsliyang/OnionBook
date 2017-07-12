@@ -29,6 +29,7 @@ namespace OnionBookOnline.Controllers
         public ActionResult Search(string standard, string keywords)
         {
             var bkVM = new BookViewModel();
+            ViewBag.keywords = keywords;
             switch (standard)
             {
                 case "bookname":
