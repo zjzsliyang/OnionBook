@@ -10,7 +10,7 @@ namespace OnionBookOnline.Models
         [Column(TypeName = "varchar2")]
         public string AUTHORID { get; set; }
 
-        [MaxLength(256)]
+        [MaxLength(128)]
         [Column(TypeName = "varchar2")]
         public string NAME { get; set; }
     }

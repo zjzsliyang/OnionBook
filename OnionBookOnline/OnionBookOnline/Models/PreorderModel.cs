@@ -8,15 +8,14 @@ namespace OnionBookOnline.Models
     {
         [Key]
         [MaxLength(128)]
-        [Column(TypeName = "varchar2")]
+        [Column(Order = 1, TypeName = "varchar2")]
         public string CUSTOMERID { get; set; }
 
         [Key]
         [MaxLength(128)]
-        [Column(TypeName = "varchar2")]
+        [Column(Order = 2, TypeName = "varchar2")]
         public string BOOKID { get; set; }
 
-        [Column(TypeName = "number(4,0)")]
         public int AMOUNT { get; set; }
     }
 }

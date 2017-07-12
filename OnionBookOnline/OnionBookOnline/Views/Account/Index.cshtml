@@ -1,7 +1,33 @@
-﻿
+﻿@using OnionBookOnline.Models
+@model IEnumerable<ApplicationUser>
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        User Accounts
+    </div>
+    <table class="table table-striped">
+        <tr><th>ID</th><th>Name</th><th>Email</th></tr>
+        @if (Model.Count() == 0)
+        {
+            <tr><td colspan="3" class="text-center">No User Accounts</td></tr>
+        }
+        else
+        {
+            foreach (ApplicationUser user in Model)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.UserName</td>
+                    <td>@user.Email</td>
+                </tr>
+            }
+        }
+    </table>
+</div>
+@Html.ActionLink("Create", "Create", null, new { @class = "btn btn-primary" })
+ 

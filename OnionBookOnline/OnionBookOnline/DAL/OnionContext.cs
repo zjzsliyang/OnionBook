@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using OnionBookOnline.Models;
 using System.Data.Entity;
-using System.Linq;
-using System.Web;
-using Oracle.ManagedDataAccess.Client;
-using Oracle.ManagedDataAccess.EntityFramework;
-using OnionBookOnline.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace OnionBookOnline.DAL
 {
@@ -28,7 +23,7 @@ namespace OnionBookOnline.DAL
 
         public DbSet<AREA> areas { get; set; }
 
-        public DbSet<AUTHOR> authors{ get; set; }
+        public DbSet<AUTHOR> authors { get; set; }
 
         public DbSet<BOOK> books { get; set; }
 
@@ -36,7 +31,7 @@ namespace OnionBookOnline.DAL
 
         public DbSet<CITY> citys { get; set; }
 
-        public DbSet<CONTAIN> contains  { get; set; }
+        public DbSet<CONTAIN> contains { get; set; }
 
         public DbSet<COUNTRY> countrys { get; set; }
 

@@ -88,10 +88,10 @@
 |        | /onionbook/home/contact                  |                            |                                          |
 | 登陆     | /onionbook/account/login/                | 1. 客户：客户编号、密码              | 登陆是否成功                                   |
 | 注册     | /onionbook/account/register/             | 1. 客户：客户姓名、密码              | 返回                                       |
-| 搜索结果页面 | /onionbook/book/search/?standard=bookname&keyword=书名/ | 1. 搜索标准（图书）；2 . 关键词：书名     | 所有搜索结果的图书：名字、折前价格、折后价格、图片、评分、销量；         |
-|        | /onionbook/book/search/?standard=author&keyword=作者/ | 1. 搜索标准（作者）；2 . 关键词：作者     | 所有搜索结果的图书：名字、折前价格、折后价格、图片、评分、销量；         |
-|        | /onionbook/book/search/?standard=publisher&keyword=出版社/ | 1. 搜索标准（出版社）；2 . 关键词：出版社   | 所有搜索结果的图书：名字、折前价格、折后价格、图片、评分、销量；         |
-|        | /onionbook/book/search/?standard=isbn&keyword=ISBN号/ | 1. 搜索标准（ISBN）；2 . 关键词：ISBN | 所有搜索结果的图书：名字、折前价格、折后价格、图片、评分、销量；         |
+| 搜索结果页面 | /onionbook/book/search/?standard=bookname&keywords=书名/ | 1. 搜索标准（图书）；2 . 关键词：书名     | 所有搜索结果的图书：名字、折前价格、折后价格、图片、评分、销量；         |
+|        | /onionbook/book/search/?standard=author&keywords=作者/ | 1. 搜索标准（作者）；2 . 关键词：作者     | 所有搜索结果的图书：名字、折前价格、折后价格、图片、评分、销量；         |
+|        | /onionbook/book/search/?standard=publisher&keywords=出版社/ | 1. 搜索标准（出版社）；2 . 关键词：出版社   | 所有搜索结果的图书：名字、折前价格、折后价格、图片、评分、销量；         |
+|        | /onionbook/book/search/?standard=isbn&keywords=ISBN号/ | 1. 搜索标准（ISBN）；2 . 关键词：ISBN | 所有搜索结果的图书：名字、折前价格、折后价格、图片、评分、销量；         |
 | 分类页面   | /onionbook/book/type/?typename=类别名/      | 类别                         | 所有搜索结果的图书：名字、折前价格、折后价格、图片、评分、销量；         |
 | 商品详细信息 | /onionbook/book/bookdetail/?id=图书编号/     | 图书编号                       | 图书：名字、isbn、折前价格、折后价格、出版商、页数、销量、库存、图片、作者名字、第一二级分类、所有评论：客户编号、评分、内容、时间。 |
 | 创建订单   | /onionbook/account/order/createorder/    | 商品编号、数量                    | 是否创建成功                                   |
