@@ -43,7 +43,7 @@ namespace OnionBookOnline.Models
 
         [MaxLength(128)]
         [Column(TypeName = "varchar2")]
-        public string PUBLICHINGDATE { get; set; }
+        public string PUBLISHINGDATE { get; set; }
 
         public int SALE { get; set; }
     }

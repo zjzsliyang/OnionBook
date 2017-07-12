@@ -1,5 +1,6 @@
 ﻿using OnionBookOnline.Models;
 using System.Data.Entity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace OnionBookOnline.DAL
 {
