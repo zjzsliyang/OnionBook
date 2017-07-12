@@ -1,5 +1,10 @@
 ﻿@using OnionBookOnline.Models
 @model LoginViewModel
+@{
+    ViewBag.count = "1";
+    ViewBag.prize = "244元";
+    ViewBag.item = new string[] { "假装是一本书", "数量：1", "244元" };
+}
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -53,14 +58,14 @@
                         <div class="header-top-right">
                             <ul>
                                 <li class="slide-toggle">
-                                    
+
                                     <a href="#"><i class="fa fa-user"> 我的账户</i></a>
                                     <ul class="show-toggle">
                                         <li>
-                                            <a href="../Account/Login">登录</a>
+                                            <a href="~/Account/Login">登录</a>
                                         </li>
                                         <li>
-                                            <a href="../Account/Register">注册</a>
+                                            <a href="~/Account/Register">注册</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -271,10 +276,10 @@
                                     <a href="~/">主页</a>
                                 </li>
                                 <li>
-                                    <a href="~/book/top">图书推荐</a>
+                                    <a href="~/book/recommend">图书推荐</a>
                                 </li>
                                 <li>
-                                    <a href="~/book/new">热卖图书</a>
+                                    <a href="~/book/hot">热卖图书</a>
                                 </li>
                                 <li>
                                     <a href="~/book/new">新书上架</a>

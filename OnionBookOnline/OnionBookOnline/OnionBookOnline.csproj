@@ -305,6 +305,10 @@
     <Content Include="Views\Book\Index.cshtml" />
     <Content Include="Views\Book\Search.cshtml" />
     <Content Include="Views\Account\Checkout.cshtml" />
+    <Content Include="Views\Book\Hot.cshtml" />
+    <Content Include="Views\Book\New.cshtml" />
+    <Content Include="Views\Book\Recommend.cshtml" />
+    <Content Include="Views\Account\OrderComplete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

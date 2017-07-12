@@ -18,5 +18,20 @@ namespace OnionBookOnline.Controllers
         {
             return View();
         }
+
+        public ActionResult Recommend()
+        {
+            return View();
+        }
+
+        public ActionResult New()
+        {
+            return View();
+        }
+
+        public ActionResult Hot()
+        {
+            return View();
+        }
     }
 }

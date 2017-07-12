@@ -53,6 +53,10 @@ namespace OnionBookOnline.Controllers
             }
         }
 
+        public ActionResult OrderComplete()
+        {
+            return View();
+        }
         public ActionResult Index()
         {
             return View();
