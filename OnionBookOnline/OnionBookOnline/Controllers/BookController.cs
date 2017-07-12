@@ -34,5 +34,10 @@ namespace OnionBookOnline.Controllers
         {
             return View();
         }
+
+        public ActionResult Type()
+        {
+            return View();
+        }
     }
 }
