@@ -1,4 +1,7 @@
-﻿<!doctype html>
+﻿@using OnionBookOnline.Models
+@model LoginViewModel
+
+<!doctype html>
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
@@ -50,7 +53,8 @@
                         <div class="header-top-right">
                             <ul>
                                 <li class="slide-toggle">
-                                    <a href="#"><i class="fa fa-user">我的账户</i></a>
+                                    
+                                    <a href="#"><i class="fa fa-user"> 我的账户</i></a>
                                     <ul class="show-toggle">
                                         <li>
                                             <a href="../Account/Login">登录</a>
@@ -109,7 +113,6 @@
                                                 <span class="price">@ViewBag.prize </span>
                                             </a>
                                         </div>
-
                                         <div class="top-cart-content" id="cart">
                                             <ol class="mini-products-list">
                                                 <!-- single item -->
@@ -137,6 +140,8 @@
                                             <div class="cart-actions">
                                                 <button><span>结账</span></button>
                                             </div>
+
+
                                         </div>
 
                                     </div>
@@ -315,7 +320,7 @@
                                         <li> <a href="~/book/type/?typename=photography/">摄影</a></li>
                                         <li> <a href="~/book/type/?typename=food/">美食</a></li>
                                         <li> <a href="~/book/type/?typename=health/">健康</a></li>
-                                        <li> <a href="~/book/type/?typename=education"/>教育</a></li>
+                                        <li> <a href="~/book/type/?typename=education" />教育</a></li>
                                         <li> <a href="~/book/type/?typename=home/">家居</a></li>
                                         <li> <a href="~/book/type/?typename=workplace/">职场</a></li>
                                         <li> <a href="~/book/type/?typename=gender/">两性</a></li>
