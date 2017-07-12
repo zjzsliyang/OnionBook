@@ -16,12 +16,30 @@ namespace OnionBookOnline.Controllers
             var bkVM = new BookViewModel();
             using (var context = new OnionContext())
             {
-                var query = from a in context.books
-                            where a.BOOKID == id
-                            select a;
+                var query = from b in context.books
+                            join c in context.pictures on b.BOOKID equals c.BOOKID
+                            join d in context.writes on b.BOOKID equals d.BOOKID
+                            join e in context.authors on d.AUTHORID equals e.AUTHORID
+                            where b.BOOKID == id
+                            select new Detailbook()
+                            {
+                                ID = b.BOOKID,
+                                NAME = b.NAME,
+                                ISBN = b.ISBN,
+                                CATEGORYID = b.PRIMARYID,
+                                PUBLISHER = b.PUBLISHER,
+                                PAGES = b.PAGES,
+                                PUBLISHINGDATE = b.PUBLISHINGDATE,
+                                STOCK = b.STOCK,
+                                SCORE = b.SCORE,
+                                PRICE = b.PRICE,
+                                DISCOUNT = b.DISCOUNT,
+                                SALE = b.SALE,
+                                PATH = c.PATH,
+                                AUTHOR = e.NAME
+                            };
                 var res = query.First();
                 bkVM.detailBook = res;
-
             }
             return View(bkVM);
         }
@@ -35,10 +53,29 @@ namespace OnionBookOnline.Controllers
                     {
                         using (var context = new OnionContext())
                         {
-                            var query = from a in context.books
-                                        where a.NAME == keywords
-                                        select a;
-                            bkVM.srcBook = new List<BOOK>(query.ToList());
+                            var query = from b in context.books
+                                        join c in context.pictures on b.BOOKID equals c.BOOKID
+                                        join d in context.writes on b.BOOKID equals d.BOOKID
+                                        join e in context.authors on d.AUTHORID equals e.AUTHORID
+                                        where b.NAME.Contains(keywords)
+                                        select new Detailbook()
+                                        {
+                                            ID = b.BOOKID,
+                                            NAME = b.NAME,
+                                            ISBN = b.ISBN,
+                                            CATEGORYID = b.PRIMARYID,
+                                            PUBLISHER = b.PUBLISHER,
+                                            PAGES = b.PAGES,
+                                            PUBLISHINGDATE = b.PUBLISHINGDATE,
+                                            STOCK = b.STOCK,
+                                            SCORE = b.SCORE,
+                                            PRICE = b.PRICE,
+                                            DISCOUNT = b.DISCOUNT,
+                                            SALE = b.SALE,
+                                            PATH = c.PATH,
+                                            AUTHOR = e.NAME
+                                        };
+                            bkVM.srcBook = new List<Detailbook>(query.ToList());
                         }
                         return View(bkVM);
                     }
@@ -46,10 +83,29 @@ namespace OnionBookOnline.Controllers
                     {
                         using (var context = new OnionContext())
                         {
-                            var query = from a in context.books
-                                        where a.NAME == keywords
-                                        select a;
-                            bkVM.srcBook = new List<BOOK>(query.ToList());
+                            var query = from b in context.books
+                                        join c in context.pictures on b.BOOKID equals c.BOOKID
+                                        join d in context.writes on b.BOOKID equals d.BOOKID
+                                        join e in context.authors on d.AUTHORID equals e.AUTHORID
+                                        where e.NAME.Contains(keywords)
+                                        select new Detailbook()
+                                        {
+                                            ID = b.BOOKID,
+                                            NAME = b.NAME,
+                                            ISBN = b.ISBN,
+                                            CATEGORYID = b.PRIMARYID,
+                                            PUBLISHER = b.PUBLISHER,
+                                            PAGES = b.PAGES,
+                                            PUBLISHINGDATE = b.PUBLISHINGDATE,
+                                            STOCK = b.STOCK,
+                                            SCORE = b.SCORE,
+                                            PRICE = b.PRICE,
+                                            DISCOUNT = b.DISCOUNT,
+                                            SALE = b.SALE,
+                                            PATH = c.PATH,
+                                            AUTHOR = e.NAME
+                                        };
+                            bkVM.srcBook = new List<Detailbook>(query.ToList());
                         }
                         return View(bkVM);
                     }
@@ -57,10 +113,29 @@ namespace OnionBookOnline.Controllers
                     {
                         using (var context = new OnionContext())
                         {
-                            var query = from a in context.books
-                                        where a.PUBLISHER == keywords
-                                        select a;
-                            bkVM.srcBook = new List<BOOK>(query.ToList());
+                            var query = from b in context.books
+                                        join c in context.pictures on b.BOOKID equals c.BOOKID
+                                        join d in context.writes on b.BOOKID equals d.BOOKID
+                                        join e in context.authors on d.AUTHORID equals e.AUTHORID
+                                        where b.PUBLISHER.Contains(keywords)
+                                        select new Detailbook()
+                                        {
+                                            ID = b.BOOKID,
+                                            NAME = b.NAME,
+                                            ISBN = b.ISBN,
+                                            CATEGORYID = b.PRIMARYID,
+                                            PUBLISHER = b.PUBLISHER,
+                                            PAGES = b.PAGES,
+                                            PUBLISHINGDATE = b.PUBLISHINGDATE,
+                                            STOCK = b.STOCK,
+                                            SCORE = b.SCORE,
+                                            PRICE = b.PRICE,
+                                            DISCOUNT = b.DISCOUNT,
+                                            SALE = b.SALE,
+                                            PATH = c.PATH,
+                                            AUTHOR = e.NAME
+                                        };
+                            bkVM.srcBook = new List<Detailbook>(query.ToList());
                         }
                         return View(bkVM);
                     }
@@ -68,10 +143,29 @@ namespace OnionBookOnline.Controllers
                     {
                         using (var context = new OnionContext())
                         {
-                            var query = from a in context.books
-                                        where a.ISBN == keywords
-                                        select a;
-                            bkVM.srcBook = new List<BOOK>(query.ToList());
+                            var query = from b in context.books
+                                        join c in context.pictures on b.BOOKID equals c.BOOKID
+                                        join d in context.writes on b.BOOKID equals d.BOOKID
+                                        join e in context.authors on d.AUTHORID equals e.AUTHORID
+                                        where b.ISBN.Contains(keywords)
+                                        select new Detailbook()
+                                        {
+                                            ID = b.BOOKID,
+                                            NAME = b.NAME,
+                                            ISBN = b.ISBN,
+                                            CATEGORYID = b.PRIMARYID,
+                                            PUBLISHER = b.PUBLISHER,
+                                            PAGES = b.PAGES,
+                                            PUBLISHINGDATE = b.PUBLISHINGDATE,
+                                            STOCK = b.STOCK,
+                                            SCORE = b.SCORE,
+                                            PRICE = b.PRICE,
+                                            DISCOUNT = b.DISCOUNT,
+                                            SALE = b.SALE,
+                                            PATH = c.PATH,
+                                            AUTHOR = e.NAME
+                                        };
+                            bkVM.srcBook = new List<Detailbook>(query.ToList());
                         }
                         return View(bkVM);
                     }
@@ -85,11 +179,30 @@ namespace OnionBookOnline.Controllers
             var bkVM = new BookViewModel();
             using (var context = new OnionContext())
             {
-                var query = from a in context.books
-                            select a;
+                var query = from b in context.books
+                            join c in context.pictures on b.BOOKID equals c.BOOKID
+                            join d in context.writes on b.BOOKID equals d.BOOKID
+                            join e in context.authors on d.AUTHORID equals e.AUTHORID
+                            select new Detailbook()
+                            {
+                                ID = b.BOOKID,
+                                NAME = b.NAME,
+                                ISBN = b.ISBN,
+                                CATEGORYID = b.PRIMARYID,
+                                PUBLISHER = b.PUBLISHER,
+                                PAGES = b.PAGES,
+                                PUBLISHINGDATE = b.PUBLISHINGDATE,
+                                STOCK = b.STOCK,
+                                SCORE = b.SCORE,
+                                PRICE = b.PRICE,
+                                DISCOUNT = b.DISCOUNT,
+                                SALE = b.SALE,
+                                PATH = c.PATH,
+                                AUTHOR = e.NAME
+                            };
+                bkVM.recBook = new List<Detailbook>(query.ToList());
                 query = query.OrderBy(a => a.SCORE);
                 var res = query.ToList();
-                bkVM.recBook = new List<BOOK>();
                 for (int i = 0; i < 10; ++i)
                 {
                     bkVM.recBook.Add(res[i]);
@@ -103,11 +216,30 @@ namespace OnionBookOnline.Controllers
             var bkVM = new BookViewModel();
             using (var context = new OnionContext())
             {
-                var query = from a in context.books
-                            select a;
+                var query = from b in context.books
+                            join c in context.pictures on b.BOOKID equals c.BOOKID
+                            join d in context.writes on b.BOOKID equals d.BOOKID
+                            join e in context.authors on d.AUTHORID equals e.AUTHORID
+                            select new Detailbook()
+                            {
+                                ID = b.BOOKID,
+                                NAME = b.NAME,
+                                ISBN = b.ISBN,
+                                CATEGORYID = b.PRIMARYID,
+                                PUBLISHER = b.PUBLISHER,
+                                PAGES = b.PAGES,
+                                PUBLISHINGDATE = b.PUBLISHINGDATE,
+                                STOCK = b.STOCK,
+                                SCORE = b.SCORE,
+                                PRICE = b.PRICE,
+                                DISCOUNT = b.DISCOUNT,
+                                SALE = b.SALE,
+                                PATH = c.PATH,
+                                AUTHOR = e.NAME
+                            };
+                bkVM.newBook = new List<Detailbook>(query.ToList());
                 query = query.OrderBy(a => a.PUBLISHINGDATE);
                 var res = query.ToList();
-                bkVM.newBook = new List<BOOK>();
                 for (int i = 0; i < 16; ++i)
                 {
                     bkVM.newBook.Add(res[i]);
@@ -121,11 +253,30 @@ namespace OnionBookOnline.Controllers
             var bkVM = new BookViewModel();
             using (var context = new OnionContext())
             {
-                var query = from a in context.books
-                            select a;
+                var query = from b in context.books
+                            join c in context.pictures on b.BOOKID equals c.BOOKID
+                            join d in context.writes on b.BOOKID equals d.BOOKID
+                            join e in context.authors on d.AUTHORID equals e.AUTHORID
+                            select new Detailbook()
+                            {
+                                ID = b.BOOKID,
+                                NAME = b.NAME,
+                                ISBN = b.ISBN,
+                                CATEGORYID = b.PRIMARYID,
+                                PUBLISHER = b.PUBLISHER,
+                                PAGES = b.PAGES,
+                                PUBLISHINGDATE = b.PUBLISHINGDATE,
+                                STOCK = b.STOCK,
+                                SCORE = b.SCORE,
+                                PRICE = b.PRICE,
+                                DISCOUNT = b.DISCOUNT,
+                                SALE=b.SALE,
+                                PATH = c.PATH,
+                                AUTHOR = e.NAME
+                            };
+                bkVM.hotBook = new List<Detailbook>(query.ToList());
                 query = query.OrderBy(a => a.SALE);
                 var res = query.ToList();
-                bkVM.hotBook = new List<BOOK>();
                 for (int i = 0; i < 10; ++i)
                 {
                     bkVM.hotBook.Add(res[i]);

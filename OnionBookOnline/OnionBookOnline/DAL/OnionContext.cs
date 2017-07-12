@@ -29,32 +29,32 @@ namespace OnionBookOnline.DAL
 
         public DbSet<CATEGORY> categorys { get; set; }
 
-        //public DbSet<CITY> citys { get; set; }
+        public DbSet<CITY> citys { get; set; }
 
-        //public DbSet<CONTAIN> contains  { get; set; }
+        public DbSet<CONTAIN> contains { get; set; }
 
-        //public DbSet<COUNTRY> countrys { get; set; }
+        public DbSet<COUNTRY> countrys { get; set; }
 
-        //public DbSet<CUSTOMER> customers { get; set; }
+        public DbSet<CUSTOMER> customers { get; set; }
 
-        //public DbSet<ENGAGE> engages { get; set; }
+        public DbSet<ENGAGE> engages { get; set; }
 
-        //public DbSet<OCOMMENT> ocomments { get; set; }
+        public DbSet<OCOMMENT> ocomments { get; set; }
 
-        //public DbSet<OORDER> oorders { get; set; }
+        public DbSet<OORDER> oorders { get; set; }
 
-        //public DbSet<PICTURE> pictures { get; set; }
+        public DbSet<PICTURE> pictures { get; set; }
 
-        //public DbSet<PREORDER> preorders { get; set; }
+        public DbSet<PREORDER> preorders { get; set; }
 
-        //public DbSet<PRIMARYCATEGORY> primarycategorys { get; set; }
+        public DbSet<PRIMARYCATEGORY> primarycategorys { get; set; }
 
-        //public DbSet<PROVINCE> provinces { get; set; }
+        public DbSet<PROVINCE> provinces { get; set; }
 
-        //public DbSet<RECIPIENT> recipients { get; set; }
+        public DbSet<RECIPIENT> recipients { get; set; }
 
-        //public DbSet<STAR> stars { get; set; }
+        public DbSet<STAR> stars { get; set; }
 
-        //public DbSet<WRITE> writes { get; set; }
+        public DbSet<WRITE> writes { get; set; }
     }
 }

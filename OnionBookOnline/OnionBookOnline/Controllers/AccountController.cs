@@ -57,10 +57,12 @@ namespace OnionBookOnline.Controllers
         {
             return View();
         }
+
         public ActionResult Index()
         {
-            return View();
+            return View(UserManager.Users);
         }
+
         public ActionResult Orderlist()
         {
             return View();
