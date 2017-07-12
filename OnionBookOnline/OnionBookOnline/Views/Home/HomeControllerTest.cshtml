@@ -1,0 +1,249 @@
+﻿@model OnionBookOnline.Models.HomeIndexViewModel
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.bpsLit[0].NAME)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.bpsLit[0].AUTHORNAME)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.bpsLit[0].SCORE)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.bpsLit[0].PRICE)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.bpsLit[0].DISCOUNT)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.bpsLit[0].PATH)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.bpsLit)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AUTHORNAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SCORE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PRICE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DISCOUNT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PATH)
+                        </td>
+                    </tr>
+                }
+                @foreach (var item in Model.bpsPop)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AUTHORNAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SCORE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PRICE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DISCOUNT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PATH)
+                        </td>
+                    </tr>
+                }
+                @foreach (var item in Model.bpsCul)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AUTHORNAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SCORE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PRICE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DISCOUNT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PATH)
+                        </td>
+                    </tr>
+                }
+                @foreach (var item in Model.bpsLif)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AUTHORNAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SCORE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PRICE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DISCOUNT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PATH)
+                        </td>
+                    </tr>
+                }
+                @foreach (var item in Model.bpsEco)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AUTHORNAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SCORE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PRICE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DISCOUNT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PATH)
+                        </td>
+                    </tr>
+                }
+                @foreach (var item in Model.bpsTec)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AUTHORNAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SCORE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PRICE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DISCOUNT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PATH)
+                        </td>
+                    </tr>
+                }
+                @foreach (var item in Model.bpsRank)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AUTHORNAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SCORE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PRICE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DISCOUNT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PATH)
+                        </td>
+                    </tr>
+                }
+                @foreach (var item in Model.bpsScore)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AUTHORNAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SCORE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PRICE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DISCOUNT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PATH)
+                        </td>
+                    </tr>
+                }
+                @foreach (var item in Model.bpsLatest)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AUTHORNAME)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SCORE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PRICE)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DISCOUNT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PATH)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
