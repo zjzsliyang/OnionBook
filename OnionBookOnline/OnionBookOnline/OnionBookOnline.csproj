@@ -333,7 +333,11 @@
     <Content Include="Views\Book\New.cshtml" />
     <Content Include="Views\Book\Recommend.cshtml" />
     <Content Include="Views\Account\OrderComplete.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\ConnTest\Index.cshtml" />
+=======
+    <Content Include="Views\Book\Type.cshtml" />
+>>>>>>> master
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

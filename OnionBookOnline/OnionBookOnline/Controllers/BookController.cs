@@ -13,6 +13,7 @@ namespace OnionBookOnline.Controllers
         // GET: Book
         public ActionResult Index(string id)
         {
+<<<<<<< HEAD
             var bkVM = new BookViewModel();
             using (var context = new OnionContext())
             {
@@ -24,6 +25,10 @@ namespace OnionBookOnline.Controllers
 
             }
             return View(bkVM);
+=======
+
+            return View();
+>>>>>>> master
         }
 
         public ActionResult Search(string standard, string keywords)
@@ -133,6 +138,11 @@ namespace OnionBookOnline.Controllers
                 }
             }
             return View(bkVM);
+        }
+
+        public ActionResult Type()
+        {
+            return View();
         }
     }
 }

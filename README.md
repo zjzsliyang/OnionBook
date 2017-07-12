@@ -2,21 +2,21 @@
 
 42028903 Summer2017 Database Systems(Course Design) by Shijin YUAN @ SSE, TJU
 
-![](https://img.shields.io/badge/.NET-4.5.2-blue.svg) 
+![](https://img.shields.io/badge/.NET-4.5.2-blue.svg) ![test](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 ------
 
 *TA: [Xiang ZHANG](mailto:546919127@qq.com) & [Zhenhao MEI](mailto:546919127@qq.com)*
 
-## Contributors(provisional)
-
-**Full Stack**: 1452669 [李阳](https://github.com/zjzsliyang)
+## Contributors
 
 | Front-end                                | Back-end                                 | Database                                 |
 | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
-| 1552651 [王依睿](https://github.com/Charon0622) | 1552618 [姜逸之](https://github.com/Ginufet) | 1453645 [罗忠金](https://github.com/tjluozhongjin) |
-| 1552745 [刘一宁](https://github.com/Eclear) | 1552701 [王晓文](https://github.com/WANGXiaowen0904) | 1451228 [杨国辉](https://github.com/Yghifi) |
-| 1552726 [余行健](https://github.com/ThomasFisher196) | 1454091 [倪政](https://github.com/frank1129) | 1552649 [杜若衡](https://github.com/Wortspieldrh) |
+| 1452669 [李阳](https://github.com/zjzsliyang) | 1552618 [姜逸之](https://github.com/Ginufet) | 1453645 [罗忠金](https://github.com/tjluozhongjin) |
+| 1552651 [王依睿](https://github.com/Charon0622) | 1552701 [王晓文](https://github.com/WANGXiaowen0904) | 1451228 [杨国辉](https://github.com/Yghifi) |
+|                                          | 1454091 [倪政](https://github.com/frank1129) | 1552649 [杜若衡](https://github.com/Wortspieldrh) |
+|                                          | 1552726 [余行健](https://github.com/ThomasFisher196) |                                          |
+|                                          | 1552745 [刘一宁](https://github.com/Eclear) |                                          |
 
 ## Prerequisites
 
@@ -24,14 +24,22 @@
 - Oracle Database 12c
 - Visual Studio 2015(alt: 2013, 2017)
 
+## How to Run
+
+1. Clone the Repository
+2. Change Directory(cd) to ``OnionBookOnline`` folder
+3. Open ``OnionBookOnline.sln`` with Visual Studio(test passing on 2015 & 2017 version)
+4. Restore the package with NuGet
+5. Run with Google Chrome(recommended)
+
 ## Functionality
 
 | 用户                 | 管理员            | 系统         |
 | ------------------ | -------------- | ---------- |
 | 用户注册               | 商品管理（添加、删除、修改） | 排行榜        |
-| 用户登录               | 发布广告（添加、删除、查看） | 洋葱钱包       |
-| 用户信息修改             | 折扣（添加、删除、修改）   | 洋葱积分       |
-| 商品搜索（关键字、分类）       |                | 用户折扣（下单改价） |
+| 用户登录               | 发布广告（添加、删除、查看） | 用户折扣（下单改价） |
+| 用户信息修改             | 折扣（添加、删除、修改）   |            |
+| 商品搜索（关键字、分类）       |                |            |
 | 商品查看（信息、评价、书评）     |                |            |
 | 商品评价（评价、写书评）       |                |            |
 | 购物车（添加、移除、修改数量、查看） |                |            |
@@ -39,11 +47,9 @@
 | 未支付订单（创建、删除、查看状态）  |                |            |
 | 已支付订单（查看状态、退货）     |                |            |
 | 购买记录（查看历史订单）       |                |            |
-| 洋葱钱包               |                |            |
-| 洋葱积分               |                |            |
 | 收货地址（添加、移除、查看）     |                |            |
 
-## Database Design
+## Database
 
 ### E-R Diagram
 
@@ -53,9 +59,7 @@
 
 ![DatabaseModel](Res/Export/DatabaseModel.png)
 
-
-
-## Book type 
+### Book Type
 
 | 文学   | 流行   | 文化   | 生活   | 经管   | 科技   |
 | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -67,6 +71,12 @@
 | 杂文   | 武侠   | 政治   | 家居   | 理财   | 通信   |
 | 儿童   | 青春   | 建筑   | 职场   | 股票   | 程序   |
 | 名著   | 悬疑   | 宗教   | 两性   | 广告   | 互联网  |
+
+## Back-end
+
+### Database Connection
+
+
 
 ## Front-end(provisional)
 
@@ -92,15 +102,9 @@
 | 收藏     | /onionbook/account/star/?id=客户编号/        | 客户编号                       | 所有商品：图片、名字、作者、出版商、折后价格                   |
 | 历史订单列表 | /onionbook/accout/orderlist/?id=客户编号/    | 客户编号                       | 所有订单：编号、状态、总价；每个订单所有商品：图片、名字、数量、折后价格。    |
 
-#### 其他操作
+### Others
 
 | 操作    | 前端->后端  | 后端->前端 |
 | ----- | ------- | ------ |
 | 加入购物车 | 商品编号、数量 | 加入是否成功 |
-
-
-
-## Back-end
-
-
 
