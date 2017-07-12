@@ -327,3 +327,5 @@ _[Ss]cripts
 *.ncrunchsolution
 *.dot[Cc]over
 
+*.texpadtmp
+
