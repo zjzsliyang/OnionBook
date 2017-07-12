@@ -272,22 +272,22 @@
                     <div class="mainmenu">
                         <nav>
                             <ul>
-                                <li class="active">
+                                <li id="index">
                                     <a href="~/">主页</a>
                                 </li>
-                                <li>
+                                <li id="recommend">
                                     <a href="~/book/recommend">图书推荐</a>
                                 </li>
-                                <li>
+                                <li id="hot">
                                     <a href="~/book/hot">热卖图书</a>
                                 </li>
-                                <li>
+                                <li id="new">
                                     <a href="~/book/new">新书上架</a>
                                 </li>
-                                <li>
+                                <li id="order">
                                     <a href="~/account/orderlist">历史订单</a>
                                 </li>
-                                <li>
+                                <li id="contact">
                                     <a href="~/home/contact">关于我们</a>
                                 </li>
                             </ul>
@@ -421,6 +421,28 @@
     <script>
         if (window.location.href != "http://localhost:52570/") {
             document.getElementsByClassName('product_vmegamenu')[0].style.display = 'none'
+        }
+    </script>
+    <script>
+        switch (window.location.href) {
+            case 'http://localhost:52570/book/recommend':
+                $('li[id=recommend]').addClass('active');
+                break;
+            case 'http://localhost:52570/book/hot':
+                $('li[id=hot]').addClass('active');
+                break;
+            case 'http://localhost:52570/book/new':
+                $('li[id=new]').addClass('active');
+                break;
+            case 'http://localhost:52570/home/contact':
+                $('li[id=contact]').addClass('active');
+                break;
+            case 'http://localhost:52570/account/orderlist':
+                $('li[id=order]').addClass('active');
+                break;
+            default:
+                $('li[id=index]').addClass('active');
+                break;
         }
     </script>
     <!-- jquery-1.12.0 -->
