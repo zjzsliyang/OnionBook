@@ -27,6 +27,7 @@
     <!-- responsive.css -->
     <link rel="stylesheet" href="~/Content/responsive.css">
     <script src="~/Scripts/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 </head>
 
 <body>
@@ -108,7 +109,8 @@
                                                 <span class="price">@ViewBag.prize </span>
                                             </a>
                                         </div>
-                                        <div class="top-cart-content">
+
+                                        <div class="top-cart-content" id="cart">
                                             <ol class="mini-products-list">
                                                 <!-- single item -->
                                                 <li>
@@ -117,7 +119,7 @@
                                                     </a>
                                                     <div class="product-details">
                                                         <p class="cartproduct-name">
-                                                            <a href="product-details.html">@ViewBag.item[0] </a>
+                                                            <a href="#">@ViewBag.item[0] </a>
                                                         </p>
                                                         <strong class="qty">@ViewBag.item[1]</strong>
                                                         <span class="sig-price">@ViewBag.item[2]</span>
@@ -136,6 +138,7 @@
                                                 <button><span>结账</span></button>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
