@@ -10,6 +10,9 @@ namespace OnionBookOnline.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.count = "1";
+            ViewBag.prize = "244元";
+            ViewBag.item = new string[] { "假装是一本书", "数量：1", "244元" };
             return View();
         }
 
