@@ -204,15 +204,35 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Controllers\ConnTestController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DAL\OnionContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\DataModels.cs" />
+    <Compile Include="Models\AdvertisementModel.cs" />
+    <Compile Include="Models\AreaModel.cs" />
+    <Compile Include="Models\AuthorModel.cs" />
+    <Compile Include="Models\BookModel.cs" />
+    <Compile Include="Models\CategoryModel.cs" />
+    <Compile Include="Models\CityModel.cs" />
+    <Compile Include="Models\ContainModel.cs" />
+    <Compile Include="Models\CountryModel.cs" />
+    <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\EngageModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\OcommentModel.cs" />
+    <Compile Include="Models\OorderModel.cs" />
+    <Compile Include="Models\PictureModel.cs" />
+    <Compile Include="Models\PreorderModel.cs" />
+    <Compile Include="Models\PrimarycategoryModel.cs" />
+    <Compile Include="Models\ProvinceModel.cs" />
+    <Compile Include="Models\RecipientModel.cs" />
+    <Compile Include="Models\StarModel.cs" />
+    <Compile Include="Models\WriteModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -312,6 +332,7 @@
     <Content Include="Views\Book\New.cshtml" />
     <Content Include="Views\Book\Recommend.cshtml" />
     <Content Include="Views\Account\OrderComplete.cshtml" />
+    <Content Include="Views\ConnTest\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

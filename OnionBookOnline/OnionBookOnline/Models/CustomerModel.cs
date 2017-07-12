@@ -26,10 +26,8 @@ namespace OnionBookOnline.Models
         [Column(TypeName = "varchar2")]
         public string AVATAR { get; set; }
 
-        [Column(TypeName = "number(6,2)")]
         public double BALANCE { get; set; }
 
-        [Column(TypeName = "number(38,0)")]
         public int CREDITS { get; set; }
     }
 }

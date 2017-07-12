@@ -7,17 +7,17 @@ namespace OnionBookOnline.Models
     {
         [Key]
         [MaxLength(128)]
-        [Column(TypeName = "varchar2")]
+        [Column(Order = 1, TypeName = "varchar2")]
         public string COUNTRYID { get; set; }
     
         [Key]
         [MaxLength(128)]
-        [Column(TypeName = "varchar2")]
+        [Column(Order = 2, TypeName = "varchar2")]
         public string PROVINCEID { get; set; }
 
         [Key]
         [MaxLength(128)]
-        [Column(TypeName = "varchar2")]
+        [Column(Order = 3, TypeName = "varchar2")]
         public string CITYID { get; set; }
 
         [MaxLength(128)]
