@@ -2,7 +2,7 @@
 
 42028903 Summer2017 Database Systems(Course Design) by Shijin YUAN @ SSE, TJU
 
-![](https://img.shields.io/badge/.NET-4.5.2-blue.svg) ![test](https://img.shields.io/badge/test-passing-brightgreen.svg)
+![](https://img.shields.io/badge/.NET-4.5.2-blue.svg) ![test](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 ------
 
