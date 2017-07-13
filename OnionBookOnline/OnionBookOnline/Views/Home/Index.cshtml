@@ -1,4 +1,6 @@
-﻿    <!-- slider-area-start -->
+﻿@model OnionBookOnline.Models.HomeIndexViewModel
+
+<!-- slider-area-start -->
 <div class="slider-area">
     <div class="container">
         <div class="row">
@@ -114,7 +116,7 @@
                                     <div class="product-content product-i">
                                         <div class="pro-title">
                                             <h4>
-                                                <a href="product-details.html">Lounge Chair Cinema </a>
+                                                <a href="product-details.html">@Model.bpsCul[0].NAME </a>
                                             </h4>
                                         </div>
                                         <div class="pro-rating ">

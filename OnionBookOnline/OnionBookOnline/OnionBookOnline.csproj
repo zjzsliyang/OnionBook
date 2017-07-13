@@ -204,7 +204,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BookController.cs" />
-    <Compile Include="Controllers\ConnTestController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DAL\OnionContext.cs" />
@@ -222,7 +221,9 @@
     <Compile Include="Models\ContainModel.cs" />
     <Compile Include="Models\CountryModel.cs" />
     <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\HomeModels.cs" />
     <Compile Include="Models\EngageModel.cs" />
+    <Compile Include="Models\HomeViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\OcommentModel.cs" />
@@ -333,6 +334,7 @@
     <Content Include="Views\Book\New.cshtml" />
     <Content Include="Views\Book\Recommend.cshtml" />
     <Content Include="Views\Account\OrderComplete.cshtml" />
+    <Content Include="Views\Book\Type.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -343,7 +345,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <PropertyGroup>
