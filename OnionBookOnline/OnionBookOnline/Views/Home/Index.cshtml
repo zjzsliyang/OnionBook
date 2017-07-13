@@ -95,8 +95,18 @@
                                     <span class="price product-price">￥@Model.bpsLit[0].PRICE</span>
                                 </div>
                                 <div class="product-icon">
-                                    <div class="product-icon-left f-left">
+                                    <div class="product-icon-left f-left" id="test">
                                         <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                        <script>
+                                            $("#test").click(function()
+                                            {
+                                                $.ajax({
+                                                    type: "POST",
+                                                    url: "/Account/AddCart",
+                                                    data: {bookId: @Model.bpsLit[0].BOOKID}
+                                                });
+                                            })
+                                        </script>
                                     </div>
                                     <div class="product-icon-right floatright">
                                         <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>

@@ -55,6 +55,24 @@ namespace OnionBookOnline.Controllers
             }
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> AddCart()
+        {
+            using (var context = new OnionContext())
+            {
+                var preOrder = new PREORDER()
+                {
+                    CUSTOMERID = User.Identity.GetUserId(),
+                    BOOKID = HttpContext.Request["bookId"],
+                    AMOUNT = 1,
+                };
+                context.preorders.Add(preOrder);
+                int x = await (context.SaveChangesAsync());
+            }
+            return View();
+        }
+    
         public ActionResult OrderComplete()
         {
             return View();

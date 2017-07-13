@@ -310,7 +310,10 @@ namespace OnionBookOnline.Controllers
                     res[i].INTRODUCTION = replaceNewLine(res[i].INTRODUCTION);
                     bkVM.recBook.Add(res[i]);
                 }
-                ViewBag.pages = res.Count();
+                ViewBag.pages = Math.Ceiling(res.Count() / 10.0);
+                ViewBag.currentPage = pages;
+                ViewBag.addPage = pages + 1;
+                ViewBag.minusPage = pages - 1;
             }
             return View(bkVM);
         }
@@ -352,7 +355,10 @@ namespace OnionBookOnline.Controllers
                     res[i].INTRODUCTION = replaceNewLine(res[i].INTRODUCTION);
                     bkVM.newBook.Add(res[i]);
                 }
-                ViewBag.pages = res.Count();
+                ViewBag.pages = Math.Ceiling(res.Count()/10.0);
+                ViewBag.currentPage = pages;
+                ViewBag.addPage = pages + 1;
+                ViewBag.minusPage = pages - 1;
             }
             return View(bkVM);
         }
@@ -394,7 +400,10 @@ namespace OnionBookOnline.Controllers
                     res[i].INTRODUCTION = replaceNewLine(res[i].INTRODUCTION);
                     bkVM.hotBook.Add(res[i]);
                 }
-                ViewBag.pages = res.Count();
+                ViewBag.pages = Math.Ceiling(res.Count() / 10.0);
+                ViewBag.currentPage = pages;
+                ViewBag.addPage = pages + 1;
+                ViewBag.minusPage = pages - 1;
             }
             return View(bkVM);
         }
@@ -495,7 +504,10 @@ namespace OnionBookOnline.Controllers
                 {
                     bkVM.typeBook.Add(res[i]);
                 }
-                ViewBag.pages = res.Count();
+                ViewBag.pages = Math.Ceiling(res.Count() / 10.0);
+                ViewBag.currentPage = pages;
+                ViewBag.addPage = pages + 1;
+                ViewBag.minusPage = pages - 1;
                 bkVM.type = chname;
             }
             return View(bkVM);
