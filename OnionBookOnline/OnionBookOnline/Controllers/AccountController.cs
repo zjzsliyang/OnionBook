@@ -94,7 +94,7 @@ namespace OnionBookOnline.Controllers
         // GET: /Account/Cart/?userId=xxxx
         public ActionResult Cart(string userId)
         {
-            var cartVM = new GoodSVIewModel();
+            var cartVM = new GoodsViewModel();
             using (var context = new OnionContext())
             {
                  var query = from b in context.preorders
@@ -119,22 +119,22 @@ namespace OnionBookOnline.Controllers
 
         //
         // GET: /Account/Cart/?userId=xxxx&bookId=xxxx
-        public ActionResult Cart(string userId, string bookId)
-        {
-            using(var context = new OnionContext())
-            {
-                context.preorders.Remove(context.preorders.Where(x => x.BOOKID == bookId && x.CUSTOMERID == userId).FirstOrDefault());
-                int res = context.SaveChanges();
-            }
-            return View();
-        }
+        //public ActionResult Cart(string userId, string bookId)
+        //{
+        //    using(var context = new OnionContext())
+        //    {
+        //        context.preorders.Remove(context.preorders.Where(x => x.BOOKID == bookId && x.CUSTOMERID == userId).FirstOrDefault());
+        //        int res = context.SaveChanges();
+        //    }
+        //    return View();
+        //}
 
 
         //
         // GET: /Account/Star/?userId=xxxx
         public ActionResult Star(string userId)
         {
-            var starVM = new GoodSVIewModel();
+            var starVM = new GoodsViewModel();
             using (var context = new OnionContext())
             {
                 var query = from b in context.stars
@@ -160,15 +160,15 @@ namespace OnionBookOnline.Controllers
 
         //
         // GET: /Account/Star/?userId=xxx&bookId=xxxx
-        public ActionResult Star(string userId, string bookId)
-        {
-            using (var context = new OnionContext())
-            {
-                context.stars.Remove(context.stars.Where(x => x.BOOKID == bookId && x.CUSTOMERID == userId).FirstOrDefault());
-                int res = context.SaveChanges();
-            }
-            return View();
-        }
+        //public ActionResult Star(string userId, string bookId)
+        //{
+        //    using (var context = new OnionContext())
+        //    {
+        //        context.stars.Remove(context.stars.Where(x => x.BOOKID == bookId && x.CUSTOMERID == userId).FirstOrDefault());
+        //        int res = context.SaveChanges();
+        //    }
+        //    return View();
+        //}
 
 
         public ActionResult Checkout()

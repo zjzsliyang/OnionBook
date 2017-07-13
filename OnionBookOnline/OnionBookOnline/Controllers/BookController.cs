@@ -427,6 +427,7 @@ namespace OnionBookOnline.Controllers
                                 SECONDARYID = b.SECONDARYID
                             };
                 bkVM.typeBook = new List<Detailbook>(query.ToList());
+                bkVM.type = typename;
             }
             return View(bkVM);
         }

@@ -30,5 +30,6 @@ namespace OnionBookOnline.Models
         public List<Detailbook> newBook;
         public List<Detailbook> hotBook;
         public List<Detailbook> typeBook;
+        public string type;
     }
 }

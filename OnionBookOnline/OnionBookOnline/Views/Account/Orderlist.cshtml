@@ -1,4 +1,6 @@
-﻿<style>
+﻿@model OnionBookOnline.Models.OrderViewModel
+
+<style>
     .table-content table td.product-status {
         width: 270px;
     }
@@ -36,7 +38,7 @@
                             </thead>
                             <tbody valign="middle">
                                 <tr>
-                                    <td class="product-name" rowspan="2">00000001</td>
+                                    <td class="product-name" rowspan="2">@Model.</td>
                                     <td class="product-thumbnail"><a href="#"><img src="~/Images/product/3.jpg" alt="" /></a></td>
                                     <td class="product-name"><a href="product-details.html">Vestibulum suscipit</a></td>
                                     <td class="product-price"><span class="amount">$165.00</span></td>

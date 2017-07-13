@@ -5,7 +5,7 @@ using System.Web;
 
 namespace OnionBookOnline.Models
 {
-    public class GoodSVIewModel
+    public class GoodsViewModel
     {
         public List<Goods> GOODS { get; set; }
         public double TOTAL { get; set; }
