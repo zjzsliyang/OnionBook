@@ -7,7 +7,6 @@ namespace OnionBookOnline.Models
         public string ID { get; set; }
         public string ISBN { get; set; }
         public string NAME { get; set; }
-        public string CATEGORYID { get; set; }
         public string PUBLISHER { get; set; }
         public double PRICE { get; set; }
         public double PAGES { get; set; }
@@ -18,6 +17,9 @@ namespace OnionBookOnline.Models
         public string PATH { get; set; }
         public string AUTHOR { get; set; }
         public int SALE { get; set; }
+        public string INTRODUCTION { get; set; }
+        public string SECONDARYID { get; set; }
+        public string PRIMARYID { get; set; }
     }
 
     public class BookViewModel
@@ -27,5 +29,7 @@ namespace OnionBookOnline.Models
         public List<Detailbook> recBook;
         public List<Detailbook> newBook;
         public List<Detailbook> hotBook;
+        public List<Detailbook> typeBook;
+        public string type;
     }
 }

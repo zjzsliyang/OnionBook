@@ -216,6 +216,7 @@
     <Compile Include="Models\AuthorModel.cs" />
     <Compile Include="Models\BookModel.cs" />
     <Compile Include="Models\BookViewModel.cs" />
+    <Compile Include="Models\GoodsViewModel.cs" />
     <Compile Include="Models\CategoryModel.cs" />
     <Compile Include="Models\CityModel.cs" />
     <Compile Include="Models\ContainModel.cs" />
@@ -228,6 +229,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\OcommentModel.cs" />
     <Compile Include="Models\OorderModel.cs" />
+    <Compile Include="Models\OrderViewModel.cs" />
     <Compile Include="Models\PictureModel.cs" />
     <Compile Include="Models\PreorderModel.cs" />
     <Compile Include="Models\PrimarycategoryModel.cs" />

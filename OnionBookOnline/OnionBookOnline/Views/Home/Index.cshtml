@@ -44,29 +44,29 @@
                 <div class="tab-menu">
                     <ul>
                         <li class="active">
-                            <a href="#home" data-toggle="tab"><img src="~/Images/electronic/4.png" alt="" />文学 </a>
+                            <a href="#lit" data-toggle="tab"><img src="~/Images/electronic/4.png" alt="" />文学 </a>
                         </li>
                         <li>
-                            <a href="#profile" data-toggle="tab"><img src="~/Images/electronic/3.png" alt="" />流行</a>
+                            <a href="#pop" data-toggle="tab"><img src="~/Images/electronic/3.png" alt="" />流行</a>
                         </li>
                         <li>
-                            <a href="#messages" data-toggle="tab"><img src="~/Images/electronic/1.png" alt="" />文化</a>
+                            <a href="#cul" data-toggle="tab"><img src="~/Images/electronic/1.png" alt="" />文化</a>
                         </li>
                         <li>
-                            <a href="#settings" data-toggle="tab"><img src="~/Images/electronic/2.png" alt="" />生活</a>
+                            <a href="#lif" data-toggle="tab"><img src="~/Images/electronic/2.png" alt="" />生活</a>
                         </li>
                         <li>
-                            <a href="#settings" data-toggle="tab"><img src="~/Images/electronic/5.png" alt="" />经管</a>
+                            <a href="#eco" data-toggle="tab"><img src="~/Images/electronic/5.png" alt="" />经管</a>
                         </li>
                         <li>
-                            <a href="#settings" data-toggle="tab"><img src="~/Images/electronic/6.png" alt="" />科技</a>
+                            <a href="#tec" data-toggle="tab"><img src="~/Images/electronic/6.png" alt="" />科技</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="tab-content tab-content-item">
-            <div class="tab-pane active" id="home">
+            <div class="tab-pane active" id="lit">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pad">
                         <div class="single-tab-img">
@@ -76,12 +76,12 @@
                     <div class="col-lg-4 col-md-4 col-sm-6  col-xs-12 pad">
                         <div class="single-product pt-30 pb-20 white-bg">
                             <div class="product-img pb-40">
-                                <a href="#"><img src="~/Images/product/1.jpg" alt="" /></a>
+                                <a href="~/book/?id=@Model.bpsLit[5].BOOKID"><img src="@Model.bpsLit[5].PATH" alt="" /></a>
                             </div>
                             <div class="product-content">
                                 <div class="pro-title">
                                     <h4>
-                                        <a href="product-details.html">Moebius Table</a>
+                                        <a href="~">@Model.bpsLit[5].NAME</a>
                                     </h4>
                                 </div>
                                 <div class="pro-rating ">
@@ -92,7 +92,7 @@
                                     <a href="#"><i class="fa fa-star-o"></i></a>
                                 </div>
                                 <div class="price-box">
-                                    <span class="price product-price">$262.00</span>
+                                    <span class="price product-price">￥@Model.bpsLit[5].PRICE</span>
                                 </div>
                                 <div class="product-icon">
                                     <div class="product-icon-left f-left">
@@ -111,12 +111,12 @@
                             <div class="together-single-product">
                                 <div class="single-product white-bg">
                                     <div class="product-img product-container-img">
-                                        <a href="#"><img src="~/Images/product/2.jpg" alt="" /></a>
+                                        <a href="#"><img src="@Model.bpsLit[0].PATH" alt="" /></a>
                                     </div>
                                     <div class="product-content product-i">
                                         <div class="pro-title">
                                             <h4>
-                                                <a href="product-details.html">@Model.bpsCul[0].NAME </a>
+                                                <a href="product-details.html">@Model.bpsLit[0].NAME </a>
                                             </h4>
                                         </div>
                                         <div class="pro-rating ">
@@ -127,8 +127,8 @@
                                             <a href="#"><i class="fa fa-star-o"></i></a>
                                         </div>
                                         <div class="price-box">
-                                            <span class="price product-price">$210.00</span>
-                                            <span class="price-2"><del>$230.00</del></span>
+                                            <span class="price product-price">￥@{double currentPrice = Model.bpsLit[0].DISCOUNT * Model.bpsLit[0].PRICE;}@currentPrice</span>
+                                            <span class="price-2"><del>￥@Model.bpsLit[0].PRICE</del></span>
                                         </div>
                                         <div class="product-icon">
                                             <div class="product-icon-left f-left">
@@ -143,12 +143,12 @@
                                 </div>
                                 <div class="single-product white-bg">
                                     <div class="product-img product-container-img">
-                                        <a href="#"><img src="~/Images/product/3.jpg" alt="" /></a>
+                                        <a href="#"><img src="@Model.bpsLit[1].PATH" alt="" /></a>
                                     </div>
                                     <div class="product-content product-i">
                                         <div class="pro-title">
                                             <h4>
-                                                <a href="product-details.html">iPhone</a>
+                                                <a href="product-details.html">@Model.bpsLit[1].NAME</a>
                                             </h4>
                                         </div>
                                         <div class="pro-rating ">
@@ -159,7 +159,8 @@
                                             <a href="#"><i class="fa fa-star"></i></a>
                                         </div>
                                         <div class="price-box">
-                                            <span class="price product-price">$100.00</span>
+                                            <span class="price product-price">￥@{ currentPrice = Model.bpsLit[1].DISCOUNT * Model.bpsLit[1].PRICE;}@currentPrice</span>
+                                            <span class="price-2"><del>￥@Model.bpsLit[1].PRICE</del></span>
                                         </div>
                                         <div class="product-icon">
                                             <div class="product-icon-left f-left">
@@ -176,12 +177,12 @@
                             <div class="together-single-product">
                                 <div class="single-product white-bg">
                                     <div class="product-img product-container-img">
-                                        <a href="#"><img src="~/Images/product/4.jpg" alt="" /></a>
+                                        <a href="#"><img src="@Model.bpsLit[2].PATH" alt="" /></a>
                                     </div>
                                     <div class="product-content product-i">
                                         <div class="pro-title">
                                             <h4>
-                                                <a href="product-details.html">iMac</a>
+                                                <a href="product-details.html">@Model.bpsLit[2].NAME</a>
                                             </h4>
                                         </div>
                                         <div class="pro-rating ">
@@ -192,8 +193,8 @@
                                             <a href="#"><i class="fa fa-star-o"></i></a>
                                         </div>
                                         <div class="price-box">
-                                            <span class="price product-price">$120.00</span>
-                                            <span class="price-2"><del>$300.00</del></span>
+                                            <span class="price product-price">￥@{ currentPrice = Model.bpsLit[2].DISCOUNT * Model.bpsLit[2].PRICE;}@currentPrice</span>
+                                            <span class="price-2"><del>￥@Model.bpsLit[2].PRICE</del></span>
                                         </div>
                                         <div class="product-icon">
                                             <div class="product-icon-left f-left">
@@ -207,12 +208,12 @@
                                 </div>
                                 <div class="single-product white-bg">
                                     <div class="product-img product-container-img">
-                                        <a href="#"><img src="~/Images/product/5.jpg" alt="" /></a>
+                                        <a href="#"><img src="@Model.bpsLit[3].PATH" alt="" /></a>
                                     </div>
                                     <div class="product-content product-i">
                                         <div class="pro-title">
                                             <h4>
-                                                <a href="product-details.html">Footstool</a>
+                                                <a href="product-details.html">@Model.bpsLit[3].NAME</a>
                                             </h4>
                                         </div>
                                         <div class="pro-rating ">
@@ -223,8 +224,8 @@
                                             <a href="#"><i class="fa fa-star"></i></a>
                                         </div>
                                         <div class="price-box">
-                                            <span class="price product-price">$70.00</span>
-                                            <span class="price-2"><del>$100.00</del></span>
+                                            <span class="price product-price">￥@{ currentPrice = Model.bpsLit[3].DISCOUNT * Model.bpsLit[3].PRICE;}@currentPrice</span>
+                                            <span class="price-2"><del>￥@Model.bpsLit[3].PRICE</del></span>
                                         </div>
                                         <div class="product-icon">
                                             <div class="product-icon-left f-left">
@@ -241,12 +242,12 @@
                             <div class="together-single-product">
                                 <div class="single-product white-bg">
                                     <div class="product-img product-container-img">
-                                        <a href="#"><img src="~/Images/product/6.jpg" alt="" /></a>
+                                        <a href="#"><img src="@Model.bpsLit[4].PATH" alt="" /></a>
                                     </div>
                                     <div class="product-content product-i">
                                         <div class="pro-title">
                                             <h4>
-                                                <a href="product-details.html">Lounge Chair Cinema </a>
+                                                <a href="product-details.html">@Model.bpsLit[4].NAME </a>
                                             </h4>
                                         </div>
                                         <div class="pro-rating ">
@@ -257,38 +258,8 @@
                                             <a href="#"><i class="fa fa-star-o"></i></a>
                                         </div>
                                         <div class="price-box">
-                                            <span class="price product-price">$300.00</span>
-                                        </div>
-                                        <div class="product-icon">
-                                            <div class="product-icon-left f-left">
-                                                <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                            </div>
-                                            <div class="product-icon-right floatright">
-                                                <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <span class="sale">sale</span>
-                                </div>
-                                <div class="single-product white-bg">
-                                    <div class="product-img product-container-img">
-                                        <a href="#"><img src="~/Images/product/7.jpg" alt="" /></a>
-                                    </div>
-                                    <div class="product-content product-i">
-                                        <div class="pro-title">
-                                            <h4>
-                                                <a href="product-details.html">iPhone</a>
-                                            </h4>
-                                        </div>
-                                        <div class="pro-rating ">
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="price product-price">$100.00</span>
+                                            <span class="price product-price">￥@{ currentPrice = Model.bpsLit[4].DISCOUNT * Model.bpsLit[4].PRICE;}@currentPrice</span>
+                                            <span class="price-2"><del>￥@Model.bpsLit[4].PRICE</del></span>
                                         </div>
                                         <div class="product-icon">
                                             <div class="product-icon-left f-left">
@@ -306,7 +277,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane" id="profile">
+            <div class="tab-pane" id="pop">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pad">
                         <div class="single-tab-img">
@@ -545,7 +516,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane" id="messages">
+            <div class="tab-pane" id="cul">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pad">
                         <div class="single-tab-img">
@@ -785,7 +756,487 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane" id="settings">
+            <div class="tab-pane" id="lif">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pad">
+                        <div class="single-tab-img">
+                            <a href="#"><img src="~/Images/electronic/1.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pad">
+                        <div class="single-product pt-30 pb-20 white-bg">
+                            <div class="product-img pb-40">
+                                <a href="#"><img src="~/Images/product/3.jpg" alt="" /></a>
+                            </div>
+                            <div class="product-content">
+                                <div class="pro-title">
+                                    <h4>
+                                        <a href="product-details.html">Moebius Table</a>
+                                    </h4>
+                                </div>
+                                <div class="pro-rating ">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star-o"></i></a>
+                                </div>
+                                <div class="price-box">
+                                    <span class="price product-price">$262.00</span>
+                                </div>
+                                <div class="product-icon">
+                                    <div class="product-icon-left f-left">
+                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                    </div>
+                                    <div class="product-icon-right floatright">
+                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="new">new</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 padd-2 col-sm-12 col-xs-12 dotted-style-1">
+                        <div class="tab-product-active">
+                            <div class="together-single-product">
+                                <div class="single-product white-bg">
+                                    <div class="product-img product-container-img">
+                                        <a href="#"><img src="~/Images/product/2.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="product-content product-i">
+                                        <div class="pro-title">
+                                            <h4>
+                                                <a href="product-details.html">Lounge Chair Cinema </a>
+                                            </h4>
+                                        </div>
+                                        <div class="pro-rating ">
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star-o"></i></a>
+                                        </div>
+                                        <div class="price-box">
+                                            <span class="price product-price">$210.00</span>
+                                            <span class="price-2"><del>$230.00</del></span>
+                                        </div>
+                                        <div class="product-icon">
+                                            <div class="product-icon-left f-left">
+                                                <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                            </div>
+                                            <div class="product-icon-right floatright">
+                                                <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="new">new</span>
+                                </div>
+                                <div class="single-product white-bg">
+                                    <div class="product-img product-container-img">
+                                        <a href="#"><img src="~/Images/product/3.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="product-content product-i">
+                                        <div class="pro-title">
+                                            <h4>
+                                                <a href="product-details.html">iPhone</a>
+                                            </h4>
+                                        </div>
+                                        <div class="pro-rating ">
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                        </div>
+                                        <div class="price-box">
+                                            <span class="price product-price">$100.00</span>
+                                        </div>
+                                        <div class="product-icon">
+                                            <div class="product-icon-left f-left">
+                                                <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                            </div>
+                                            <div class="product-icon-right floatright">
+                                                <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="sale">sale</span>
+                                </div>
+                            </div>
+                            <div class="together-single-product">
+                                <div class="single-product white-bg">
+                                    <div class="product-img product-container-img">
+                                        <a href="#"><img src="~/Images/product/4.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="product-content product-i">
+                                        <div class="pro-title">
+                                            <h4>
+                                                <a href="product-details.html">iMac</a>
+                                            </h4>
+                                        </div>
+                                        <div class="pro-rating ">
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star-o"></i></a>
+                                        </div>
+                                        <div class="price-box">
+                                            <span class="price product-price">$120.00</span>
+                                            <span class="price-2"><del>$300.00</del></span>
+                                        </div>
+                                        <div class="product-icon">
+                                            <div class="product-icon-left f-left">
+                                                <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                            </div>
+                                            <div class="product-icon-right floatright">
+                                                <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-product white-bg">
+                                    <div class="product-img product-container-img">
+                                        <a href="#"><img src="~/Images/product/5.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="product-content product-i">
+                                        <div class="pro-title">
+                                            <h4>
+                                                <a href="product-details.html">Footstool</a>
+                                            </h4>
+                                        </div>
+                                        <div class="pro-rating ">
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                        </div>
+                                        <div class="price-box">
+                                            <span class="price product-price">$70.00</span>
+                                            <span class="price-2"><del>$100.00</del></span>
+                                        </div>
+                                        <div class="product-icon">
+                                            <div class="product-icon-left f-left">
+                                                <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                            </div>
+                                            <div class="product-icon-right floatright">
+                                                <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="new">new</span>
+                                </div>
+                            </div>
+                            <div class="together-single-product">
+                                <div class="single-product white-bg">
+                                    <div class="product-img product-container-img">
+                                        <a href="#"><img src="~/Images/product/6.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="product-content product-i">
+                                        <div class="pro-title">
+                                            <h4>
+                                                <a href="product-details.html">Lounge Chair Cinema </a>
+                                            </h4>
+                                        </div>
+                                        <div class="pro-rating ">
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star-o"></i></a>
+                                        </div>
+                                        <div class="price-box">
+                                            <span class="price product-price">$300.00</span>
+                                        </div>
+                                        <div class="product-icon">
+                                            <div class="product-icon-left f-left">
+                                                <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                            </div>
+                                            <div class="product-icon-right floatright">
+                                                <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="sale">sale</span>
+                                </div>
+                                <div class="single-product white-bg">
+                                    <div class="product-img product-container-img">
+                                        <a href="#"><img src="~/Images/product/7.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="product-content product-i">
+                                        <div class="pro-title">
+                                            <h4>
+                                                <a href="product-details.html">iPhone</a>
+                                            </h4>
+                                        </div>
+                                        <div class="pro-rating ">
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                        </div>
+                                        <div class="price-box">
+                                            <span class="price product-price">$100.00</span>
+                                        </div>
+                                        <div class="product-icon">
+                                            <div class="product-icon-left f-left">
+                                                <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                            </div>
+                                            <div class="product-icon-right floatright">
+                                                <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="sale">sale</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="eco">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pad">
+                        <div class="single-tab-img">
+                            <a href="#"><img src="~/Images/electronic/1.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pad">
+                        <div class="single-product pt-30 pb-20 white-bg">
+                            <div class="product-img pb-40">
+                                <a href="#"><img src="~/Images/product/3.jpg" alt="" /></a>
+                            </div>
+                            <div class="product-content">
+                                <div class="pro-title">
+                                    <h4>
+                                        <a href="product-details.html">Moebius Table</a>
+                                    </h4>
+                                </div>
+                                <div class="pro-rating ">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star-o"></i></a>
+                                </div>
+                                <div class="price-box">
+                                    <span class="price product-price">$262.00</span>
+                                </div>
+                                <div class="product-icon">
+                                    <div class="product-icon-left f-left">
+                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                    </div>
+                                    <div class="product-icon-right floatright">
+                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="new">new</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 padd-2 col-sm-12 col-xs-12 dotted-style-1">
+                        <div class="tab-product-active">
+                            <div class="together-single-product">
+                                <div class="single-product white-bg">
+                                    <div class="product-img product-container-img">
+                                        <a href="#"><img src="~/Images/product/2.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="product-content product-i">
+                                        <div class="pro-title">
+                                            <h4>
+                                                <a href="product-details.html">Lounge Chair Cinema </a>
+                                            </h4>
+                                        </div>
+                                        <div class="pro-rating ">
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star-o"></i></a>
+                                        </div>
+                                        <div class="price-box">
+                                            <span class="price product-price">$210.00</span>
+                                            <span class="price-2"><del>$230.00</del></span>
+                                        </div>
+                                        <div class="product-icon">
+                                            <div class="product-icon-left f-left">
+                                                <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                            </div>
+                                            <div class="product-icon-right floatright">
+                                                <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="new">new</span>
+                                </div>
+                                <div class="single-product white-bg">
+                                    <div class="product-img product-container-img">
+                                        <a href="#"><img src="~/Images/product/3.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="product-content product-i">
+                                        <div class="pro-title">
+                                            <h4>
+                                                <a href="product-details.html">iPhone</a>
+                                            </h4>
+                                        </div>
+                                        <div class="pro-rating ">
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                        </div>
+                                        <div class="price-box">
+                                            <span class="price product-price">$100.00</span>
+                                        </div>
+                                        <div class="product-icon">
+                                            <div class="product-icon-left f-left">
+                                                <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                            </div>
+                                            <div class="product-icon-right floatright">
+                                                <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="sale">sale</span>
+                                </div>
+                            </div>
+                            <div class="together-single-product">
+                                <div class="single-product white-bg">
+                                    <div class="product-img product-container-img">
+                                        <a href="#"><img src="~/Images/product/4.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="product-content product-i">
+                                        <div class="pro-title">
+                                            <h4>
+                                                <a href="product-details.html">iMac</a>
+                                            </h4>
+                                        </div>
+                                        <div class="pro-rating ">
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star-o"></i></a>
+                                        </div>
+                                        <div class="price-box">
+                                            <span class="price product-price">$120.00</span>
+                                            <span class="price-2"><del>$300.00</del></span>
+                                        </div>
+                                        <div class="product-icon">
+                                            <div class="product-icon-left f-left">
+                                                <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                            </div>
+                                            <div class="product-icon-right floatright">
+                                                <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-product white-bg">
+                                    <div class="product-img product-container-img">
+                                        <a href="#"><img src="~/Images/product/5.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="product-content product-i">
+                                        <div class="pro-title">
+                                            <h4>
+                                                <a href="product-details.html">Footstool</a>
+                                            </h4>
+                                        </div>
+                                        <div class="pro-rating ">
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                        </div>
+                                        <div class="price-box">
+                                            <span class="price product-price">$70.00</span>
+                                            <span class="price-2"><del>$100.00</del></span>
+                                        </div>
+                                        <div class="product-icon">
+                                            <div class="product-icon-left f-left">
+                                                <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                            </div>
+                                            <div class="product-icon-right floatright">
+                                                <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="new">new</span>
+                                </div>
+                            </div>
+                            <div class="together-single-product">
+                                <div class="single-product white-bg">
+                                    <div class="product-img product-container-img">
+                                        <a href="#"><img src="~/Images/product/6.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="product-content product-i">
+                                        <div class="pro-title">
+                                            <h4>
+                                                <a href="product-details.html">Lounge Chair Cinema </a>
+                                            </h4>
+                                        </div>
+                                        <div class="pro-rating ">
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star-o"></i></a>
+                                        </div>
+                                        <div class="price-box">
+                                            <span class="price product-price">$300.00</span>
+                                        </div>
+                                        <div class="product-icon">
+                                            <div class="product-icon-left f-left">
+                                                <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                            </div>
+                                            <div class="product-icon-right floatright">
+                                                <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="sale">sale</span>
+                                </div>
+                                <div class="single-product white-bg">
+                                    <div class="product-img product-container-img">
+                                        <a href="#"><img src="~/Images/product/7.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="product-content product-i">
+                                        <div class="pro-title">
+                                            <h4>
+                                                <a href="product-details.html">iPhone</a>
+                                            </h4>
+                                        </div>
+                                        <div class="pro-rating ">
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                        </div>
+                                        <div class="price-box">
+                                            <span class="price product-price">$100.00</span>
+                                        </div>
+                                        <div class="product-icon">
+                                            <div class="product-icon-left f-left">
+                                                <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                            </div>
+                                            <div class="product-icon-right floatright">
+                                                <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="sale">sale</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="tec">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pad">
                         <div class="single-tab-img">

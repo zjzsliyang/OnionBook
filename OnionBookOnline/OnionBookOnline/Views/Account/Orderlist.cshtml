@@ -1,4 +1,6 @@
-﻿<style>
+﻿@model OnionBookOnline.Models.OrderViewModel
+
+<style>
     .table-content table td.product-status {
         width: 270px;
     }
@@ -23,24 +25,28 @@
                         <table>
                             <thead>
                                 <tr>
+                                    <th class="product-name">订单号</th>
                                     <th class="product-thumbnail">图片</th>
                                     <th class="product-name">书名</th>
                                     <th class="product-price">单价</th>
                                     <th class="product-quantity">数量</th>
                                     <th class="product-subtotal">总价</th>
+                                    <th class="product-subtotal">下单时间</th>
                                     <th class="product-subtotal">订单状态</th>
                                     <th class="product-subtotal">操作</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody valign="middle">
                                 <tr>
+                                    <td class="product-name" rowspan="2">@Model.</td>
                                     <td class="product-thumbnail"><a href="#"><img src="~/Images/product/3.jpg" alt="" /></a></td>
                                     <td class="product-name"><a href="product-details.html">Vestibulum suscipit</a></td>
                                     <td class="product-price"><span class="amount">$165.00</span></td>
                                     <td class="product-price"><span class="amount">1</span></td>
                                     <td class="product-subtotal">$165.00</td>
-                                    <td class="product-name">已完成</td>
-                                    <td class="product-status"><div class="wc-proceed-to-checkout"><a href="#"> 确认完成</a></div></td>
+                                    <td class="product-name" rowspan="2">2017年1月28日13:00</td>
+                                    <td class="product-name" rowspan="2">已完成</td>
+                                    <td class="product-status" rowspan="2"><div class="wc-proceed-to-checkout"><a href="#"> 确认完成</a></div></td>
                                 </tr>
                                 <tr>
                                     <td class="product-thumbnail"><a href="#"><img src="~/Images/product/4.jpg" alt="" /></a></td>
@@ -48,8 +54,6 @@
                                     <td class="product-price"><span class="amount">$50.00</span></td>
                                     <td class="product-price"><span class="amount">1</span></td>
                                     <td class="product-subtotal">$50.00</td>
-                                    <td class="product-name">未完成</td>
-                                    <td class="product-status"><div class="wc-proceed-to-checkout"><a href="#"> 确认完成</a></div></td>
                                 </tr>
                             </tbody>
                         </table>

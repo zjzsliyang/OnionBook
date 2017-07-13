@@ -46,5 +46,7 @@ namespace OnionBookOnline.Models
         public string PUBLISHINGDATE { get; set; }
 
         public int SALE { get; set; }
+
+        public string INTRODUCTION { get; set; }
     }
 }

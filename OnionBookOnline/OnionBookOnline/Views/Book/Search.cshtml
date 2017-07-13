@@ -118,7 +118,6 @@
                                         <option value="">Price: Highest first</option>
                                         <option value="">Product Name: A to Z</option>
                                         <option value="">Product Name: Z to A</option>
-                                        <option value="">In stock</option>
                                         <option value="">Reference: Lowest first</option>
                                         <option value="">Reference: Highest first</option>
                                     </select>
@@ -141,378 +140,40 @@
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="home">
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <div class="single-product mb-30  white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="~/Images/product/1.jpg" alt="" /></a>
-                                            </div>
-                                            <div class="product-content product-i">
-                                                <div class="pro-title">
-                                                    <h4><a href="product-details.html">Moebius Table</a></h4>
+                                    @foreach (var item in Model.srcBook)
+                                    {
+                                        <div class="col-lg-4 col-md-4 col-sm-6">
+                                            <div class="single-product mb-30  white-bg">
+                                                <div class="product-img pt-20">
+                                                    <a href="#"><img src="@item.PATH" /></a>
                                                 </div>
-                                                <div class="pro-rating ">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <span class="price product-price">$400.00</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                <div class="product-content product-i">
+                                                    <div class="pro-title">
+                                                        <h4><a href="~/book/?id=@item.ID">@item.NAME</a></h4>
                                                     </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                                    <div class="pro-rating ">
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star-o"></i></a>
+                                                    </div>
+                                                    <div class="price-box">
+                                                        <span class="price product-price">￥@item.PRICE</span>
+                                                    </div>
+                                                    <div class="product-icon">
+                                                        <div class="product-icon-left f-left">
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                        </div>
+                                                        <div class="product-icon-right floatright">
+                                                            <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <span class="new">new</span>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <div class="single-product mb-30  white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="~/Images/product/3.jpg" alt="" /></a>
-                                            </div>
-                                            <div class="product-content product-i">
-                                                <div class="pro-title">
-                                                    <h4><a href="product-details.html">Moebius Table</a></h4>
-                                                </div>
-                                                <div class="pro-rating ">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <span class="price product-price">$400.00</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                                    </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span class="new">new</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <div class="single-product mb-30 white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="~/Images/product/4.jpg" alt="" /></a>
-                                            </div>
-                                            <div class="product-content product-i">
-                                                <div class="pro-title">
-                                                    <h4><a href="product-details.html">Moebius Table</a></h4>
-                                                </div>
-                                                <div class="pro-rating ">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <span class="price product-price">$400.00</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                                    </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span class="new">new</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <div class="single-product mb-30  white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="~/Images/product/5.jpg" alt="" /></a>
-                                            </div>
-                                            <div class="product-content product-i">
-                                                <div class="pro-title">
-                                                    <h4><a href="product-details.html">Moebius Table</a></h4>
-                                                </div>
-                                                <div class="pro-rating ">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <span class="price product-price">$400.00</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                                    </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span class="new">new</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <div class="single-product mb-30 white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="~/Images/product/6.jpg" alt="" /></a>
-                                            </div>
-                                            <div class="product-content product-i">
-                                                <div class="pro-title">
-                                                    <h4><a href="product-details.html">Moebius Table</a></h4>
-                                                </div>
-                                                <div class="pro-rating ">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <span class="price product-price">$400.00</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                                    </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span class="new">new</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <div class="single-product mb-30 white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="~/Images/product/7.jpg" alt="" /></a>
-                                            </div>
-                                            <div class="product-content product-i">
-                                                <div class="pro-title">
-                                                    <h4><a href="product-details.html">Moebius Table</a></h4>
-                                                </div>
-                                                <div class="pro-rating ">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <span class="price product-price">$400.00</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                                    </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span class="new">new</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <div class="single-product mb-30 white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="~/Images/product/8.jpg" alt="" /></a>
-                                            </div>
-                                            <div class="product-content product-i">
-                                                <div class="pro-title">
-                                                    <h4><a href="product-details.html">Moebius Table</a></h4>
-                                                </div>
-                                                <div class="pro-rating ">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <span class="price product-price">$400.00</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                                    </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span class="new">new</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <div class="single-product mb-30 white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="~/Images/product/9.jpg" alt="" /></a>
-                                            </div>
-                                            <div class="product-content product-i">
-                                                <div class="pro-title">
-                                                    <h4><a href="product-details.html">Moebius Table</a></h4>
-                                                </div>
-                                                <div class="pro-rating ">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <span class="price product-price">$400.00</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                                    </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span class="new">new</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <div class="single-product mb-30 white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="~/Images/product/10.jpg" alt="" /></a>
-                                            </div>
-                                            <div class="product-content product-i">
-                                                <div class="pro-title">
-                                                    <h4><a href="product-details.html">Moebius Table</a></h4>
-                                                </div>
-                                                <div class="pro-rating ">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <span class="price product-price">$400.00</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                                    </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span class="new">new</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <div class="single-product mb-30 white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="~/Images/product/11.jpg" alt="" /></a>
-                                            </div>
-                                            <div class="product-content product-i">
-                                                <div class="pro-title">
-                                                    <h4><a href="product-details.html">Moebius Table</a></h4>
-                                                </div>
-                                                <div class="pro-rating ">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <span class="price product-price">$400.00</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                                    </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span class="new">new</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <div class="single-product mb-30 white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="~/Images/product/12.jpg" alt="" /></a>
-                                            </div>
-                                            <div class="product-content product-i">
-                                                <div class="pro-title">
-                                                    <h4><a href="product-details.html">Moebius Table</a></h4>
-                                                </div>
-                                                <div class="pro-rating ">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <span class="price product-price">$400.00</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                                    </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span class="new">new</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-6">
-                                        <div class="single-product mb-30 white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="~/Images/product/2.jpg" alt="" /></a>
-                                            </div>
-                                            <div class="product-content product-i">
-                                                <div class="pro-title">
-                                                    <h4><a href="product-details.html">Moebius Table</a></h4>
-                                                </div>
-                                                <div class="pro-rating ">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <div class="price-box">
-                                                    <span class="price product-price">$400.00</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                                    </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span class="new">new</span>
-                                        </div>
-                                    </div>
+                                    }
+                                    
                                 </div>
                                 <div class="content-sortpagibar">
                                     <div class="product-count display-inline">Showing 1 - 12 of 13 items</div>

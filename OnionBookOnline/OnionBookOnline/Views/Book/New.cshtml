@@ -1,4 +1,6 @@
-﻿<!-- breadcrumb start -->
+﻿@model OnionBookOnline.Models.BookViewModel
+
+<!-- breadcrumb start -->
 <div class="breadcrumb-area">
     <div class="container">
         <ol class="breadcrumb">
@@ -15,154 +17,63 @@
             <div class="col-md-9 col-sm-8">
                 <h2 class="page-heading mt-40">
                     <span class="cat-name">新书上架</span>
-                    <span class="heading-counter">共10个产品.</span>
+                    <span class="heading-counter">共 @Model.newBook.Count 个产品。</span>
                 </h2>
                 <div class="shop-page-bar">
                     <div>
-                        <div class="shop-bar">
-                            <div class="selector-field f-left ml-20 hidden-xs">
-                                <form action="#">
-                                    <label>排序方式</label>
-                                    <select name="select">
-                                        <option value="">默认</option>
-                                        <option value="">销量从高到底</option>
-                                        <option value="">销量从低到高</option>
-                                        <option value="">评分从低到高</option>
-                                        <option value="">评分从低到高</option>
-                                        <option value="">价格从低到高</option>
-                                        <option value="">价格从高到低</option>
-                                    </select>
-                                </form>
-                            </div>
-                        </div>
                         <!-- Tab panes -->
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="profile">
                                 <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="single-product  shop-single-product mb-30 white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="~/Images/product/2.jpg" alt="" /></a>
-                                            </div>
-                                            <div class="product-content">
-                                                <div class="pro-title">
-                                                    <h4><a href="product-details.html">Moebius Table</a></h4>
+                                    @foreach (var item in Model.newBook)
+                                    {
+                                        <div class="col-lg-12">
+                                            <div class="single-product  shop-single-product mb-30 white-bg">
+                                                <div class="product-img pt-20">
+                                                    <a href="#"><img src="@item.PATH"  style="width: 50%; height: 50%; padding-left:20px" /></a>
                                                 </div>
-                                                <div class="pro-rating mb-20">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <p>Revolutionary multi-touch interface. iPod touch features the same multi-touch screen technology as iPhone. Pinch to zoom in on a photo. Scroll through your songs and videos with a flick. Flip through your library by album artwork with Cover Flow. Gorgeous 3.5-inch widescreen display. Watc..</p>
-                                                <div class="price-box">
-                                                    <span class="price product-price">$400.00</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                <div class="product-content">
+                                                    <div class="pro-title">
+                                                        <h4><a href="~/book/?id=@item.ID">@item.NAME</a></h4>
                                                     </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                                    <div class="pro-rating mb-20">
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star-o"></i></a>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="single-product  shop-single-product mb-30 white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="~/Images/product/5.jpg" alt="" /></a>
-                                            </div>
-                                            <div class="product-content">
-                                                <div class="pro-title">
-                                                    <h4><a href="product-details.html">Footstool</a></h4>
-                                                </div>
-                                                <div class="pro-rating mb-20">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <p>Revolutionary multi-touch interface. iPod touch features the same multi-touch screen technology as iPhone. Pinch to zoom in on a photo. Scroll through your songs and videos with a flick. Flip through your library by album artwork with Cover Flow. Gorgeous 3.5-inch widescreen display. Watc..</p>
-                                                <div class="price-box">
-                                                    <span class="price product-price">$324.00</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                    <p>@item.INTRODUCTION</p>
+                                                    <div class="price-box">
+                                                        <span class="price product-price">￥@item.PRICE</span>
                                                     </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                                    <div class="product-icon">
+                                                        <div class="product-icon-left f-left">
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                        </div>
+                                                        <div class="product-icon-right floatright">
+                                                            <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="single-product  shop-single-product mb-30 white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="~/Images/product/6.jpg" alt="" /></a>
-                                            </div>
-                                            <div class="product-content">
-                                                <div class="pro-title">
-                                                    <h4><a href="product-details.html">Como Ottoman</a></h4>
-                                                </div>
-                                                <div class="pro-rating mb-20">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <p>Revolutionary multi-touch interface. iPod touch features the same multi-touch screen technology as iPhone. Pinch to zoom in on a photo. Scroll through your songs and videos with a flick. Flip through your library by album artwork with Cover Flow. Gorgeous 3.5-inch widescreen display. Watc..</p>
-                                                <div class="price-box">
-                                                    <span class="price product-price">$422.00</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                                    </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="single-product  shop-single-product mb-30 white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="~/Images/product/9.jpg" alt="" /></a>
-                                            </div>
-                                            <div class="product-content">
-                                                <div class="pro-title">
-                                                    <h4><a href="product-details.html">MacBook</a></h4>
-                                                </div>
-                                                <div class="pro-rating mb-20">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <p>Revolutionary multi-touch interface. iPod touch features the same multi-touch screen technology as iPhone. Pinch to zoom in on a photo. Scroll through your songs and videos with a flick. Flip through your library by album artwork with Cover Flow. Gorgeous 3.5-inch widescreen display. Watc..</p>
-                                                <div class="price-box">
-                                                    <span class="price product-price">$422.00</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart</a>
-                                                    </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    }
+                                </div>
+                                <div class="content-sortpagibar">
+                                    <div class="product-count display-inline">显示13条记录中的1-12条</div>
+                                    <ul class="shop-pagi display-inline">
+                                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                    </ul>
+                                    <div class="selector-field f-right">
+                                        <form action="#">
+                                            <button class="compare">Compare (1)</button>
+                                        </form>
+                                    </div>                                              
                                 </div>
                             </div>
                         </div>
