@@ -68,8 +68,11 @@ namespace OnionBookOnline.Controllers
             return View();
         }
 
-        public ActionResult Cart()
+        //
+        // GET: /Account/Cart/?userId=xxx&bookId=xxxx
+        public ActionResult Cart(string userId, string bookId)
         {
+
             return View();
         }
 
@@ -109,6 +112,7 @@ namespace OnionBookOnline.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
+                    ViewBag.userTag = model.Email;
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");

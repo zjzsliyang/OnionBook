@@ -5,43 +5,63 @@ using System.Web;
 using System.Web.Mvc;
 using OnionBookOnline.Models;
 using OnionBookOnline.DAL;
+using System.Threading.Tasks;
 
 namespace OnionBookOnline.Controllers
 {
     public class BookController : Controller
     {
         // GET: Book
-        public ActionResult Index(string id)
+        //public ActionResult Index(string id)
+        //{
+        //    var bkVM = new BookViewModel();
+        //    using (var context = new OnionContext())
+        //    {
+        //        var query = from b in context.books
+        //                    join c in context.pictures on b.BOOKID equals c.BOOKID
+        //                    join d in context.writes on b.BOOKID equals d.BOOKID
+        //                    join e in context.authors on d.AUTHORID equals e.AUTHORID
+        //                    where b.BOOKID == id
+        //                    select new Detailbook()
+        //                    {
+        //                        ID = b.BOOKID,
+        //                        NAME = b.NAME,
+        //                        ISBN = b.ISBN,
+        //                        CATEGORYID = b.PRIMARYID,
+        //                        PUBLISHER = b.PUBLISHER,
+        //                        PAGES = b.PAGES,
+        //                        PUBLISHINGDATE = b.PUBLISHINGDATE,
+        //                        STOCK = b.STOCK,
+        //                        SCORE = b.SCORE,
+        //                        PRICE = b.PRICE,
+        //                        DISCOUNT = b.DISCOUNT,
+        //                        SALE = b.SALE,
+        //                        PATH = c.PATH,
+        //                        AUTHOR = e.NAME
+        //                    };
+        //        var res = query.First();
+        //        bkVM.detailBook = res;
+        //    }
+        //    return View(bkVM);
+        //}
+
+//        [HttpPost]
+        //[ValidateAntiForgeryToken]
+        public async Task<ActionResult> Index(string id, string userId, int amount)
         {
-            var bkVM = new BookViewModel();
-            using (var context = new OnionContext())
+            using(var context = new OnionContext())
             {
-                var query = from b in context.books
-                            join c in context.pictures on b.BOOKID equals c.BOOKID
-                            join d in context.writes on b.BOOKID equals d.BOOKID
-                            join e in context.authors on d.AUTHORID equals e.AUTHORID
-                            where b.BOOKID == id
-                            select new Detailbook()
-                            {
-                                ID = b.BOOKID,
-                                NAME = b.NAME,
-                                ISBN = b.ISBN,
-                                CATEGORYID = b.PRIMARYID,
-                                PUBLISHER = b.PUBLISHER,
-                                PAGES = b.PAGES,
-                                PUBLISHINGDATE = b.PUBLISHINGDATE,
-                                STOCK = b.STOCK,
-                                SCORE = b.SCORE,
-                                PRICE = b.PRICE,
-                                DISCOUNT = b.DISCOUNT,
-                                SALE = b.SALE,
-                                PATH = c.PATH,
-                                AUTHOR = e.NAME
-                            };
-                var res = query.First();
-                bkVM.detailBook = res;
+                var preOrder = new PREORDER()
+                {
+                    CUSTOMERID = userId,
+                    BOOKID = id,
+                    AMOUNT = amount,
+                };
+                context.preorders.Add(preOrder);
+                int x = await(context.SaveChangesAsync());
             }
-            return View(bkVM);
+            ViewBag.Message = "添加成功！";
+            return View();
         }
 
         public ActionResult Search(string standard, string keywords)
