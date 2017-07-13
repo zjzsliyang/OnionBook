@@ -30,8 +30,9 @@
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="home">
                                 <div class="row">
-                                    @foreach (var item in Model.typeBook)
+                                    @for (int i = 0; i < 10; i++)
                                     {
+                                        var item = Model.typeBook[i];
                                         <div class="col-lg-4 col-md-4 col-sm-6">
                                             <div class="single-product mb-30  white-bg">
                                                 <div class="product-img pt-20">
@@ -68,16 +69,14 @@
                                     }
                                 </div>
                                 <div class="content-sortpagibar">
-                                    <div class="product-count display-inline">显示13条记录中的1-12条</div>
+                                    <div class="product-count display-inline">共 @ViewBag.pages 条记录</div>
                                     <ul class="shop-pagi display-inline">
-                                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                                        <li class="active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                        <li><a href="/book/hot/?pages=@ViewBag.minusPage"><i class="fa fa-angle-left"></i></a></li>
+                                        <li><a href="#/?pages=@ViewBag.minusPage">@ViewBag.minusPage</a></li>
+                                        <li class="active"><a href="/book/hot/?pages=@ViewBag.currentPage">@ViewBag.currentPage</a></li>
+                                        <li><a href="/book/hot/?pages=@ViewBag.addPage">@ViewBag.addPage</a></li>
+                                        <li><a href="/book/hot/?pages=@ViewBag.addPage"><i class="fa fa-angle-right"></i></a></li>
                                     </ul>
-                                    <div class="selector-field f-right">
-                                    </div>
                                 </div>
                             </div>
                         </div>
