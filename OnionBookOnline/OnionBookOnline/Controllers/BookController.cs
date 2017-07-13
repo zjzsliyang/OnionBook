@@ -234,6 +234,7 @@ namespace OnionBookOnline.Controllers
                             join c in context.pictures on b.BOOKID equals c.BOOKID
                             join d in context.writes on b.BOOKID equals d.BOOKID
                             join e in context.authors on d.AUTHORID equals e.AUTHORID
+                            orderby b.SCORE descending
                             select new Detailbook()
                             {
                                 ID = b.BOOKID,
@@ -254,7 +255,7 @@ namespace OnionBookOnline.Controllers
                                 SECONDARYID = b.SECONDARYID
                             };
                 bkVM.recBook = new List<Detailbook>(query.ToList());
-                query = query.OrderBy(a => a.SCORE);
+                //query = query.OrderByDescending(a => a.SCORE);
                 var res = query.ToList();
                 for (int i = 0; i < 10; ++i)
                 {
@@ -273,6 +274,7 @@ namespace OnionBookOnline.Controllers
                             join c in context.pictures on b.BOOKID equals c.BOOKID
                             join d in context.writes on b.BOOKID equals d.BOOKID
                             join e in context.authors on d.AUTHORID equals e.AUTHORID
+                            orderby b.PUBLISHINGDATE descending
                             select new Detailbook()
                             {
                                 ID = b.BOOKID,
@@ -293,7 +295,7 @@ namespace OnionBookOnline.Controllers
                                 SECONDARYID = b.SECONDARYID
                             };
                 bkVM.newBook = new List<Detailbook>(query.ToList());
-                query = query.OrderBy(a => a.PUBLISHINGDATE);
+                //query = query.OrderBy(a => a.PUBLISHINGDATE);
                 var res = query.ToList();
                 for (int i = 0; i < 16; ++i)
                 {
@@ -312,6 +314,7 @@ namespace OnionBookOnline.Controllers
                             join c in context.pictures on b.BOOKID equals c.BOOKID
                             join d in context.writes on b.BOOKID equals d.BOOKID
                             join e in context.authors on d.AUTHORID equals e.AUTHORID
+                            orderby b.SALE descending
                             select new Detailbook()
                             {
                                 ID = b.BOOKID,
@@ -332,7 +335,7 @@ namespace OnionBookOnline.Controllers
                                 SECONDARYID=b.SECONDARYID
                             };
                 bkVM.hotBook = new List<Detailbook>(query.ToList());
-                query = query.OrderBy(a => a.SALE);
+                //query = query.OrderBy(a => a.SALE);
                 var res = query.ToList();
                 for (int i = 0; i < 10; ++i)
                 {
