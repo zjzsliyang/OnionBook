@@ -43,6 +43,40 @@ namespace OnionBookOnline.Controllers
                             };
                 var res = query.First();
                 bkVM.detailBook = res;
+
+
+                var q = from b in context.books
+                            join c in context.pictures on b.BOOKID equals c.BOOKID
+                            join d in context.writes on b.BOOKID equals d.BOOKID
+                            join e in context.authors on d.AUTHORID equals e.AUTHORID
+                            where e.NAME==res.AUTHOR 
+                            select new Detailbook()
+                            {
+                                ID = b.BOOKID,
+                                NAME = b.NAME,
+                                ISBN = b.ISBN,
+                                PRIMARYID = b.PRIMARYID,
+                                PUBLISHER = b.PUBLISHER,
+                                PAGES = b.PAGES,
+                                PUBLISHINGDATE = b.PUBLISHINGDATE,
+                                STOCK = b.STOCK,
+                                SCORE = b.SCORE,
+                                PRICE = b.PRICE,
+                                DISCOUNT = b.DISCOUNT,
+                                SALE = b.SALE,
+                                PATH = c.PATH,
+                                AUTHOR = e.NAME,
+                                INTRODUCTION = b.INTRODUCTION,
+                                SECONDARYID = b.SECONDARYID
+                            };
+                bkVM.relatedBook = new List<Detailbook>();
+                //query = query.OrderByDescending(a => a.SCORE);
+                var r = q.ToList();
+                r.Remove(res);
+                for (int i = 0; (i < 4 && i < r.Count()); ++i)
+                {
+                    bkVM.relatedBook.Add(r[i]);
+                }
             }
             return View(bkVM);
         }
@@ -225,7 +259,7 @@ namespace OnionBookOnline.Controllers
             }
         }
 
-        public ActionResult Recommend()
+        public ActionResult Recommend(int pages = 1)
         {
             var bkVM = new BookViewModel();
             using (var context = new OnionContext())
@@ -254,18 +288,19 @@ namespace OnionBookOnline.Controllers
                                 INTRODUCTION = b.INTRODUCTION,
                                 SECONDARYID = b.SECONDARYID
                             };
-                bkVM.recBook = new List<Detailbook>(query.ToList());
+                bkVM.recBook = new List<Detailbook>();
                 //query = query.OrderByDescending(a => a.SCORE);
                 var res = query.ToList();
-                for (int i = 0; i < 10; ++i)
+                for (int i = (pages-1)*10; (i < pages* 10&&i<res.Count()); ++i)
                 {
                     bkVM.recBook.Add(res[i]);
                 }
+                ViewBag.pages = res.Count();
             }
             return View(bkVM);
         }
 
-        public ActionResult New()
+        public ActionResult New(int pages=1)
         {
             var bkVM = new BookViewModel();
             using (var context = new OnionContext())
@@ -294,18 +329,19 @@ namespace OnionBookOnline.Controllers
                                 INTRODUCTION = b.INTRODUCTION,
                                 SECONDARYID = b.SECONDARYID
                             };
-                bkVM.newBook = new List<Detailbook>(query.ToList());
-                //query = query.OrderBy(a => a.PUBLISHINGDATE);
+                bkVM.newBook = new List<Detailbook>();
+                //query = query.OrderByDescending(a => a.SCORE);
                 var res = query.ToList();
-                for (int i = 0; i < 16; ++i)
+                for (int i = (pages - 1) * 10; (i < pages * 10 && i < res.Count()); ++i)
                 {
                     bkVM.newBook.Add(res[i]);
                 }
+                ViewBag.pages = res.Count();
             }
             return View(bkVM);
         }
 
-        public ActionResult Hot()
+        public ActionResult Hot(int pages=1)
         {
             var bkVM = new BookViewModel();
             using (var context = new OnionContext())
@@ -334,18 +370,19 @@ namespace OnionBookOnline.Controllers
                                 INTRODUCTION = b.INTRODUCTION,
                                 SECONDARYID=b.SECONDARYID
                             };
-                bkVM.hotBook = new List<Detailbook>(query.ToList());
-                //query = query.OrderBy(a => a.SALE);
+                bkVM.hotBook = new List<Detailbook>();
+                //query = query.OrderByDescending(a => a.SCORE);
                 var res = query.ToList();
-                for (int i = 0; i < 10; ++i)
+                for (int i = (pages - 1) * 10; (i < pages * 10 && i < res.Count()); ++i)
                 {
                     bkVM.hotBook.Add(res[i]);
                 }
+                ViewBag.pages = res.Count();
             }
             return View(bkVM);
         }
 
-        public ActionResult Type(string typename)
+        public ActionResult Type(string typename,int pages=1)
         {
             var bkVM = new BookViewModel();
             using (var context = new OnionContext())
@@ -434,7 +471,14 @@ namespace OnionBookOnline.Controllers
                                 INTRODUCTION = b.INTRODUCTION,
                                 SECONDARYID = b.SECONDARYID
                             };
-                bkVM.typeBook = new List<Detailbook>(query.ToList());
+                bkVM.typeBook = new List<Detailbook>();
+                //query = query.OrderByDescending(a => a.SCORE);
+                var res = query.ToList();
+                for (int i = (pages - 1) * 10; (i < pages * 10 && i < res.Count()); ++i)
+                {
+                    bkVM.typeBook.Add(res[i]);
+                }
+                ViewBag.pages = res.Count();
                 bkVM.type = chname;
             }
             return View(bkVM);

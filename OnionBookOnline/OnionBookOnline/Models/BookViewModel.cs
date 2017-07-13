@@ -25,6 +25,7 @@ namespace OnionBookOnline.Models
     public class BookViewModel
     {
         public Detailbook detailBook;
+        public List<Detailbook> relatedBook;
         public List<Detailbook> srcBook;
         public List<Detailbook> recBook;
         public List<Detailbook> newBook;
