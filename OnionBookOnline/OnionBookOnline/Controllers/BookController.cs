@@ -12,75 +12,76 @@ namespace OnionBookOnline.Controllers
     public class BookController : Controller
     {
         // GET: Book
-        //public ActionResult Index(string id)
-        //{
-        //    var bkVM = new BookViewModel();
-        //    using (var context = new OnionContext())
-        //    {
-        //        var query = from b in context.books
-        //                    join c in context.pictures on b.BOOKID equals c.BOOKID
-        //                    join d in context.writes on b.BOOKID equals d.BOOKID
-        //                    join e in context.authors on d.AUTHORID equals e.AUTHORID
-        //                    where b.BOOKID == id
-        //                    select new Detailbook()
-        //                    {
-        //                        ID = b.BOOKID,
-        //                        NAME = b.NAME,
-        //                        ISBN = b.ISBN,
-        //                        CATEGORYID = b.PRIMARYID,
-        //                        PUBLISHER = b.PUBLISHER,
-        //                        PAGES = b.PAGES,
-        //                        PUBLISHINGDATE = b.PUBLISHINGDATE,
-        //                        STOCK = b.STOCK,
-        //                        SCORE = b.SCORE,
-        //                        PRICE = b.PRICE,
-        //                        DISCOUNT = b.DISCOUNT,
-        //                        SALE = b.SALE,
-        //                        PATH = c.PATH,
-        //                        AUTHOR = e.NAME
-        //                    };
-        //        var res = query.First();
-        //        bkVM.detailBook = res;
-        //    }
-        //    return View(bkVM);
-        //}
-
-//        [HttpPost]
-        //[ValidateAntiForgeryToken]
-        public async Task<ActionResult> Index(string id, string userId, int amount)
+        public ActionResult Index(string id)
         {
-            using(var context = new OnionContext())
-            {
-                var preOrder = new PREORDER()
-                {
-                    CUSTOMERID = userId,
-                    BOOKID = id,
-                    AMOUNT = amount,
-                };
-                context.preorders.Add(preOrder);
-                int x = await(context.SaveChangesAsync());
-            }
-            ViewBag.Message = "添加成功！";
-            return View();
-        }
-
-        //GET:Book/
-        public async Task<ActionResult> Index(string id, string userId)
-        {
+            var bkVM = new BookViewModel();
             using (var context = new OnionContext())
             {
-                var star = new STAR()
-                {
-                    CUSTOMERID = userId,
-                    BOOKID = id,
-                    TIME = DateTime.Now.Date.ToString(),
-                };
-                context.stars.Add(star);
-                int x = await (context.SaveChangesAsync());
+                var query = from b in context.books
+                            join c in context.pictures on b.BOOKID equals c.BOOKID
+                            join d in context.writes on b.BOOKID equals d.BOOKID
+                            join e in context.authors on d.AUTHORID equals e.AUTHORID
+                            where b.BOOKID == id
+                            select new Detailbook()
+                            {
+                                ID = b.BOOKID,
+                                NAME = b.NAME,
+                                ISBN = b.ISBN,
+                                CATEGORYID = b.PRIMARYID,
+                                PUBLISHER = b.PUBLISHER,
+                                PAGES = b.PAGES,
+                                PUBLISHINGDATE = b.PUBLISHINGDATE,
+                                STOCK = b.STOCK,
+                                SCORE = b.SCORE,
+                                PRICE = b.PRICE,
+                                DISCOUNT = b.DISCOUNT,
+                                SALE = b.SALE,
+                                PATH = c.PATH,
+                                AUTHOR = e.NAME,
+                                INTRODUCTION=b.INTRODUCTION
+                            };
+                var res = query.First();
+                bkVM.detailBook = res;
             }
-            ViewBag.Message = "添加成功！";
-            return View();
+            return View(bkVM);
         }
+
+        //        [HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<ActionResult> Index(string id, string userId, int amount)
+        //{
+        //    using(var context = new OnionContext())
+        //    {
+        //        var preOrder = new PREORDER()
+        //        {
+        //            CUSTOMERID = userId,
+        //            BOOKID = id,
+        //            AMOUNT = amount,
+        //        };
+        //        context.preorders.Add(preOrder);
+        //        int x = await(context.SaveChangesAsync());
+        //    }
+        //    ViewBag.Message = "添加成功！";
+        //    return View();
+        //}
+
+        ////GET:Book/
+        //public async Task<ActionResult> Index(string id, string userId)
+        //{
+        //    using (var context = new OnionContext())
+        //    {
+        //        var star = new STAR()
+        //        {
+        //            CUSTOMERID = userId,
+        //            BOOKID = id,
+        //            TIME = DateTime.Now.Date.ToString(),
+        //        };
+        //        context.stars.Add(star);
+        //        int x = await (context.SaveChangesAsync());
+        //    }
+        //    ViewBag.Message = "添加成功！";
+        //    return View();
+        //}
 
         public ActionResult Search(string standard, string keywords)
         {
@@ -112,12 +113,15 @@ namespace OnionBookOnline.Controllers
                                             DISCOUNT = b.DISCOUNT,
                                             SALE = b.SALE,
                                             PATH = c.PATH,
-                                            AUTHOR = e.NAME
+                                            AUTHOR = e.NAME,
+                                            INTRODUCTION = b.INTRODUCTION
                                         };
                             bkVM.srcBook = new List<Detailbook>(query.ToList());
                         }
                         return View(bkVM);
                     }
+                    
+            
                 case "author"://nature join
                     {
                         using (var context = new OnionContext())
@@ -142,7 +146,8 @@ namespace OnionBookOnline.Controllers
                                             DISCOUNT = b.DISCOUNT,
                                             SALE = b.SALE,
                                             PATH = c.PATH,
-                                            AUTHOR = e.NAME
+                                            AUTHOR = e.NAME,
+                                            INTRODUCTION = b.INTRODUCTION
                                         };
                             bkVM.srcBook = new List<Detailbook>(query.ToList());
                         }
@@ -172,7 +177,8 @@ namespace OnionBookOnline.Controllers
                                             DISCOUNT = b.DISCOUNT,
                                             SALE = b.SALE,
                                             PATH = c.PATH,
-                                            AUTHOR = e.NAME
+                                            AUTHOR = e.NAME,
+                                            INTRODUCTION = b.INTRODUCTION
                                         };
                             bkVM.srcBook = new List<Detailbook>(query.ToList());
                         }
@@ -202,7 +208,8 @@ namespace OnionBookOnline.Controllers
                                             DISCOUNT = b.DISCOUNT,
                                             SALE = b.SALE,
                                             PATH = c.PATH,
-                                            AUTHOR = e.NAME
+                                            AUTHOR = e.NAME,
+                                            INTRODUCTION = b.INTRODUCTION
                                         };
                             bkVM.srcBook = new List<Detailbook>(query.ToList());
                         }
@@ -237,7 +244,8 @@ namespace OnionBookOnline.Controllers
                                 DISCOUNT = b.DISCOUNT,
                                 SALE = b.SALE,
                                 PATH = c.PATH,
-                                AUTHOR = e.NAME
+                                AUTHOR = e.NAME,
+                                INTRODUCTION = b.INTRODUCTION
                             };
                 bkVM.recBook = new List<Detailbook>(query.ToList());
                 query = query.OrderBy(a => a.SCORE);
@@ -274,7 +282,8 @@ namespace OnionBookOnline.Controllers
                                 DISCOUNT = b.DISCOUNT,
                                 SALE = b.SALE,
                                 PATH = c.PATH,
-                                AUTHOR = e.NAME
+                                AUTHOR = e.NAME,
+                                INTRODUCTION = b.INTRODUCTION
                             };
                 bkVM.newBook = new List<Detailbook>(query.ToList());
                 query = query.OrderBy(a => a.PUBLISHINGDATE);
@@ -311,7 +320,8 @@ namespace OnionBookOnline.Controllers
                                 DISCOUNT = b.DISCOUNT,
                                 SALE=b.SALE,
                                 PATH = c.PATH,
-                                AUTHOR = e.NAME
+                                AUTHOR = e.NAME,
+                                INTRODUCTION = b.INTRODUCTION
                             };
                 bkVM.hotBook = new List<Detailbook>(query.ToList());
                 query = query.OrderBy(a => a.SALE);

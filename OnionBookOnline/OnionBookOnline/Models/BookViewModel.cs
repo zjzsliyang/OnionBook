@@ -18,6 +18,7 @@ namespace OnionBookOnline.Models
         public string PATH { get; set; }
         public string AUTHOR { get; set; }
         public int SALE { get; set; }
+        public string INTRODUCTION { get; set; }
     }
 
     public class BookViewModel

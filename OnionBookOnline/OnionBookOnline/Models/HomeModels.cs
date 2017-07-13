@@ -9,7 +9,7 @@ namespace OnionBookOnline.Models
 {
     public class HomeBookInfo
     {
-
+        public string BOOKID { get; set; }
         public string NAME { get; set; }
         public string AUTHORNAME { get; set; }
         public double SCORE { get; set; }

@@ -20,6 +20,7 @@ namespace OnionBookOnline.Controllers
                                             orderby b.DISCOUNT ascending
                                             select new HomeBookInfo()
                                             {
+                                                BOOKID = b.BOOKID,
                                                 NAME = b.NAME,
                                                 AUTHORNAME = e.NAME,
                                                 SCORE = b.SCORE,
@@ -69,6 +70,7 @@ namespace OnionBookOnline.Controllers
                                 orderby b.SALE descending
                                 select new HomeBookInfo()
                                 {
+                                    BOOKID = b.BOOKID,
                                     NAME = b.NAME,
                                     AUTHORNAME = e.NAME,
                                     SCORE = b.SCORE,
@@ -86,6 +88,7 @@ namespace OnionBookOnline.Controllers
                                  orderby b.SCORE descending
                                  select new HomeBookInfo()
                                  {
+                                     BOOKID=b.BOOKID,
                                      NAME = b.NAME,
                                      AUTHORNAME = e.NAME,
                                      SCORE = b.SCORE,
@@ -103,6 +106,7 @@ namespace OnionBookOnline.Controllers
                                   orderby b.PUBLISHINGDATE descending
                                   select new HomeBookInfo()
                                   {
+                                      BOOKID =b.BOOKID,
                                       NAME = b.NAME,
                                       AUTHORNAME = e.NAME,
                                       SCORE = b.SCORE,

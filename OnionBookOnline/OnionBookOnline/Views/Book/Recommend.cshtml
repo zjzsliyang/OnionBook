@@ -24,130 +24,40 @@
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="profile">
                                 <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="single-product  shop-single-product mb-30 white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="@Model.recBook[0].PATH" alt="" /></a>
-                                            </div>
-                                            <div class="product-content">
-                                                <div class="pro-title">
-                                                    <h4><a href="~/book/?id=@Model.recBook[0].ID">@Model.recBook[0].NAME</a></h4>
+                                    @foreach (var item in Model.recBook)
+                                    {
+                                        <div class="col-lg-12">
+                                            <div class="single-product  shop-single-product mb-30 white-bg">
+                                                <div class="product-img pt-20">
+                                                    <a href="#"><img src="@item.PATH" style="width: 50%; height: 50%; padding-left:20px" /></a>
                                                 </div>
-                                                <div class="pro-rating mb-20">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <p>@Model.recBook[0].ISBN</p>
-                                                <div class="price-box">
-                                                    <span class="price product-price">￥@Model.recBook[0].PRICE</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                <div class="product-content">
+                                                    <div class="pro-title">
+                                                        <h4><a href="~/book/?id=@item.ID">@item.NAME</a></h4>
                                                     </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                                    <div class="pro-rating mb-20">
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star-o"></i></a>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="single-product  shop-single-product mb-30 white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="@Model.recBook[1].PATH" alt="" /></a>
-                                            </div>
-                                            <div class="product-content">
-                                                <div class="pro-title">
-                                                    <h4><a href="~/book/?id=@Model.recBook[1].ID">@Model.recBook[1].NAME</a></h4>
-                                                </div>
-                                                <div class="pro-rating mb-20">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <p>@Model.recBook[1].ISBN</p>
-                                                <div class="price-box">
-                                                    <span class="price product-price">￥@Model.recBook[1].PRICE</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                    <p>@item.INTRODUCTION</p>
+                                                    <div class="price-box">
+                                                        <span class="price product-price">￥@item.PRICE</span>
                                                     </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                                    <div class="product-icon">
+                                                        <div class="product-icon-left f-left">
+                                                            <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                        </div>
+                                                        <div class="product-icon-right floatright">
+                                                            <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="single-product  shop-single-product mb-30 white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="@Model.recBook[2].PATH" alt="" /></a>
-                                            </div>
-                                            <div class="product-content">
-                                                <div class="pro-title">
-                                                    <h4><a href="~/book/?id=@Model.recBook[2].ID">@Model.recBook[2].NAME</a></h4>
-                                                </div>
-                                                <div class="pro-rating mb-20">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <p>@Model.recBook[2].ISBN</p>
-                                                <div class="price-box">
-                                                    <span class="price product-price">￥@Model.recBook[2].PRICE</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                                    </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="single-product  shop-single-product mb-30 white-bg">
-                                            <div class="product-img pt-20">
-                                                <a href="#"><img src="@Model.recBook[3].PATH" alt="" /></a>
-                                            </div>
-                                            <div class="product-content">
-                                                <div class="pro-title">
-                                                    <h4><a href="~/book/?id=@Model.recBook[3].ID">@Model.recBook[3].NAME</a></h4>
-                                                </div>
-                                                <div class="pro-rating mb-20">
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                                </div>
-                                                <p>@Model.recBook[3].ISBN</p>
-                                                <div class="price-box">
-                                                    <span class="price product-price">￥@Model.recBook[3].PRICE</span>
-                                                </div>
-                                                <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
-                                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                                    </div>
-                                                    <div class="product-icon-right floatright">
-                                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    }
                                 </div>
                                 <div class="content-sortpagibar">
                                     <div class="product-count display-inline">显示13条记录中的1-12条</div>
@@ -157,12 +67,7 @@
                                         <li><a href="#">2</a></li>
                                         <li><a href="#">3</a></li>
                                         <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                                    </ul>
-                                    <div class="selector-field f-right">
-                                        <form action="#">
-                                            <button class="compare">Compare (1)</button>
-                                        </form>
-                                    </div>                                              
+                                    </ul>                                       
                                 </div>
                             </div>
                         </div>
