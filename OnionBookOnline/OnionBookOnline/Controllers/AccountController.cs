@@ -202,7 +202,7 @@ namespace OnionBookOnline.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    ViewBag.userTag = model.Email;
+                    Response.Cookies["UserEmail"].Value = model.Email;
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -214,6 +214,14 @@ namespace OnionBookOnline.Controllers
                     return View(model);
             }
         }
+
+        // GET: /Account/Logout
+        public  ActionResult Logout()
+        {
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            Request.Cookies.Remove("UserEmail");
+            return Redirect("~/");
+        } 
 
         //
         // GET: /Account/VerifyCode
@@ -356,9 +364,9 @@ namespace OnionBookOnline.Controllers
         //
         // GET: /Account/ResetPassword
         [AllowAnonymous]
-        public ActionResult ResetPassword(string code)
+        public ActionResult ResetPassword()
         {
-            return code == null ? View("Error") : View();
+            return View();
         }
 
         //

@@ -57,16 +57,30 @@
                         <div class="header-top-right">
                             <ul>
                                 <li class="slide-toggle">
-
-                                    <a href="#"><i class="fa fa-user"> 我的账户</i></a>
-                                    <ul class="show-toggle">
-                                        <li>
-                                            <a href="~/Account/Login">登录</a>
-                                        </li>
-                                        <li>
-                                            <a href="~/Account/Register">注册</a>
-                                        </li>
-                                    </ul>
+                                    @if (Request.Cookies["OnionCookie"] == null)
+                                    {
+                                        <a href="#"><i class="fa fa-user"> 我的账户</i></a>
+                                        <ul class="show-toggle">
+                                            <li>
+                                                <a href="~/Account/Login">登录</a>
+                                            </li>
+                                            <li>
+                                                <a href="~/Account/Register">注册</a>
+                                            </li>
+                                        </ul>
+                                    }
+                                    else
+                                    {
+                                        <a href="#"><i class="fa fa-user"> @Request.Cookies["UserEmail"].Value </i></a>
+                                        <ul class="show-toggle">
+                                            <li>
+                                                <a href="~/Account/ResetPassword">修改密码</a>
+                                            </li>
+                                            <li>
+                                                <a href="~/Account/Logout">注销</a>
+                                            </li>
+                                        </ul>
+                                    }
                                 </li>
                             </ul>
                         </div>
