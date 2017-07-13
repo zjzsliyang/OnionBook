@@ -11,6 +11,17 @@ namespace OnionBookOnline.Controllers
 {
     public class BookController : Controller
     {
+        public string replaceNewLine(string src)
+        {
+            if (src.Contains("\\n"))
+            {
+                return src.Replace("\\n", Environment.NewLine);
+            }
+            else
+                return src;
+           
+        }
+
         // GET: Book
         public ActionResult Index(string id)
         {
@@ -42,6 +53,7 @@ namespace OnionBookOnline.Controllers
                                 SECONDARYID = b.SECONDARYID
                             };
                 var res = query.First();
+                res.INTRODUCTION = replaceNewLine(res.INTRODUCTION);
                 bkVM.detailBook = res;
 
 
@@ -75,8 +87,10 @@ namespace OnionBookOnline.Controllers
                 r.Remove(res);
                 for (int i = 0; (i < 4 && i < r.Count()); ++i)
                 {
+                    r[i].INTRODUCTION = replaceNewLine(r[i].INTRODUCTION);
                     bkVM.relatedBook.Add(r[i]);
                 }
+                
             }
             return View(bkVM);
         }
@@ -293,6 +307,7 @@ namespace OnionBookOnline.Controllers
                 var res = query.ToList();
                 for (int i = (pages-1)*10; (i < pages* 10&&i<res.Count()); ++i)
                 {
+                    res[i].INTRODUCTION = replaceNewLine(res[i].INTRODUCTION);
                     bkVM.recBook.Add(res[i]);
                 }
                 ViewBag.pages = res.Count();
@@ -334,6 +349,7 @@ namespace OnionBookOnline.Controllers
                 var res = query.ToList();
                 for (int i = (pages - 1) * 10; (i < pages * 10 && i < res.Count()); ++i)
                 {
+                    res[i].INTRODUCTION = replaceNewLine(res[i].INTRODUCTION);
                     bkVM.newBook.Add(res[i]);
                 }
                 ViewBag.pages = res.Count();
@@ -375,6 +391,7 @@ namespace OnionBookOnline.Controllers
                 var res = query.ToList();
                 for (int i = (pages - 1) * 10; (i < pages * 10 && i < res.Count()); ++i)
                 {
+                    res[i].INTRODUCTION = replaceNewLine(res[i].INTRODUCTION);
                     bkVM.hotBook.Add(res[i]);
                 }
                 ViewBag.pages = res.Count();
