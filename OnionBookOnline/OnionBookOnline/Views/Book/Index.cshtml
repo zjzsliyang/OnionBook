@@ -20,50 +20,11 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="home">
                             <div class="pro-large-img">
-                                <img src="~/Images/product/1.jpg" alt="" />
-                                <a class="popup-link" href="~/Images/product/1.jpg">View larger <i class="fa fa-search-plus" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="profile">
-                            <div class="pro-large-img">
-                                <img src="~/Images/product/2.jpg" alt="" />
-                                <a class="popup-link" href="~/Images/product/2.jpg">View larger <i class="fa fa-search-plus" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="messages">
-                            <div class="pro-large-img">
-                                <img src="~/Images/product/3.jpg" alt="" />
-                                <a class="popup-link" href="~/Images/product/3.jpg">View larger <i class="fa fa-search-plus" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="settings">
-                            <div class="pro-large-img">
-                                <img src="~/Images/product/4.jpg" alt="" />
-                                <a class="popup-link" href="~/Images/product/4.jpg">View larger <i class="fa fa-search-plus" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="settings2">
-                            <div class="pro-large-img">
-                                <img src="~/Images/product/5.jpg" alt="" />
-                                <a class="popup-link" href="~/Images/product/5.jpg">View larger <i class="fa fa-search-plus" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="settings3">
-                            <div class="pro-large-img">
-                                <img src="~/Images/product/6.jpg" alt="" />
-                                <a class="popup-link" href="img/product/6.jpg">View larger <i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                                <img src="@Model.detailBook.PATH" alt="" />
+                                <a class="popup-link" href="@Model.detailBook.PATH">查看更大图片 <i class="fa fa-search-plus" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
-                    <!-- Nav tabs -->
-                    <ul class="details-tab">
-                        <li class="active"><a href="#home" data-toggle="tab"><img src="~/Images/product/1.jpg" alt="" /></a></li>
-                        <li><a href="#profile" data-toggle="tab"><img src="~/Images/product/2.jpg" alt="" /></a></li>
-                        <li><a href="#messages" data-toggle="tab"><img src="~/Images/product/3.jpg" alt="" /></a></li>
-                        <li><a href="#settings" data-toggle="tab"><img src="~/Images/product/4.jpg" alt="" /></a></li>
-                        <li><a href="#settings2" data-toggle="tab"><img src="~/Images/product/5.jpg" alt="" /></a></li>
-                        <li><a href="#settings3" data-toggle="tab"><img src="~/Images/product/6.jpg" alt="" /></a></li>
-                    </ul>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-7">
@@ -80,8 +41,8 @@
                         </p>
                     </div>
                     <div class="price-box">
-                        <span class="price product-price">@{var currentPrice = Model.detailBook.DISCOUNT * Model.detailBook.PRICE} @currentPrice</span>
-                        <span class="old-price product-price">@Model.detailBook.PRICE</span>
+                        <span class="price product-price">￥@{var currentPrice = Model.detailBook.DISCOUNT * Model.detailBook.PRICE;} @currentPrice</span>
+                        <span class="old-price product-price"><del>￥@Model.detailBook.PRICE</del></span>
                     </div>
                     <div class="short-desc">
                         <p>@Model.detailBook.INTRODUCTION</p>
@@ -131,16 +92,40 @@
                         <table class="table-data-sheet">
                             <tbody>
                                 <tr class="odd">
-                                    <td>Compositions</td>
-                                    <td>Cotton</td>
+                                    <td>作者</td>
+                                    <td>@Model.detailBook.AUTHOR</td>
                                 </tr>
                                 <tr class="even">
-                                    <td>Styles</td>
-                                    <td>Casual</td>
+                                    <td>折扣</td>
+                                    <td>@Model.detailBook.DISCOUNT</td>
                                 </tr>
                                 <tr class="odd">
-                                    <td>Properties</td>
-                                    <td>Short Sleeve</td>
+                                    <td>ISBN</td>
+                                    <td>@Model.detailBook.ISBN</td>
+                                </tr>
+                                <tr class="even">
+                                    <td>页数</td>
+                                    <td>@Model.detailBook.PAGES</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td>价格</td>
+                                    <td>@Model.detailBook.PRICE</td>
+                                </tr>
+                                <tr class="even">
+                                    <td>出版社</td>
+                                    <td>@Model.detailBook.PUBLISHER</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td>评分</td>
+                                    <td>@Model.detailBook.SCORE</td>
+                                </tr>
+                                <tr class="even">
+                                    <td>库存</td>
+                                    <td>@Model.detailBook.STOCK</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td>销量</td>
+                                    <td>@Model.detailBook.SALE</td>
                                 </tr>
                             </tbody>
                         </table>

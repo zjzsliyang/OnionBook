@@ -108,19 +108,19 @@
                     </div>
                     <div class="col-lg-4 col-md-4 padd-2 col-sm-12  col-xs-12 dotted-style-1">
                         <div class="tab-product-active">
-                            @for (int i = 1; i < 8; i = i+3)
+                            @for (int i = 1; i < 8; i = i + 3)
                             {
                                 <div class="together-single-product">
                                     @for (int j = 1; j < 3; j++)
                                     {
                                         <div class="single-product white-bg">
                                             <div class="product-img product-container-img">
-                                                <a href="#"><img src="@Model.bpsLit[i+j].PATH" alt="" /></a>
+                                                <a href="~/book/?id=@Model.bpsLit[i+j].BOOKID"><img src="@Model.bpsLit[i+j].PATH" alt="" /></a>
                                             </div>
                                             <div class="product-content product-i">
                                                 <div class="pro-title">
                                                     <h4>
-                                                        <a href="~/book/?id=@Model.bpsLit[i+j].BOOKID">@Model.bpsLit[i+j].NAME</a>
+                                                        <a href="~/book/?id=@Model.bpsLit[i+j].BOOKID">@Model.bpsLit[i + j].NAME</a>
                                                     </h4>
                                                 </div>
                                                 <div class="pro-rating ">
@@ -131,8 +131,8 @@
                                                     <a href="#"><i class="fa fa-star"></i></a>
                                                 </div>
                                                 <div class="price-box">
-                                                    <span class="price product-price">￥@{ var currentPrice = Model.bpsLit[i+j].DISCOUNT * Model.bpsLit[i+j].PRICE;}@currentPrice</span>
-                                                    <span class="price-2"><del>￥@Model.bpsLit[i+j].PRICE</del></span>
+                                                    <span class="price product-price">￥@{ var currentPrice = Model.bpsLit[i + j].DISCOUNT * Model.bpsLit[i + j].PRICE;}@currentPrice</span>
+                                                    <span class="price-2"><del>￥@Model.bpsLit[i + j].PRICE</del></span>
                                                 </div>
                                                 <div class="product-icon">
                                                     <div class="product-icon-left f-left">
@@ -194,14 +194,14 @@
                     </div>
                     <div class="col-lg-4 col-md-4 padd-2 col-sm-12  col-xs-12 dotted-style-1">
                         <div class="tab-product-active">
-                            @for (int i = 1; i < 8; i = i+3)
+                            @for (int i = 1; i < 8; i = i + 3)
                             {
                                 <div class="together-single-product">
                                     @for (int j = 1; j < 3; j++)
                                     {
                                         <div class="single-product white-bg">
                                             <div class="product-img product-container-img">
-                                                <a href="#"><img src="@Model.bpsPop[i+j].PATH" alt="" /></a>
+                                                <a href="~/book/?id=@Model.bpsPop[i+j].BOOKID"><img src="@Model.bpsPop[i+j].PATH" alt="" /></a>
                                             </div>
                                             <div class="product-content product-i">
                                                 <div class="pro-title">
@@ -217,8 +217,8 @@
                                                     <a href="#"><i class="fa fa-star"></i></a>
                                                 </div>
                                                 <div class="price-box">
-                                                    <span class="price product-price">￥@{ var currentPrice = Model.bpsPop[i +j].DISCOUNT * Model.bpsPop[i + j].PRICE;}@currentPrice</span>
-                                                    <span class="price-2"><del>￥@Model.bpsPop[i+ j].PRICE</del></span>
+                                                    <span class="price product-price">￥@{ var currentPrice = Model.bpsPop[i + j].DISCOUNT * Model.bpsPop[i + j].PRICE;}@currentPrice</span>
+                                                    <span class="price-2"><del>￥@Model.bpsPop[i + j].PRICE</del></span>
                                                 </div>
                                                 <div class="product-icon">
                                                     <div class="product-icon-left f-left">
@@ -280,19 +280,19 @@
                     </div>
                     <div class="col-lg-4 col-md-4 padd-2 col-sm-12  col-xs-12 dotted-style-1">
                         <div class="tab-product-active">
-                            @for (int i = 1; i < 8; i=i+3)
+                            @for (int i = 1; i < 8; i = i + 3)
                             {
                                 <div class="together-single-product">
                                     @for (int j = 1; j < 3; j++)
                                     {
                                         <div class="single-product white-bg">
                                             <div class="product-img product-container-img">
-                                                <a href="#"><img src="@Model.bpsCul[i+j].PATH" alt="" /></a>
+                                                <a href="~/book/?id=@Model.bpsCul[i+j].BOOKID"><img src="@Model.bpsCul[i+j].PATH" alt="" /></a>
                                             </div>
                                             <div class="product-content product-i">
                                                 <div class="pro-title">
                                                     <h4>
-                                                        <a href="~/book/?id=@Model.bpsCul[i+j].BOOKID">@Model.bpsCul[i +j].NAME</a>
+                                                        <a href="~/book/?id=@Model.bpsCul[i+j].BOOKID">@Model.bpsCul[i + j].NAME</a>
                                                     </h4>
                                                 </div>
                                                 <div class="pro-rating ">
@@ -303,8 +303,8 @@
                                                     <a href="#"><i class="fa fa-star"></i></a>
                                                 </div>
                                                 <div class="price-box">
-                                                    <span class="price product-price">￥@{ var currentPrice = Model.bpsCul[i+ j].DISCOUNT * Model.bpsCul[i +j].PRICE;}@currentPrice</span>
-                                                    <span class="price-2"><del>￥@Model.bpsCul[i +j].PRICE</del></span>
+                                                    <span class="price product-price">￥@{ var currentPrice = Model.bpsCul[i + j].DISCOUNT * Model.bpsCul[i + j].PRICE;}@currentPrice</span>
+                                                    <span class="price-2"><del>￥@Model.bpsCul[i + j].PRICE</del></span>
                                                 </div>
                                                 <div class="product-icon">
                                                     <div class="product-icon-left f-left">
@@ -366,19 +366,19 @@
                     </div>
                     <div class="col-lg-4 col-md-4 padd-2 col-sm-12  col-xs-12 dotted-style-1">
                         <div class="tab-product-active">
-                            @for (int i = 1; i < 8; i=i+3)
+                            @for (int i = 1; i < 8; i = i + 3)
                             {
                                 <div class="together-single-product">
                                     @for (int j = 1; j < 3; j++)
                                     {
                                         <div class="single-product white-bg">
                                             <div class="product-img product-container-img">
-                                                <a href="#"><img src="@Model.bpsLif[i+j].PATH" alt="" /></a>
+                                                <a href="~/book/?id=@Model.bpsLif[i+j].BOOKID"><img src="@Model.bpsLif[i+j].PATH" alt="" /></a>
                                             </div>
                                             <div class="product-content product-i">
                                                 <div class="pro-title">
                                                     <h4>
-                                                        <a href="~/book/?id=@Model.bpsLif[i+j].BOOKID">@Model.bpsLif[i+ j].NAME</a>
+                                                        <a href="~/book/?id=@Model.bpsLif[i+j].BOOKID">@Model.bpsLif[i + j].NAME</a>
                                                     </h4>
                                                 </div>
                                                 <div class="pro-rating ">
@@ -389,8 +389,8 @@
                                                     <a href="#"><i class="fa fa-star"></i></a>
                                                 </div>
                                                 <div class="price-box">
-                                                    <span class="price product-price">￥@{ var currentPrice = Model.bpsLif[i +j].DISCOUNT * Model.bpsLif[i +j].PRICE;}@currentPrice</span>
-                                                    <span class="price-2"><del>￥@Model.bpsLif[i +j].PRICE</del></span>
+                                                    <span class="price product-price">￥@{ var currentPrice = Model.bpsLif[i + j].DISCOUNT * Model.bpsLif[i + j].PRICE;}@currentPrice</span>
+                                                    <span class="price-2"><del>￥@Model.bpsLif[i + j].PRICE</del></span>
                                                 </div>
                                                 <div class="product-icon">
                                                     <div class="product-icon-left f-left">
@@ -452,19 +452,19 @@
                     </div>
                     <div class="col-lg-4 col-md-4 padd-2 col-sm-12  col-xs-12 dotted-style-1">
                         <div class="tab-product-active">
-                            @for (int i = 1; i < 8; i=i+3)
+                            @for (int i = 1; i < 8; i = i + 3)
                             {
                                 <div class="together-single-product">
                                     @for (int j = 1; j < 3; j++)
                                     {
                                         <div class="single-product white-bg">
                                             <div class="product-img product-container-img">
-                                                <a href="#"><img src="@Model.bpsEco[i+j].PATH" alt="" /></a>
+                                                <a href="~/book/?id=@Model.bpsEco[i+j].BOOKID"><img src="@Model.bpsEco[i+j].PATH" alt="" /></a>
                                             </div>
                                             <div class="product-content product-i">
                                                 <div class="pro-title">
                                                     <h4>
-                                                        <a href="~/book/?id=@Model.bpsEco[i+j].BOOKID">@Model.bpsEco[i+ j].NAME</a>
+                                                        <a href="~/book/?id=@Model.bpsEco[i+j].BOOKID">@Model.bpsEco[i + j].NAME</a>
                                                     </h4>
                                                 </div>
                                                 <div class="pro-rating ">
@@ -538,14 +538,14 @@
                     </div>
                     <div class="col-lg-4 col-md-4 padd-2 col-sm-12  col-xs-12 dotted-style-1">
                         <div class="tab-product-active">
-                            @for (int i = 1; i < 8; i=i+3)
+                            @for (int i = 1; i < 8; i = i + 3)
                             {
                                 <div class="together-single-product">
                                     @for (int j = 1; j < 3; j++)
                                     {
                                         <div class="single-product white-bg">
                                             <div class="product-img product-container-img">
-                                                <a href="#"><img src="@Model.bpsTec[i+j].PATH" alt="" /></a>
+                                                <a href="~/book/?id=@Model.bpsTec[i+j].BOOKID"><img src="@Model.bpsTec[i+j].PATH" alt="" /></a>
                                             </div>
                                             <div class="product-content product-i">
                                                 <div class="pro-title">
@@ -561,7 +561,7 @@
                                                     <a href="#"><i class="fa fa-star"></i></a>
                                                 </div>
                                                 <div class="price-box">
-                                                    <span class="price product-price">￥@{ var currentPrice = Model.bpsTec[i +j].DISCOUNT * Model.bpsTec[i + j].PRICE;}@currentPrice</span>
+                                                    <span class="price product-price">￥@{ var currentPrice = Model.bpsTec[i + j].DISCOUNT * Model.bpsTec[i + j].PRICE;}@currentPrice</span>
                                                     <span class="price-2"><del>￥@Model.bpsTec[i + j].PRICE</del></span>
                                                 </div>
                                                 <div class="product-icon">
@@ -599,41 +599,41 @@
                     <div class="single-product-items-active border-1">
                         @for (int i = 1; i < 3; i++)
                         {
-                        <div class="single-product-items">
-                            @for (int j = 1; j < 6; j++)
+                            <div class="single-product-items">
+                                @for (int j = 1; j < 6; j++)
                                 {
                                     var bestsellerBook = Model.bpsRank[i * j - 1];
 
 
-                                <div class="single-product single-product-sidebar white-bg">
-                                    <div class="product-img product-img-left">
-                                        <a href="~/book/?id=@bestsellerBook.BOOKID"><img src="@bestsellerBook.PATH" alt="" /></a>
-                                    </div>
-                                    <div class="product-content product-content-right">
-                                        <div class="pro-title">
-                                            <h4>
-                                                <a href="product-details.html">@bestsellerBook.NAME</a>
-                                            </h4>
+                                    <div class="single-product single-product-sidebar white-bg">
+                                        <div class="product-img product-img-left">
+                                            <a href="~/book/?id=@bestsellerBook.BOOKID"><img src="@bestsellerBook.PATH" alt="" /></a>
                                         </div>
-                                        <div class="pro-rating ">
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star-o"></i></a>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="price product-price">￥@bestsellerBook.PRICE</span>
-                                        </div>
-                                        <div class="product-icon">
-                                            <div class="product-icon-left f-left">
-                                                <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                        <div class="product-content product-content-right">
+                                            <div class="pro-title">
+                                                <h4>
+                                                    <a href="~/book/?id=@bestsellerBook.BOOKID">@bestsellerBook.NAME</a>
+                                                </h4>
+                                            </div>
+                                            <div class="pro-rating ">
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star-o"></i></a>
+                                            </div>
+                                            <div class="price-box">
+                                                <span class="price product-price">￥@bestsellerBook.PRICE</span>
+                                            </div>
+                                            <div class="product-icon">
+                                                <div class="product-icon-left f-left">
+                                                    <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                                 }
-                        </div>
+                            </div>
                         }
                     </div>
                 </div>
@@ -650,7 +650,7 @@
                             <div class="product-content">
                                 <div class="pro-title">
                                     <h4>
-                                        <a href="product-details.html">@Model.bpsRcm[9].NAME</a>
+                                        <a href="~/book/?id=@Model.bpsRcm[9].BOOKID">@Model.bpsRcm[9].NAME</a>
                                     </h4>
                                 </div>
                                 <div class="pro-rating ">
@@ -680,7 +680,7 @@
                             <div class="product-content">
                                 <div class="pro-title">
                                     <h4>
-                                        <a href="product-details.html">@Model.bpsRcm[8].NAME</a>
+                                        <a href="~/book/?id=@Model.bpsRcm[8].BOOKID">@Model.bpsRcm[8].NAME</a>
                                     </h4>
                                 </div>
                                 <div class="pro-rating ">
@@ -753,36 +753,36 @@
                     <div class="feature-product-active border-1">
                         @foreach (var featureBook in Model.bpsScore)
                         {
-                        <div class="single-product  white-bg">
-                            <div class="product-img pt-20">
-                                <a href="~/book/?id=@featureBook.BOOKID"><img src="@featureBook.PATH" alt="" /></a>
-                            </div>
-                            <div class="product-content product-i">
-                                <div class="pro-title">
-                                    <h4>
-                                        <a href="product-details.html">@featureBook.NAME</a>
-                                    </h4>
+                            <div class="single-product  white-bg">
+                                <div class="product-img pt-20">
+                                    <a href="~/book/?id=@featureBook.BOOKID"><img src="@featureBook.PATH" alt="" /></a>
                                 </div>
-                                <div class="pro-rating ">
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                </div>
-                                <div class="price-box">
-                                    <span class="price product-price">￥@featureBook.PRICE</span>
-                                </div>
-                                <div class="product-icon">
-                                    <div class="product-icon-left f-left">
-                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                <div class="product-content product-i">
+                                    <div class="pro-title">
+                                        <h4>
+                                            <a href="~/book/?id=@featureBook.BOOKID">@featureBook.NAME</a>
+                                        </h4>
                                     </div>
-                                    <div class="product-icon-right floatright">
-                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                    <div class="pro-rating ">
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star-o"></i></a>
+                                    </div>
+                                    <div class="price-box">
+                                        <span class="price product-price">￥@featureBook.PRICE</span>
+                                    </div>
+                                    <div class="product-icon">
+                                        <div class="product-icon-left f-left">
+                                            <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                        </div>
+                                        <div class="product-icon-right floatright">
+                                            <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         }
                     </div>
                 </div>
@@ -803,42 +803,42 @@
                     <div class="new-product-active border-1">
                         @for (var i = 1; i < 6; i++)
                         {
-                        <div class="new-product-items">
-                            @for (var j = 1; j < 3; j++)
+                            <div class="new-product-items">
+                                @for (var j = 1; j < 3; j++)
                                 {
                                     var newBook = Model.bpsLatest[i * j - 1];
-                                <div class="single-product  white-bg">
-                                    <div class="product-img pt-20">
-                                        <a href="~/book/?id=@newBook.BOOKID"><img src="@newBook.PATH" alt="" /></a>
-                                    </div>
-                                    <div class="product-content product-i">
-                                        <div class="pro-title">
-                                            <h4>
-                                                <a href="product-details.html">@newBook.NAME</a>
-                                            </h4>
+                                    <div class="single-product  white-bg">
+                                        <div class="product-img pt-20">
+                                            <a href="~/book/?id=@newBook.BOOKID"><img src="@newBook.PATH" alt="" /></a>
                                         </div>
-                                        <div class="pro-rating ">
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star-o"></i></a>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="price product-price">￥@newBook.PRICE</span>
-                                        </div>
-                                        <div class="product-icon">
-                                            <div class="product-icon-left f-left">
-                                                <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                        <div class="product-content product-i">
+                                            <div class="pro-title">
+                                                <h4>
+                                                    <a href="~/book/?id=@newBook.BOOKID">@newBook.NAME</a>
+                                                </h4>
                                             </div>
-                                            <div class="product-icon-right floatright">
-                                                <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                            <div class="pro-rating ">
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                <a href="#"><i class="fa fa-star-o"></i></a>
+                                            </div>
+                                            <div class="price-box">
+                                                <span class="price product-price">￥@newBook.PRICE</span>
+                                            </div>
+                                            <div class="product-icon">
+                                                <div class="product-icon-left f-left">
+                                                    <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                </div>
+                                                <div class="product-icon-right floatright">
+                                                    <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                                 }
-                        </div>
+                            </div>
                         }
                     </div>
                 </div>
