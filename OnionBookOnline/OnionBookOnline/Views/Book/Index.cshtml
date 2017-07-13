@@ -1,4 +1,6 @@
-﻿<!-- breadcrumb start -->
+﻿@model OnionBookOnline.Models.BookViewModel
+
+<!-- breadcrumb start -->
 <div class="breadcrumb-area">
     <div class="container">
         <ol class="breadcrumb">
@@ -66,23 +68,23 @@
             </div>
             <div class="col-xs-12 col-sm-6 col-md-7">
                 <div class="product-details">
-                    <h2 class="pro-d-title">MacBook Pro</h2>
+                    <h2 class="pro-d-title">@Model.detailBook.NAME</h2>
                     <div class="pro-ref">
                         <p>
                             <label>作者： </label>
-                            <span> 丢雷楼某 </span>
+                            <span> @Model.detailBook.AUTHOR </span>
                         </p>
                         <p>
                             <label>出版社: </label>
-                            <span>同济大学出版社</span>
+                            <span>@Model.detailBook.PUBLISHER</span>
                         </p>
                     </div>
                     <div class="price-box">
-                        <span class="price product-price">$262.00</span>
-                        <span class="old-price product-price">$282.00</span>
+                        <span class="price product-price">@{var currentPrice = Model.detailBook.DISCOUNT * Model.detailBook.PRICE} @currentPrice</span>
+                        <span class="old-price product-price">@Model.detailBook.PRICE</span>
                     </div>
                     <div class="short-desc">
-                        <p>Faded short sleeves t-shirt with high neckline. Soft and stretchy material for a comfortable fit. Accessorize with a straw hat and you're ready for summer!</p>
+                        <p>@Model.detailBook.INTRODUCTION</p>
                     </div>
                     <div class="box-quantity">
                         <form action="#">
@@ -121,7 +123,7 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="home3">
                     <div class="pro-desc">
-                        <p>Fashion has been creating well-designed collections since 2010. The brand offers feminine designs delivering stylish separates and statement dresses which have since evolved into a full ready-to-wear collection in which every item is a vital part of a woman's wardrobe. The result? Cool, easy, chic looks with youthful elegance and unmistakable signature style. All the beautiful pieces are made in Italy and manufactured with the greatest attention. Now Fashion extends to a range of accessories including shoes, hats, belts and more!</p>
+                        <p>@Model.detailBook.INTRODUCTION</p>
                     </div>
                 </div>
                 <div class="tab-pane" id="profile3">

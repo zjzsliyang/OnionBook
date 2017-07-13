@@ -42,6 +42,7 @@ namespace OnionBookOnline.Controllers
             HomeVM.bpsRank = new List<HomeBookInfo>();
             HomeVM.bpsScore = new List<HomeBookInfo>();
             HomeVM.bpsLatest = new List<HomeBookInfo>();
+            HomeVM.bpsRcm = new List<HomeBookInfo>();
 
             using (var context = new OnionContext())
             {
@@ -116,7 +117,23 @@ namespace OnionBookOnline.Controllers
                                   };
                 var resLatest = queryLatest.ToList();
 
-
+                //Recommended:
+                var queryRcm = from b in context.books
+                               join c in context.pictures on b.BOOKID equals c.BOOKID
+                               join d in context.writes on b.BOOKID equals d.BOOKID
+                               join e in context.authors on d.AUTHORID equals e.AUTHORID
+                               where b.SCORE >= 4.5 && b.SALE >= 150
+                               select new HomeBookInfo()
+                               {
+                                   BOOKID =b.BOOKID,
+                                   NAME = b.NAME,
+                                   AUTHORNAME = e.NAME,
+                                   SCORE = b.SCORE,
+                                   PRICE = b.PRICE,
+                                   DISCOUNT = b.DISCOUNT,
+                                   PATH = c.PATH
+                               };
+                var resRcm = queryRcm.ToList();
 
                 for (int i = 0; i < 10; i++)
                 {
@@ -129,10 +146,9 @@ namespace OnionBookOnline.Controllers
                     HomeVM.bpsRank.Add(resRank[i]);
                     HomeVM.bpsScore.Add(resScore[i]);
                     HomeVM.bpsLatest.Add(resLatest[i]);
-                }
-
+                    HomeVM.bpsRcm.Add(resRcm[i]);
+                }        
             }
-
             return View(HomeVM);
         }
 

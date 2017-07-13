@@ -16,5 +16,6 @@ namespace OnionBookOnline.Models
         public List<HomeBookInfo> bpsRank;
         public List<HomeBookInfo> bpsScore;
         public List<HomeBookInfo> bpsLatest;
+        public List<HomeBookInfo> bpsRcm;
     }
 }
