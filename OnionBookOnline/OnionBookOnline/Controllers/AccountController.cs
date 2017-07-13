@@ -9,7 +9,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using OnionBookOnline.Models;
+using OnionBookOnline.DAL;
 using Oracle.ManagedDataAccess.Client;
+using System.Collections.Generic;
 
 namespace OnionBookOnline.Controllers
 {
@@ -63,23 +65,111 @@ namespace OnionBookOnline.Controllers
             return View(UserManager.Users);
         }
 
-        public ActionResult Orderlist()
+        public ActionResult Orderlist(string userId)
         {
+            OrderViewModel orderVM = new OrderViewModel();
+            using (var context = new OnionContext())
+            {
+                var query = from o in context.oorders
+                            join c in context.contains on o.ORDERID equals c.BOOKID
+                            join b in context.books on c.BOOKID equals b.BOOKID
+                            join p in context.pictures on b.BOOKID equals p.BOOKID
+                            where o.CUSTOMERID == userId
+                            select new DetailOrder
+                            {
+                                PICTURE = p.PATH,
+                                NAME = b.NAME,
+                                PRICE = c.SUM / c.AMOUNT,
+                                COUNT = c.AMOUNT,
+                                SUM = c.SUM,
+                            };
+                orderVM.orders = new List<DetailOrder>(query.ToList());
+                orderVM.calcTotal();
+                            
+            }
             return View();
         }
 
         //
-        // GET: /Account/Cart/?userId=xxx&bookId=xxxx
+        // GET: /Account/Cart/?userId=xxxx
+        public ActionResult Cart(string userId)
+        {
+            var cartVM = new GoodSVIewModel();
+            using (var context = new OnionContext())
+            {
+                 var query = from b in context.preorders
+                            join c in context.books on b.BOOKID equals c.BOOKID
+                            join d in context.pictures on c.BOOKID equals d.BOOKID
+                            where b.CUSTOMERID == userId
+                            select new Goods()
+                            {
+                                PICTURE = d.PATH,
+                                NAME = c.NAME,
+                                AMOUNT = b.AMOUNT,
+                                PRICE = c.PRICE * c.DISCOUNT,
+                            };
+
+                cartVM.GOODS = new System.Collections.Generic.List<Goods>(query.ToList());
+            }
+
+            cartVM.calcTotal();
+
+            return View(cartVM);
+        }
+
+        //
+        // GET: /Account/Cart/?userId=xxxx&bookId=xxxx
         public ActionResult Cart(string userId, string bookId)
         {
-
+            using(var context = new OnionContext())
+            {
+                context.preorders.Remove(context.preorders.Where(x => x.BOOKID == bookId && x.CUSTOMERID == userId).FirstOrDefault());
+                int res = context.SaveChanges();
+            }
             return View();
         }
 
-        public ActionResult Star()
+
+        //
+        // GET: /Account/Star/?userId=xxxx
+        public ActionResult Star(string userId)
         {
+            var starVM = new GoodSVIewModel();
+            using (var context = new OnionContext())
+            {
+                var query = from b in context.stars
+                            join c in context.books on b.BOOKID equals c.BOOKID
+                            join d in context.pictures on c.BOOKID equals d.BOOKID
+                            join e in context.writes on c.BOOKID equals e.BOOKID
+                            join f in context.authors on e.AUTHORID equals f.AUTHORID
+                            where b.CUSTOMERID == userId
+                            select new Goods()
+                            {
+                                PICTURE = d.PATH,
+                                NAME = c.NAME,
+                                PRICE = c.PRICE * c.DISCOUNT,
+                                PUBLISHER = c.PUBLISHER,
+                                AUTHOR = f.NAME,
+                            };
+
+                starVM.GOODS = new System.Collections.Generic.List<Goods>(query.ToList());
+            }
+
+            return View(starVM);
+        }
+
+        //
+        // GET: /Account/Star/?userId=xxx&bookId=xxxx
+        public ActionResult Star(string userId, string bookId)
+        {
+            using (var context = new OnionContext())
+            {
+                context.stars.Remove(context.stars.Where(x => x.BOOKID == bookId && x.CUSTOMERID == userId).FirstOrDefault());
+                int res = context.SaveChanges();
+            }
             return View();
         }
+
 
         public ActionResult Checkout()
         {

@@ -15,7 +15,7 @@ namespace OnionBookOnline.Models
         [Column(Order = 2, TypeName = "varchar2")]
         public string BOOKID { get; set; }
 
-        public double AMOUNT { get; set; }
+        public int AMOUNT { get; set; }
 
         public double SUM { get; set; }
     }

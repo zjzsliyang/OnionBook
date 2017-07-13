@@ -64,6 +64,24 @@ namespace OnionBookOnline.Controllers
             return View();
         }
 
+        //GET:Book/
+        public async Task<ActionResult> Index(string id, string userId)
+        {
+            using (var context = new OnionContext())
+            {
+                var star = new STAR()
+                {
+                    CUSTOMERID = userId,
+                    BOOKID = id,
+                    TIME = DateTime.Now.Date.ToString(),
+                };
+                context.stars.Add(star);
+                int x = await (context.SaveChangesAsync());
+            }
+            ViewBag.Message = "添加成功！";
+            return View();
+        }
+
         public ActionResult Search(string standard, string keywords)
         {
             var bkVM = new BookViewModel();
