@@ -18,7 +18,7 @@
 <!-- shop-area start -->
 <div class="shop-area">
     <div class="container">
-        <div class="row">
+        <div class="row" style="display: flex;flex-direction: column;align-items: center;">
             <div class="col-md-9 col-sm-8">
                 <h2 class="page-heading mt-40">
                     <span class="cat-name">@Model.type</span>
@@ -26,22 +26,6 @@
                 </h2>
                 <div class="shop-page-bar">
                     <div>
-                        <div class="shop-bar">
-                            <div class="selector-field f-left ml-20 hidden-xs">
-                                <form action="#">
-                                    <label>排序</label>
-                                    <select name="select">
-                                        <option value="">----</option>
-                                        <option value="">销量从高到低</option>
-                                        <option value="">销量从低到高</option>
-                                        <option value="">评分从高到低</option>
-                                        <option value="">评分从低到高</option>
-                                        <option value="">价格从低到高</option>
-                                        <option value="">价格从高到低</option>
-                                    </select>
-                                </form>
-                            </div>
-                        </div>
                         <!-- Tab panes -->
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="home">
@@ -51,7 +35,7 @@
                                         <div class="col-lg-4 col-md-4 col-sm-6">
                                             <div class="single-product mb-30  white-bg">
                                                 <div class="product-img pt-20">
-                                                    <a href="#"><img src="@item.PATH"  /></a>
+                                                    <a href="#"><img src="@item.PATH" style="width:260px; height:368px" /></a>
                                                 </div>
                                                 <div class="product-content product-i">
                                                     <div class="pro-title">
