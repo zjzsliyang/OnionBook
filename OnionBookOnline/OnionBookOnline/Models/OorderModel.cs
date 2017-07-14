@@ -20,7 +20,7 @@ namespace OnionBookOnline.Models
         [Column(Order = 3, TypeName = "varchar2")]
         public string RECIPIENTID { get; set; }
 
-        public  int TOTAL{get; set; }
+        public  double TOTAL{get; set; }
 
         [MaxLength(128)]
         [Column(TypeName = "varchar2")]

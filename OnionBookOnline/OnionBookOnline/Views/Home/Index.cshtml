@@ -98,7 +98,7 @@
                                     <div class="product-icon-left f-left" id="test">
                                         <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
                                         <script>
-                                            $("#test").click(function()
+                                            $(".product-icon-left a").click(function()
                                             {
                                                 $.ajax({
                                                     type: "POST",
@@ -110,6 +110,16 @@
                                     </div>
                                     <div class="product-icon-right floatright">
                                         <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                        <script>
+                                            $(".product-icon-right a").click(function()
+                                            {
+                                                $.ajax({
+                                                    type: "POST",
+                                                    url: "/Account/AddStar",
+                                                    data: {bookId: @Model.bpsLit[0].BOOKID, returnUrl: "/Home/Index"}
+                                                });
+                                            })
+                                        </script>
                                     </div>
                                 </div>
                             </div>
