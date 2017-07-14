@@ -154,111 +154,39 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="slider-product dotted-style-1 pt-20">
-                    <div class="slider-product-active-3">
-                        <div class="single-product single-product-sidebar white-bg">
-                            <div class="product-img product-img-left">
-                                <a href="#"><img src="~/Images/product/5.jpg" alt="" /></a>
-                            </div>
-                            <div class="product-content product-content-right">
-                                <div class="pro-title">
-                                    <h4><a href="product-details.html">Lounge Chair</a></h4>
+                    <div class="slider-product-active-3"> 
+                        @foreach (var item in Model.relatedBook)
+                        {
+                            <div class="single-product single-product-sidebar white-bg">
+                                <div class="product-img product-img-left">
+                                    <a href="#"><img src="@item.PATH" style="width:284px; height:400px" alt="" /></a>
                                 </div>
-                                <div class="pro-rating ">
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                </div>
-                                <div class="price-box">
-                                    <span class="price product-price">$444.00</span>
-                                </div>
-                                <div class="product-icon">
-                                    <div class="product-icon-left f-left">
-                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                <div class="product-content product-content-right">
+                                    <div class="pro-title">
+                                        <h4><a href="/book/?id=@item.ID">@item.NAME</a></h4>
+                                    </div>
+                                    <div class="pro-rating ">
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star-o"></i></a>
+                                    </div>
+                                    <div class="price-box">
+                                        <span class="price product-price">￥@item.PRICE</span>
+                                    </div>
+                                    <div class="product-icon">
+                                        <div class="product-icon-left f-left">
+                                            <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="single-product single-product-sidebar white-bg">
-                            <div class="product-img product-img-left">
-                                <a href="#"><img src="~/Images/product/6.jpg" alt="" /></a>
-                            </div>
-                            <div class="product-content product-content-right">
-                                <div class="pro-title">
-                                    <h4><a href="product-details.html">Lounge Chair</a></h4>
-                                </div>
-                                <div class="pro-rating ">
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                </div>
-                                <div class="price-box">
-                                    <span class="price product-price">$444.00</span>
-                                </div>
-                                <div class="product-icon">
-                                    <div class="product-icon-left f-left">
-                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-product single-product-sidebar white-bg">
-                            <div class="product-img product-img-left">
-                                <a href="#"><img src="~/Images/product/9.jpg" alt="" /></a>
-                            </div>
-                            <div class="product-content product-content-right">
-                                <div class="pro-title">
-                                    <h4><a href="product-details.html">imac</a></h4>
-                                </div>
-                                <div class="pro-rating ">
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                </div>
-                                <div class="price-box">
-                                    <span class="price product-price">$300.00</span>
-                                </div>
-                                <div class="product-icon">
-                                    <div class="product-icon-left f-left">
-                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-product single-product-sidebar white-bg">
-                            <div class="product-img product-img-left">
-                                <a href="#"><img src="~/Images/product/11.jpg" alt="" /></a>
-                            </div>
-                            <div class="product-content product-content-right">
-                                <div class="pro-title">
-                                    <h4><a href="product-details.html">imac</a></h4>
-                                </div>
-                                <div class="pro-rating ">
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star-o"></i></a>
-                                </div>
-                                <div class="price-box">
-                                    <span class="price product-price">$331.00</span>
-                                </div>
-                                <div class="product-icon">
-                                    <div class="product-icon-left f-left">
-                                        <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        }
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- .slider-product-area-3-end -->	
+<!-- .slider-product-area-3-end -->

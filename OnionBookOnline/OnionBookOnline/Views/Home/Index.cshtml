@@ -70,17 +70,17 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pad">
                         <div class="single-tab-img">
-                            <a href="#"><img src="~/Images/electronic/1.jpg" alt="" /></a>
+                            <a href="~/book/?id=@Model.bpsLit[0].BOOKID"><img src="~/Images/electronic/1.jpg" alt="" /></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6  col-xs-12 pad">
                         <div class="single-product pt-30 pb-20 white-bg">
                             <div class="product-img pb-40">
-                                <a href="~/book/?id=@Model.bpsLit[0].BOOKID"><img src="@Model.bpsLit[0].PATH" alt="" /></a>
+                                <a href="~/book/?id=@Model.bpsLit[0].BOOKID"><img src="@Model.bpsLit[0].PATH" style="width:369px; height:534px" alt="" /></a>
                             </div>
                             <div class="product-content">
                                 <div class="pro-title">
-                                    <h4>
+                                    <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
                                         <a href="~/book/?id=@Model.bpsLit[0].BOOKID">@Model.bpsLit[0].NAME</a>
                                     </h4>
                                 </div>
@@ -95,11 +95,31 @@
                                     <span class="price product-price">￥@Model.bpsLit[0].PRICE</span>
                                 </div>
                                 <div class="product-icon">
-                                    <div class="product-icon-left f-left">
+                                    <div class="product-icon-left f-left" id="test">
                                         <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                        <script>
+                                            $(".product-icon-left a").click(function()
+                                            {
+                                                $.ajax({
+                                                    type: "POST",
+                                                    url: "/Account/AddCart",
+                                                    data: {bookId: @Model.bpsLit[0].BOOKID}
+                                                });
+                                            })
+                                        </script>
                                     </div>
                                     <div class="product-icon-right floatright">
                                         <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
+                                        <script>
+                                            $(".product-icon-right a").click(function()
+                                            {
+                                                $.ajax({
+                                                    type: "POST",
+                                                    url: "/Account/AddStar",
+                                                    data: {bookId: @Model.bpsLit[0].BOOKID, returnUrl: "/Home/Index"}
+                                                });
+                                            })
+                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -115,11 +135,11 @@
                                     {
                                         <div class="single-product white-bg">
                                             <div class="product-img product-container-img">
-                                                <a href="~/book/?id=@Model.bpsLit[i+j].BOOKID"><img src="@Model.bpsLit[i+j].PATH" alt="" /></a>
+                                                <a href="~/book/?id=@Model.bpsLit[i+j].BOOKID"><img src="@Model.bpsLit[i+j].PATH" style="width:162px; height:236px" alt="" /></a>
                                             </div>
                                             <div class="product-content product-i">
                                                 <div class="pro-title">
-                                                    <h4>
+                                                    <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
                                                         <a href="~/book/?id=@Model.bpsLit[i+j].BOOKID">@Model.bpsLit[i + j].NAME</a>
                                                     </h4>
                                                 </div>
@@ -162,11 +182,11 @@
                     <div class="col-lg-4 col-md-4 col-sm-6  col-xs-12 pad">
                         <div class="single-product pt-30 pb-20 white-bg">
                             <div class="product-img pb-40">
-                                <a href="~/book/?id=@Model.bpsPop[0].BOOKID"><img src="@Model.bpsPop[0].PATH" alt="" /></a>
+                                <a href="~/book/?id=@Model.bpsPop[0].BOOKID"><img src="@Model.bpsPop[0].PATH" style="width:369px; height:534px" alt="" /></a>
                             </div>
                             <div class="product-content">
                                 <div class="pro-title">
-                                    <h4>
+                                    <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
                                         <a href="~/book/?id=@Model.bpsPop[0].BOOKID">@Model.bpsPop[0].NAME</a>
                                     </h4>
                                 </div>
@@ -201,11 +221,11 @@
                                     {
                                         <div class="single-product white-bg">
                                             <div class="product-img product-container-img">
-                                                <a href="~/book/?id=@Model.bpsPop[i+j].BOOKID"><img src="@Model.bpsPop[i+j].PATH" alt="" /></a>
+                                                <a href="~/book/?id=@Model.bpsPop[i+j].BOOKID"><img src="@Model.bpsPop[i+j].PATH"  style="width:162px; height:236px" alt="" /></a>
                                             </div>
                                             <div class="product-content product-i">
                                                 <div class="pro-title">
-                                                    <h4>
+                                                    <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
                                                         <a href="~/book/?id=@Model.bpsPop[i+j].BOOKID">@Model.bpsPop[i + j].NAME</a>
                                                     </h4>
                                                 </div>
@@ -248,11 +268,11 @@
                     <div class="col-lg-4 col-md-4 col-sm-6  col-xs-12 pad">
                         <div class="single-product pt-30 pb-20 white-bg">
                             <div class="product-img pb-40">
-                                <a href="~/book/?id=@Model.bpsCul[0].BOOKID"><img src="@Model.bpsCul[0].PATH" alt="" /></a>
+                                <a href="~/book/?id=@Model.bpsCul[0].BOOKID"><img src="@Model.bpsCul[0].PATH" style="width:369px; height:534px"  alt="" /></a>
                             </div>
                             <div class="product-content">
                                 <div class="pro-title">
-                                    <h4>
+                                    <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
                                         <a href="~/book/?id=@Model.bpsCul[0].BOOKID">@Model.bpsCul[0].NAME</a>
                                     </h4>
                                 </div>
@@ -287,11 +307,11 @@
                                     {
                                         <div class="single-product white-bg">
                                             <div class="product-img product-container-img">
-                                                <a href="~/book/?id=@Model.bpsCul[i+j].BOOKID"><img src="@Model.bpsCul[i+j].PATH" alt="" /></a>
+                                                <a href="~/book/?id=@Model.bpsCul[i+j].BOOKID"><img src="@Model.bpsCul[i+j].PATH"  style="width:162px; height:236px" alt="" /></a>
                                             </div>
                                             <div class="product-content product-i">
                                                 <div class="pro-title">
-                                                    <h4>
+                                                    <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
                                                         <a href="~/book/?id=@Model.bpsCul[i+j].BOOKID">@Model.bpsCul[i + j].NAME</a>
                                                     </h4>
                                                 </div>
@@ -334,11 +354,11 @@
                     <div class="col-lg-4 col-md-4 col-sm-6  col-xs-12 pad">
                         <div class="single-product pt-30 pb-20 white-bg">
                             <div class="product-img pb-40">
-                                <a href="~/book/?id=@Model.bpsLif[0].BOOKID"><img src="@Model.bpsLif[0].PATH" alt="" /></a>
+                                <a href="~/book/?id=@Model.bpsLif[0].BOOKID"><img src="@Model.bpsLif[0].PATH"  style="width:369px; height:534px" alt="" /></a>
                             </div>
                             <div class="product-content">
                                 <div class="pro-title">
-                                    <h4>
+                                    <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
                                         <a href="~/book/?id=@Model.bpsLif[0].BOOKID">@Model.bpsLif[0].NAME</a>
                                     </h4>
                                 </div>
@@ -373,11 +393,11 @@
                                     {
                                         <div class="single-product white-bg">
                                             <div class="product-img product-container-img">
-                                                <a href="~/book/?id=@Model.bpsLif[i+j].BOOKID"><img src="@Model.bpsLif[i+j].PATH" alt="" /></a>
+                                                <a href="~/book/?id=@Model.bpsLif[i+j].BOOKID"><img src="@Model.bpsLif[i+j].PATH"  style="width:162px; height:236px" alt="" /></a>
                                             </div>
                                             <div class="product-content product-i">
                                                 <div class="pro-title">
-                                                    <h4>
+                                                    <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
                                                         <a href="~/book/?id=@Model.bpsLif[i+j].BOOKID">@Model.bpsLif[i + j].NAME</a>
                                                     </h4>
                                                 </div>
@@ -420,11 +440,11 @@
                     <div class="col-lg-4 col-md-4 col-sm-6  col-xs-12 pad">
                         <div class="single-product pt-30 pb-20 white-bg">
                             <div class="product-img pb-40">
-                                <a href="~/book/?id=@Model.bpsEco[0].BOOKID"><img src="@Model.bpsEco[0].PATH" alt="" /></a>
+                                <a href="~/book/?id=@Model.bpsEco[0].BOOKID"><img src="@Model.bpsEco[0].PATH"  style="width:369px; height:534px" alt="" /></a>
                             </div>
                             <div class="product-content">
                                 <div class="pro-title">
-                                    <h4>
+                                    <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
                                         <a href="~/book/?id=@Model.bpsEco[0].BOOKID">@Model.bpsEco[0].NAME</a>
                                     </h4>
                                 </div>
@@ -459,11 +479,11 @@
                                     {
                                         <div class="single-product white-bg">
                                             <div class="product-img product-container-img">
-                                                <a href="~/book/?id=@Model.bpsEco[i+j].BOOKID"><img src="@Model.bpsEco[i+j].PATH" alt="" /></a>
+                                                <a href="~/book/?id=@Model.bpsEco[i+j].BOOKID"><img src="@Model.bpsEco[i+j].PATH"  style="width:162px; height:236px" alt="" /></a>
                                             </div>
                                             <div class="product-content product-i">
                                                 <div class="pro-title">
-                                                    <h4>
+                                                    <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
                                                         <a href="~/book/?id=@Model.bpsEco[i+j].BOOKID">@Model.bpsEco[i + j].NAME</a>
                                                     </h4>
                                                 </div>
@@ -506,11 +526,11 @@
                     <div class="col-lg-4 col-md-4 col-sm-6  col-xs-12 pad">
                         <div class="single-product pt-30 pb-20 white-bg">
                             <div class="product-img pb-40">
-                                <a href="~/book/?id=@Model.bpsTec[0].BOOKID"><img src="@Model.bpsTec[0].PATH" alt="" /></a>
+                                <a href="~/book/?id=@Model.bpsTec[0].BOOKID"><img src="@Model.bpsTec[0].PATH"  style="width:369px; height:534px" alt="" /></a>
                             </div>
                             <div class="product-content">
                                 <div class="pro-title">
-                                    <h4>
+                                    <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
                                         <a href="~/book/?id=@Model.bpsTec[0].BOOKID">@Model.bpsTec[0].NAME</a>
                                     </h4>
                                 </div>
@@ -545,11 +565,11 @@
                                     {
                                         <div class="single-product white-bg">
                                             <div class="product-img product-container-img">
-                                                <a href="~/book/?id=@Model.bpsTec[i+j].BOOKID"><img src="@Model.bpsTec[i+j].PATH" alt="" /></a>
+                                                <a href="~/book/?id=@Model.bpsTec[i+j].BOOKID"><img src="@Model.bpsTec[i+j].PATH"  style="width:162px; height:236px" alt="" /></a>
                                             </div>
                                             <div class="product-content product-i">
                                                 <div class="pro-title">
-                                                    <h4>
+                                                    <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
                                                         <a href="~/book/?id=@Model.bpsTec[i+j].BOOKID">@Model.bpsTec[i + j].NAME</a>
                                                     </h4>
                                                 </div>
@@ -611,7 +631,7 @@
                                         </div>
                                         <div class="product-content product-content-right">
                                             <div class="pro-title">
-                                                <h4>
+                                                <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
                                                     <a href="~/book/?id=@bestsellerBook.BOOKID">@bestsellerBook.NAME</a>
                                                 </h4>
                                             </div>
@@ -649,7 +669,7 @@
                             </div>
                             <div class="product-content">
                                 <div class="pro-title">
-                                    <h4>
+                                    <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
                                         <a href="~/book/?id=@Model.bpsRcm[9].BOOKID">@Model.bpsRcm[9].NAME</a>
                                     </h4>
                                 </div>
@@ -679,7 +699,7 @@
                             </div>
                             <div class="product-content">
                                 <div class="pro-title">
-                                    <h4>
+                                    <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
                                         <a href="~/book/?id=@Model.bpsRcm[8].BOOKID">@Model.bpsRcm[8].NAME</a>
                                     </h4>
                                 </div>
@@ -755,11 +775,11 @@
                         {
                             <div class="single-product  white-bg">
                                 <div class="product-img pt-20">
-                                    <a href="~/book/?id=@featureBook.BOOKID"><img src="@featureBook.PATH" alt="" /></a>
+                                    <a href="~/book/?id=@featureBook.BOOKID"><img src="@featureBook.PATH" style="width:231px; height:349px" alt="" /></a>
                                 </div>
                                 <div class="product-content product-i">
                                     <div class="pro-title">
-                                        <h4>
+                                        <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
                                             <a href="~/book/?id=@featureBook.BOOKID">@featureBook.NAME</a>
                                         </h4>
                                     </div>
@@ -809,11 +829,11 @@
                                     var newBook = Model.bpsLatest[i * j - 1];
                                     <div class="single-product  white-bg">
                                         <div class="product-img pt-20">
-                                            <a href="~/book/?id=@newBook.BOOKID"><img src="@newBook.PATH" alt="" /></a>
+                                            <a href="~/book/?id=@newBook.BOOKID"><img src="@newBook.PATH" style="width:231px; height:349px" alt="" /></a>
                                         </div>
                                         <div class="product-content product-i">
                                             <div class="pro-title">
-                                                <h4>
+                                                <h4 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
                                                     <a href="~/book/?id=@newBook.BOOKID">@newBook.NAME</a>
                                                 </h4>
                                             </div>

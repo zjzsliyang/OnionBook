@@ -55,49 +55,13 @@ namespace OnionBookOnline.Controllers
             }
         }
 
-        public ActionResult OrderComplete()
-        {
-            return View();
-        }
-
-        public ActionResult Index()
-        {
-            return View(UserManager.Users);
-        }
-
-        public ActionResult Orderlist(string userId)
-        {
-            OrderViewModel orderVM = new OrderViewModel();
-            using (var context = new OnionContext())
-            {
-                var query = from o in context.oorders
-                            join c in context.contains on o.ORDERID equals c.BOOKID
-                            join b in context.books on c.BOOKID equals b.BOOKID
-                            join p in context.pictures on b.BOOKID equals p.BOOKID
-                            where o.CUSTOMERID == userId
-                            select new DetailOrder
-                            {
-                                PICTURE = p.PATH,
-                                NAME = b.NAME,
-                                PRICE = c.SUM / c.AMOUNT,
-                                COUNT = c.AMOUNT,
-                                SUM = c.SUM,
-                            };
-                orderVM.orders = new List<DetailOrder>(query.ToList());
-                orderVM.calcTotal();
-                            
-            }
-            return View();
-        }
-
-        //
-        // GET: /Account/Cart/?userId=xxxx
-        public ActionResult Cart(string userId)
+        public ActionResult Cart()
         {
             var cartVM = new GoodsViewModel();
             using (var context = new OnionContext())
             {
-                 var query = from b in context.preorders
+                string userId = User.Identity.GetUserId();
+                var query = from b in context.preorders
                             join c in context.books on b.BOOKID equals c.BOOKID
                             join d in context.pictures on c.BOOKID equals d.BOOKID
                             where b.CUSTOMERID == userId
@@ -117,6 +81,137 @@ namespace OnionBookOnline.Controllers
             return View(cartVM);
         }
 
+        [HttpPost]
+        //[ValidateAntiForgeryToken]
+        public async Task<ActionResult> AddCart()
+        {
+            using (var context = new OnionContext())
+            {
+                var preOrder = new PREORDER()
+                {
+                    CUSTOMERID = User.Identity.GetUserId(),
+                    BOOKID = HttpContext.Request["bookId"],
+                    AMOUNT = 1,
+                };
+                context.preorders.Add(preOrder);
+                int x = await (context.SaveChangesAsync());
+            }
+            return View();
+        }
+
+
+
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        public ActionResult Checkout()
+        {
+            return View();
+            double total = 0;
+            string userId = User.Identity.GetUserId();
+            CheckoutViewModel ckVM = new CheckoutViewModel();
+            OORDER order = new OORDER()
+            {
+                CUSTOMERID = userId,
+                ORDERID = DateTime.Now.ToFileTime().ToString(),
+                RECIPIENTID = "01",
+                TIME = DateTime.Now.ToString(),
+                REMARK = "",
+                STATUS = "未完成",
+                SCORE = 5,
+                FEEDBACK = "",
+            };
+            using (var context = new OnionContext())
+            {
+                var query = from p in context.preorders
+                            where p.CUSTOMERID == userId
+                            select p;
+                var preOrderlist = query.ToList();
+                ckVM.Contains = new List<CONTAIN>();
+                for (int i = 0; i < preOrderlist.Count; ++i)
+                {
+                    ckVM.Contains.Add(new CONTAIN()
+                    {
+                        ORDERID = order.ORDERID,
+                        BOOKID = preOrderlist[i].BOOKID,
+                        AMOUNT = preOrderlist[i].AMOUNT,
+                    });
+                    var tmpId = preOrderlist[i].BOOKID;
+                    var pr = from b in context.books
+                             where b.BOOKID == tmpId
+                             select b.PRICE;
+                    double price = pr.FirstOrDefault();
+                    ckVM.Contains[i].SUM = price * preOrderlist[i].AMOUNT;
+                }
+                for (int i = 0; i < ckVM.Contains.Count; ++i)
+                {
+                    total += ckVM.Contains[i].SUM;
+                }
+                order.TOTAL = total;
+                context.oorders.Add(order);
+
+                for (int index = 0; index < ckVM.Contains.Count; ++index)
+                {
+                    var tmpId = ckVM.Contains[index].BOOKID;
+                    context.preorders.Remove(context.preorders.Where(
+                        pre => pre.CUSTOMERID == userId
+                        && pre.BOOKID == tmpId).FirstOrDefault());
+                    context.contains.Add(ckVM.Contains[index]);
+                }
+                ckVM.NewOrder = order;
+                context.SaveChanges();
+            }
+
+            return View(ckVM);
+        }
+        public ActionResult OrderComplete()
+        {
+            return View();
+        }
+
+        public ActionResult Index()
+        {
+            return View(UserManager.Users);
+        }
+
+        public ActionResult Orderlist(string userId)
+        {
+            CheckoutViewModel orderVM = new CheckoutViewModel()
+            {
+               DOrders  = new List<DetailOrder>()
+            };
+            using (var context = new OnionContext())
+            {
+                var queryOrder = from o in context.oorders
+                                 where o.CUSTOMERID == userId
+                                 select new BasicOrder()
+                                 {
+                                     ORDERID = o.ORDERID,
+                                     TIME = o.TIME,
+                                     TOTAL = o.TOTAL,
+                                     STATUS = o.STATUS
+                                 };
+                var orderArray = queryOrder.ToArray();
+
+                for (int i = 0; i < orderArray.Length; ++i)
+                {
+                    var queryDetails = from c in context.contains
+                                       join b in context.books on c.BOOKID equals b.BOOKID
+                                       join p in context.pictures on b.BOOKID equals p.BOOKID
+                                       where c.ORDERID == orderArray[i].ORDERID
+                                       select new OrderItem
+                                       {
+                                           PATH = p.PATH,
+                                           NAME = b.NAME,
+                                           AMOUNT = c.AMOUNT,
+                                           SUBTOTAL = c.SUM,
+                                           PRICE = c.SUM / c.AMOUNT,
+                                       };
+                    orderVM.DOrders.Add(new DetailOrder(orderArray[i], queryDetails.ToList()));
+                }
+            }
+            return View(orderVM);
+        }
+
         //
         // GET: /Account/Cart/?userId=xxxx&bookId=xxxx
         //public ActionResult Cart(string userId, string bookId)
@@ -132,9 +227,10 @@ namespace OnionBookOnline.Controllers
 
         //
         // GET: /Account/Star/?userId=xxxx
-        public ActionResult Star(string userId)
+        public ActionResult Star()
         {
             var starVM = new GoodsViewModel();
+            string userId = User.Identity.GetUserId();
             using (var context = new OnionContext())
             {
                 var query = from b in context.stars
@@ -159,22 +255,25 @@ namespace OnionBookOnline.Controllers
         }
 
         //
-        // GET: /Account/Star/?userId=xxx&bookId=xxxx
-        //public ActionResult Star(string userId, string bookId)
-        //{
-        //    using (var context = new OnionContext())
-        //    {
-        //        context.stars.Remove(context.stars.Where(x => x.BOOKID == bookId && x.CUSTOMERID == userId).FirstOrDefault());
-        //        int res = context.SaveChanges();
-        //    }
-        //    return View();
-        //}
-
-
-        public ActionResult Checkout()
+        public ActionResult AddStar()
         {
-            return View();
+            string userId = User.Identity.GetUserId();
+            string bookId = HttpContext.Request["bookId"];
+            string returnUrl = HttpContext.Request["returnUrl"];
+            using (var context = new OnionContext())
+            {
+                STAR item = new STAR()
+                {
+                    CUSTOMERID = userId,
+                    BOOKID = bookId,
+                    TIME = DateTime.Now.ToString(),
+                };
+                context.stars.Add(item);
+                int res = context.SaveChanges();
+            }
+            return Redirect(returnUrl);
         }
+
         //
         // GET: /Account/Login
         [AllowAnonymous]
@@ -202,7 +301,7 @@ namespace OnionBookOnline.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    ViewBag.userTag = model.Email;
+                    Response.Cookies["UserEmail"].Value = model.Email;
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -213,6 +312,14 @@ namespace OnionBookOnline.Controllers
                     ModelState.AddModelError("", "无效的登录尝试。");
                     return View(model);
             }
+        }
+
+        // GET: /Account/Logout
+        public ActionResult Logout()
+        {
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            Request.Cookies.Remove("UserEmail");
+            return Redirect("~/");
         }
 
         //
@@ -356,9 +463,9 @@ namespace OnionBookOnline.Controllers
         //
         // GET: /Account/ResetPassword
         [AllowAnonymous]
-        public ActionResult ResetPassword(string code)
+        public ActionResult ResetPassword()
         {
-            return code == null ? View("Error") : View();
+            return View();
         }
 
         //

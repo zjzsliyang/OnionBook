@@ -1,4 +1,4 @@
-﻿@model OnionBookOnline.Models.OrderViewModel
+﻿@model OnionBookOnline.Models.CheckoutViewModel
 
 <style>
     .table-content table td.product-status {
@@ -22,41 +22,49 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <form action="#">
                     <div class="table-content table-responsive">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th class="product-name">订单号</th>
-                                    <th class="product-thumbnail">图片</th>
-                                    <th class="product-name">书名</th>
-                                    <th class="product-price">单价</th>
-                                    <th class="product-quantity">数量</th>
-                                    <th class="product-subtotal">总价</th>
-                                    <th class="product-subtotal">下单时间</th>
-                                    <th class="product-subtotal">订单状态</th>
-                                    <th class="product-subtotal">操作</th>
-                                </tr>
-                            </thead>
-                            <tbody valign="middle">
-                                <tr>
-                                    <td class="product-name" rowspan="2">@Model.</td>
-                                    <td class="product-thumbnail"><a href="#"><img src="~/Images/product/3.jpg" alt="" /></a></td>
-                                    <td class="product-name"><a href="product-details.html">Vestibulum suscipit</a></td>
-                                    <td class="product-price"><span class="amount">$165.00</span></td>
-                                    <td class="product-price"><span class="amount">1</span></td>
-                                    <td class="product-subtotal">$165.00</td>
-                                    <td class="product-name" rowspan="2">2017年1月28日13:00</td>
-                                    <td class="product-name" rowspan="2">已完成</td>
-                                    <td class="product-status" rowspan="2"><div class="wc-proceed-to-checkout"><a href="#"> 确认完成</a></div></td>
-                                </tr>
-                                <tr>
-                                    <td class="product-thumbnail"><a href="#"><img src="~/Images/product/4.jpg" alt="" /></a></td>
-                                    <td class="product-name"><a href="product-details.html">Vestibulum dictum magna</a></td>
-                                    <td class="product-price"><span class="amount">$50.00</span></td>
-                                    <td class="product-price"><span class="amount">1</span></td>
-                                    <td class="product-subtotal">$50.00</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        @foreach (var order in Model.DOrders)
+                        {
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="product-name">订单号</th>
+                                        <th class="product-thumbnail">图片</th>
+                                        <th class="product-name">书名</th>
+                                        <th class="product-price">单价</th>
+                                        <th class="product-quantity">数量</th>
+                                        <th class="product-subtotal">总价</th>
+                                        <th class="product-subtotal">下单时间</th>
+                                        <th class="product-subtotal">订单状态</th>
+                                        <th class="product-subtotal">操作</th>
+                                    </tr>
+                                </thead>
+                                @foreach (var orderDetail in order.OITEMS)
+                                {
+                                    <tbody valign="middle">
+                                        <tr>
+                                            <td class="product-name" rowspan="2">@order.BORDER.ORDERID.</td>
+                                            <td class="product-thumbnail"><a href="#"><img src="@orderDetail.PATH" alt="" /></a></td>
+                                            <td class="product-name"><a href="product-details.html">@orderDetail.NAME</a></td>
+                                            <td class="product-price"><span class="amount">￥@orderDetail.PRICE</span></td>
+                                            <td class="product-price"><span class="amount">@orderDetail.AMOUNT</span></td>
+                                            <td class="product-subtotal">￥@orderDetail.SUBTOTAL</td>
+                                            <td class="product-name" rowspan="2">@order.BORDER.TIME</td>
+                                            <td class="product-name" rowspan="2">已完成</td>
+                                            <td class="product-status" rowspan="2"><div class="wc-proceed-to-checkout"><a href="#"> 确认完成</a></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-thumbnail"><a href="#"><img src="~/Images/product/4.jpg" alt="" /></a></td>
+                                            <td class="product-name"><a href="product-details.html">Vestibulum dictum magna</a></td>
+                                            <td class="product-price"><span class="amount">$50.00</span></td>
+                                            <td class="product-price"><span class="amount">1</span></td>
+                                            <td class="product-subtotal">$50.00</td>
+                                        </tr>
+                                    </tbody>
+                                }
+                               
+                            </table>
+                        }
+                        
                     </div>
                 </form>
             </div>

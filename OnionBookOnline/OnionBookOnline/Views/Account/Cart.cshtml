@@ -31,17 +31,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @{ foreach (OnionBookOnline.Models.Goods good in Model.GOODS)
-                                    {
-                                        <tr>
-                                            <td class="product-thumbnail"><a href="#"><img src=@good.PICTURE alt="" /></a></td>
-                                            <td class="product-name"><a href="product-details.html">@good.NAME</a></td>
-                                            <td class="product-price"><span class="amount">$@good.PRICE</span></td>
-                                            <td class="product-quantity"><input type="number" value="@good.AMOUNT" /></td>
-                                            <td class="product-subtotal">@good.SUBCOUNT</td>
-                                            <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>                                            
-                                        </tr>
-                                    }
+                                @for (int i = 0; i < Model.GOODS.Count; i++)
+                                {
+                                    var good = Model.GOODS[i];
+                                    <tr>
+                                        <td class="product-thumbnail"><a href="#"><img src=@good.PICTURE alt="" /></a></td>
+                                        <td class="product-name"><a href="product-details.html">@good.NAME</a></td>
+                                        <td class="product-price"><span class="amount">$@good.PRICE</span></td>
+                                        <td class="product-quantity"><input type="number" value="@good.AMOUNT" /></td>
+                                        <td class="product-subtotal">@good.SUBCOUNT</td>
+                                        <td class="product-remove" id="@i"><a href="#"><i class="fa fa-times"></i></a></td>
+                                    </tr>
 
                                 }
                             </tbody>
@@ -60,7 +60,7 @@
                                 </tbody>
                             </table>
                             <div class="wc-proceed-to-checkout">
-                                <a href="#"> 结算</a>
+                                <a href="~/Account/Checkout"> 结算</a>
                             </div>
                             <div style="height: 40px">
                             </div>

@@ -18,7 +18,7 @@
 <!-- shop-area start -->
 <div class="shop-area">
     <div class="container">
-        <div class="row">
+        <div class="row" style="display: flex;flex-direction: column;align-items: center;">
             <div class="col-md-9 col-sm-8">
                 <h2 class="page-heading mt-40">
                     <span class="cat-name">@Model.type</span>
@@ -26,32 +26,17 @@
                 </h2>
                 <div class="shop-page-bar">
                     <div>
-                        <div class="shop-bar">
-                            <div class="selector-field f-left ml-20 hidden-xs">
-                                <form action="#">
-                                    <label>排序</label>
-                                    <select name="select">
-                                        <option value="">----</option>
-                                        <option value="">销量从高到低</option>
-                                        <option value="">销量从低到高</option>
-                                        <option value="">评分从高到低</option>
-                                        <option value="">评分从低到高</option>
-                                        <option value="">价格从低到高</option>
-                                        <option value="">价格从高到低</option>
-                                    </select>
-                                </form>
-                            </div>
-                        </div>
                         <!-- Tab panes -->
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="home">
                                 <div class="row">
-                                    @foreach (var item in Model.typeBook)
+                                    @for (int i = 0; i < 10; i++)
                                     {
+                                        var item = Model.typeBook[i];
                                         <div class="col-lg-4 col-md-4 col-sm-6">
                                             <div class="single-product mb-30  white-bg">
                                                 <div class="product-img pt-20">
-                                                    <a href="#"><img src="@item.PATH"  /></a>
+                                                    <a href="#"><img src="@item.PATH" style="width:260px; height:368px" /></a>
                                                 </div>
                                                 <div class="product-content product-i">
                                                     <div class="pro-title">
@@ -84,16 +69,14 @@
                                     }
                                 </div>
                                 <div class="content-sortpagibar">
-                                    <div class="product-count display-inline">显示13条记录中的1-12条</div>
+                                    <div class="product-count display-inline">共 @ViewBag.pages 条记录</div>
                                     <ul class="shop-pagi display-inline">
-                                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                                        <li class="active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                        <li><a href="/book/hot/?pages=@ViewBag.minusPage"><i class="fa fa-angle-left"></i></a></li>
+                                        <li><a href="#/?pages=@ViewBag.minusPage">@ViewBag.minusPage</a></li>
+                                        <li class="active"><a href="/book/hot/?pages=@ViewBag.currentPage">@ViewBag.currentPage</a></li>
+                                        <li><a href="/book/hot/?pages=@ViewBag.addPage">@ViewBag.addPage</a></li>
+                                        <li><a href="/book/hot/?pages=@ViewBag.addPage"><i class="fa fa-angle-right"></i></a></li>
                                     </ul>
-                                    <div class="selector-field f-right">
-                                    </div>
                                 </div>
                             </div>
                         </div>
