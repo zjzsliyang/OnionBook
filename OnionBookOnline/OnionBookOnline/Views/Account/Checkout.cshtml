@@ -599,26 +599,23 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach (var item in Model.OrderItems)
-                                    { 
                                         <tr class="cart_item">
                                             <td class="product-name">
-                                                @item.NAME	<strong class="product-quantity"> @item.AMOUNT</strong>
+                                                	我们仨<strong class="product-quantity">*1</strong>
                                             </td>
                                             <td class="product-price">
-                                                @item.PRICE
+                                                ￥11.28
                                             </td>
                                             <td class="product-total">
-                                                <span class="amount">￥@item.SUBTOTAL</span>
+                                                <span class="amount">￥11.28</span>
                                             </td>
                                         </tr>
-                                    }
                                 </tbody>
                                 <tfoot>
                                     <tr class="order-total">
                                         <th>合计</th>
                                         <td>
-                                            <strong><span class="amount">￥@Model.NewOrder.TOTAL</span></strong>
+                                            <strong><span class="amount">￥11.28</span></strong>
                                         </td>
                                     </tr>
                                 </tfoot>
@@ -627,7 +624,7 @@
                         <div class="payment-method">
                             <div class="payment-accordion">
                                 <div class="order-button-payment">
-                                    <input type="submit" value="提交订单" onclick="location = '~/Account/OrderComplete'"/>
+                                    <input type="button" value="提交订单" onClick="location.href = 'http://localhost:52570/Account/OrderComplete'"/>
                                 </div>
                             </div>
                         </div>
