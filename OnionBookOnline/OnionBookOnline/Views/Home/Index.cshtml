@@ -103,7 +103,11 @@
                                                 $.ajax({
                                                     type: "POST",
                                                     url: "/Account/AddCart",
-                                                    data: {bookId: @Model.bpsLit[0].BOOKID}
+                                                    data: { bookId: @Model.bpsLit[0].BOOKID},
+                                                    success: function (result) {
+                                                        var res = String($.trim(result));
+                                                        alert(res);
+                                                    }
                                                 });
                                             })
                                         </script>
