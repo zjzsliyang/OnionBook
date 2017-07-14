@@ -30,6 +30,7 @@ namespace OnionBookOnline.Models
         public double SUBCOUNT { get; set; }
         public string PUBLISHER { get; set; }
         public string AUTHOR { get; set; }
+        public string BOOKID { get; set; }
 
         public double calcSubcount()
         {

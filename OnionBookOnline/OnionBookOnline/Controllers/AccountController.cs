@@ -12,6 +12,7 @@ using OnionBookOnline.Models;
 using OnionBookOnline.DAL;
 using Oracle.ManagedDataAccess.Client;
 using System.Collections.Generic;
+using System.Data.Entity;
 
 namespace OnionBookOnline.Controllers
 {
@@ -71,6 +72,7 @@ namespace OnionBookOnline.Controllers
                                 NAME = c.NAME,
                                 AMOUNT = b.AMOUNT,
                                 PRICE = c.PRICE * c.DISCOUNT,
+                                BOOKID = b.BOOKID,
                             };
 
                 cartVM.GOODS = new System.Collections.Generic.List<Goods>(query.ToList());
@@ -85,20 +87,45 @@ namespace OnionBookOnline.Controllers
         //[ValidateAntiForgeryToken]
         public async Task<ActionResult> AddCart()
         {
+            string userId = User.Identity.GetUserId();
+            string bookId = HttpContext.Request["bookId"];
             using (var context = new OnionContext())
             {
-                var preOrder = new PREORDER()
+                PREORDER preOrder = context.preorders.Find(userId, bookId);
+                if (preOrder == null)
                 {
-                    CUSTOMERID = User.Identity.GetUserId(),
-                    BOOKID = HttpContext.Request["bookId"],
-                    AMOUNT = 1,
-                };
-                context.preorders.Add(preOrder);
+                    preOrder = new PREORDER()
+                    {
+                        CUSTOMERID = userId,
+                        BOOKID = bookId,
+                        AMOUNT = 1,
+                    };
+                    context.preorders.Add(preOrder);
+                }
+                else
+                {
+                    preOrder.AMOUNT += 1;
+                }
+
+                
                 int x = await (context.SaveChangesAsync());
             }
-            return View();
+            return Content("添加成功");
         }
 
+        public async Task<ActionResult> RemoveCart()
+        {
+            string userId = User.Identity.GetUserId();
+            string bookId = HttpContext.Request["bookId"];
+            string returnURL = HttpContext.Request["returnUrl"];
+            using (var context = new OnionContext())
+            {
+                var pre = context.preorders.Find(userId, bookId);
+                context.preorders.Remove(pre);
+                await context.SaveChangesAsync();
+            }
+            return Redirect(returnURL);
+        }
 
 
         //[HttpPost]
@@ -246,6 +273,7 @@ namespace OnionBookOnline.Controllers
                                 PRICE = c.PRICE * c.DISCOUNT,
                                 PUBLISHER = c.PUBLISHER,
                                 AUTHOR = f.NAME,
+                                BOOKID = b.BOOKID,
                             };
 
                 starVM.GOODS = new System.Collections.Generic.List<Goods>(query.ToList());
@@ -254,12 +282,11 @@ namespace OnionBookOnline.Controllers
             return View(starVM);
         }
 
-        //
+        [HttpPost]
         public ActionResult AddStar()
         {
             string userId = User.Identity.GetUserId();
             string bookId = HttpContext.Request["bookId"];
-            string returnUrl = HttpContext.Request["returnUrl"];
             using (var context = new OnionContext())
             {
                 STAR item = new STAR()
@@ -271,7 +298,21 @@ namespace OnionBookOnline.Controllers
                 context.stars.Add(item);
                 int res = context.SaveChanges();
             }
-            return Redirect(returnUrl);
+            return Content("添加成功");
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> RemoveStar()
+        {
+            string userId = User.Identity.GetUserId();
+            string bookId = HttpContext.Request["bookId"];
+            using (var context = new OnionContext())
+            {
+                var s = context.stars.Find(userId, bookId);
+                context.stars.Remove(s);
+                await context.SaveChangesAsync();
+            }
+            return Content("删除成功");
         }
 
         //

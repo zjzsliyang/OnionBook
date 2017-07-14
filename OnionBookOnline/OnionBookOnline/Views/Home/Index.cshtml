@@ -95,15 +95,19 @@
                                     <span class="price product-price">￥@Model.bpsLit[0].PRICE</span>
                                 </div>
                                 <div class="product-icon">
-                                    <div class="product-icon-left f-left" id="test">
+                                    <div class="product-icon-left f-left" id="bpsLit0">
                                         <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
                                         <script>
-                                            $(".product-icon-left a").click(function()
+                                            $("#bpsLit0").click(function()
                                             {
                                                 $.ajax({
                                                     type: "POST",
                                                     url: "/Account/AddCart",
-                                                    data: {bookId: @Model.bpsLit[0].BOOKID}
+                                                    data: { bookId: @Model.bpsLit[0].BOOKID},
+                                                    success: function (result) {
+                                                        var res = String($.trim(result));
+                                                        alert(res);
+                                                    }
                                                 });
                                             })
                                         </script>
@@ -155,8 +159,22 @@
                                                     <span class="price-2"><del>￥@Model.bpsLit[i + j].PRICE</del></span>
                                                 </div>
                                                 <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
+                                                    <div class="product-icon-left f-left" id="bpsLit1">
                                                         <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                        <script>
+                                                            $("#bpsLit1").click(function()
+                                                            {
+                                                                $.ajax({
+                                                                    type: "POST",
+                                                                    url: "/Account/AddCart",
+                                                                    data: { bookId: @Model.bpsLit[i+j].BOOKID},
+                                                                    success: function (result) {
+                                                                        var res = String($.trim(result));
+                                                                        alert(res);
+                                                                    }
+                                                                });
+                                                            })
+                                                        </script>
                                                     </div>
                                                     <div class="product-icon-right floatright">
                                                         <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
@@ -201,8 +219,22 @@
                                     <span class="price product-price">￥@Model.bpsPop[0].PRICE</span>
                                 </div>
                                 <div class="product-icon">
-                                    <div class="product-icon-left f-left">
+                                    <div class="product-icon-left f-left" id="bps">
                                         <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                        <script>
+                                            $("#bpsPop0").click(function()
+                                            {
+                                                $.ajax({
+                                                    type: "POST",
+                                                    url: "/Account/AddCart",
+                                                    data: { bookId: @Model.bpsPop[0].BOOKID},
+                                                    success: function (result) {
+                                                        var res = String($.trim(result));
+                                                        alert(res);
+                                                    }
+                                                });
+                                            })
+                                        </script>
                                     </div>
                                     <div class="product-icon-right floatright">
                                         <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
@@ -221,7 +253,7 @@
                                     {
                                         <div class="single-product white-bg">
                                             <div class="product-img product-container-img">
-                                                <a href="~/book/?id=@Model.bpsPop[i+j].BOOKID"><img src="@Model.bpsPop[i+j].PATH"  style="width:162px; height:236px" alt="" /></a>
+                                                <a href="~/book/?id=@Model.bpsPop[i+j].BOOKID"><img src="@Model.bpsPop[i+j].PATH" style="width:162px; height:236px" alt="" /></a>
                                             </div>
                                             <div class="product-content product-i">
                                                 <div class="pro-title">
@@ -241,8 +273,22 @@
                                                     <span class="price-2"><del>￥@Model.bpsPop[i + j].PRICE</del></span>
                                                 </div>
                                                 <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
+                                                    <div class="product-icon-left f-left" id="bpsPop1">
                                                         <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                        <script>
+                                                            $("#bpsPop1").click(function()
+                                                            {
+                                                                $.ajax({
+                                                                    type: "POST",
+                                                                    url: "/Account/AddCart",
+                                                                    data: { bookId: @Model.bpsPop[i+j].BOOKID},
+                                                                    success: function (result) {
+                                                                        var res = String($.trim(result));
+                                                                        alert(res);
+                                                                    }
+                                                                });
+                                                            })
+                                                        </script>
                                                     </div>
                                                     <div class="product-icon-right floatright">
                                                         <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
@@ -268,7 +314,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-6  col-xs-12 pad">
                         <div class="single-product pt-30 pb-20 white-bg">
                             <div class="product-img pb-40">
-                                <a href="~/book/?id=@Model.bpsCul[0].BOOKID"><img src="@Model.bpsCul[0].PATH" style="width:369px; height:534px"  alt="" /></a>
+                                <a href="~/book/?id=@Model.bpsCul[0].BOOKID"><img src="@Model.bpsCul[0].PATH" style="width:369px; height:534px" alt="" /></a>
                             </div>
                             <div class="product-content">
                                 <div class="pro-title">
@@ -287,8 +333,22 @@
                                     <span class="price product-price">￥@Model.bpsCul[0].PRICE</span>
                                 </div>
                                 <div class="product-icon">
-                                    <div class="product-icon-left f-left">
+                                    <div class="product-icon-left f-left" id="bpsCul0">
                                         <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                        <script>
+                                            $("#bpsCul0").click(function()
+                                            {
+                                                $.ajax({
+                                                    type: "POST",
+                                                    url: "/Account/AddCart",
+                                                    data: { bookId: @Model.bpsCul[0].BOOKID},
+                                                    success: function (result) {
+                                                        var res = String($.trim(result));
+                                                        alert(res);
+                                                    }
+                                                });
+                                            })
+                                        </script>
                                     </div>
                                     <div class="product-icon-right floatright">
                                         <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
@@ -307,7 +367,7 @@
                                     {
                                         <div class="single-product white-bg">
                                             <div class="product-img product-container-img">
-                                                <a href="~/book/?id=@Model.bpsCul[i+j].BOOKID"><img src="@Model.bpsCul[i+j].PATH"  style="width:162px; height:236px" alt="" /></a>
+                                                <a href="~/book/?id=@Model.bpsCul[i+j].BOOKID"><img src="@Model.bpsCul[i+j].PATH" style="width:162px; height:236px" alt="" /></a>
                                             </div>
                                             <div class="product-content product-i">
                                                 <div class="pro-title">
@@ -327,8 +387,22 @@
                                                     <span class="price-2"><del>￥@Model.bpsCul[i + j].PRICE</del></span>
                                                 </div>
                                                 <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
+                                                    <div class="product-icon-left f-left" id="bpsCul1">
                                                         <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                        <script>
+                                                            $("#bpsCul1").click(function()
+                                                            {
+                                                                $.ajax({
+                                                                    type: "POST",
+                                                                    url: "/Account/AddCart",
+                                                                    data: { bookId: @Model.bpsCul[i+j].BOOKID},
+                                                                    success: function (result) {
+                                                                        var res = String($.trim(result));
+                                                                        alert(res);
+                                                                    }
+                                                                });
+                                                            })
+                                                        </script>
                                                     </div>
                                                     <div class="product-icon-right floatright">
                                                         <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
@@ -354,7 +428,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-6  col-xs-12 pad">
                         <div class="single-product pt-30 pb-20 white-bg">
                             <div class="product-img pb-40">
-                                <a href="~/book/?id=@Model.bpsLif[0].BOOKID"><img src="@Model.bpsLif[0].PATH"  style="width:369px; height:534px" alt="" /></a>
+                                <a href="~/book/?id=@Model.bpsLif[0].BOOKID"><img src="@Model.bpsLif[0].PATH" style="width:369px; height:534px" alt="" /></a>
                             </div>
                             <div class="product-content">
                                 <div class="pro-title">
@@ -373,8 +447,22 @@
                                     <span class="price product-price">￥@Model.bpsLif[0].PRICE</span>
                                 </div>
                                 <div class="product-icon">
-                                    <div class="product-icon-left f-left">
+                                    <div class="product-icon-left f-left" id="bpsLif0">
                                         <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                        <script>
+                                            $("#bpsLif0").click(function()
+                                            {
+                                                $.ajax({
+                                                    type: "POST",
+                                                    url: "/Account/AddCart",
+                                                    data: { bookId: @Model.bpsLif[0].BOOKID},
+                                                    success: function (result) {
+                                                        var res = String($.trim(result));
+                                                        alert(res);
+                                                    }
+                                                });
+                                            })
+                                        </script>
                                     </div>
                                     <div class="product-icon-right floatright">
                                         <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
@@ -393,7 +481,7 @@
                                     {
                                         <div class="single-product white-bg">
                                             <div class="product-img product-container-img">
-                                                <a href="~/book/?id=@Model.bpsLif[i+j].BOOKID"><img src="@Model.bpsLif[i+j].PATH"  style="width:162px; height:236px" alt="" /></a>
+                                                <a href="~/book/?id=@Model.bpsLif[i+j].BOOKID"><img src="@Model.bpsLif[i+j].PATH" style="width:162px; height:236px" alt="" /></a>
                                             </div>
                                             <div class="product-content product-i">
                                                 <div class="pro-title">
@@ -413,8 +501,22 @@
                                                     <span class="price-2"><del>￥@Model.bpsLif[i + j].PRICE</del></span>
                                                 </div>
                                                 <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
+                                                    <div class="product-icon-left f-left" id="bpsLif1">
                                                         <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                        <script>
+                                                            $("#bpsLif1").click(function()
+                                                            {
+                                                                $.ajax({
+                                                                    type: "POST",
+                                                                    url: "/Account/AddCart",
+                                                                    data: { bookId: @Model.bpsLif[i+j].BOOKID},
+                                                                    success: function (result) {
+                                                                        var res = String($.trim(result));
+                                                                        alert(res);
+                                                                    }
+                                                                });
+                                                            })
+                                                        </script>
                                                     </div>
                                                     <div class="product-icon-right floatright">
                                                         <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
@@ -440,7 +542,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-6  col-xs-12 pad">
                         <div class="single-product pt-30 pb-20 white-bg">
                             <div class="product-img pb-40">
-                                <a href="~/book/?id=@Model.bpsEco[0].BOOKID"><img src="@Model.bpsEco[0].PATH"  style="width:369px; height:534px" alt="" /></a>
+                                <a href="~/book/?id=@Model.bpsEco[0].BOOKID"><img src="@Model.bpsEco[0].PATH" style="width:369px; height:534px" alt="" /></a>
                             </div>
                             <div class="product-content">
                                 <div class="pro-title">
@@ -459,8 +561,22 @@
                                     <span class="price product-price">￥@Model.bpsEco[0].PRICE</span>
                                 </div>
                                 <div class="product-icon">
-                                    <div class="product-icon-left f-left">
+                                    <div class="product-icon-left f-left" id="bpsEco0">
                                         <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                        <script>
+                                            $("#bpsEco0").click(function()
+                                            {
+                                                $.ajax({
+                                                    type: "POST",
+                                                    url: "/Account/AddCart",
+                                                    data: { bookId: @Model.bpsEco[0].BOOKID},
+                                                    success: function (result) {
+                                                        var res = String($.trim(result));
+                                                        alert(res);
+                                                    }
+                                                });
+                                            })
+                                        </script>
                                     </div>
                                     <div class="product-icon-right floatright">
                                         <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
@@ -479,7 +595,7 @@
                                     {
                                         <div class="single-product white-bg">
                                             <div class="product-img product-container-img">
-                                                <a href="~/book/?id=@Model.bpsEco[i+j].BOOKID"><img src="@Model.bpsEco[i+j].PATH"  style="width:162px; height:236px" alt="" /></a>
+                                                <a href="~/book/?id=@Model.bpsEco[i+j].BOOKID"><img src="@Model.bpsEco[i+j].PATH" style="width:162px; height:236px" alt="" /></a>
                                             </div>
                                             <div class="product-content product-i">
                                                 <div class="pro-title">
@@ -499,8 +615,22 @@
                                                     <span class="price-2"><del>￥@Model.bpsEco[i + j].PRICE</del></span>
                                                 </div>
                                                 <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
+                                                    <div class="product-icon-left f-left" id="bpsEco1">
                                                         <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                        <script>
+                                                            $("#bpsLEco1").click(function()
+                                                            {
+                                                                $.ajax({
+                                                                    type: "POST",
+                                                                    url: "/Account/AddCart",
+                                                                    data: { bookId: @Model.bpsEco[i+j].BOOKID},
+                                                                    success: function (result) {
+                                                                        var res = String($.trim(result));
+                                                                        alert(res);
+                                                                    }
+                                                                });
+                                                            })
+                                                        </script>
                                                     </div>
                                                     <div class="product-icon-right floatright">
                                                         <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
@@ -526,7 +656,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-6  col-xs-12 pad">
                         <div class="single-product pt-30 pb-20 white-bg">
                             <div class="product-img pb-40">
-                                <a href="~/book/?id=@Model.bpsTec[0].BOOKID"><img src="@Model.bpsTec[0].PATH"  style="width:369px; height:534px" alt="" /></a>
+                                <a href="~/book/?id=@Model.bpsTec[0].BOOKID"><img src="@Model.bpsTec[0].PATH" style="width:369px; height:534px" alt="" /></a>
                             </div>
                             <div class="product-content">
                                 <div class="pro-title">
@@ -545,8 +675,22 @@
                                     <span class="price product-price">￥@Model.bpsTec[0].PRICE</span>
                                 </div>
                                 <div class="product-icon">
-                                    <div class="product-icon-left f-left">
+                                    <div class="product-icon-left f-left" id="bpsTec0">
                                         <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                        <script>
+                                            $("#bpsTec0").click(function()
+                                            {
+                                                $.ajax({
+                                                    type: "POST",
+                                                    url: "/Account/AddCart",
+                                                    data: { bookId: @Model.bpsTec[0].BOOKID},
+                                                    success: function (result) {
+                                                        var res = String($.trim(result));
+                                                        alert(res);
+                                                    }
+                                                });
+                                            })
+                                        </script>
                                     </div>
                                     <div class="product-icon-right floatright">
                                         <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
@@ -565,7 +709,7 @@
                                     {
                                         <div class="single-product white-bg">
                                             <div class="product-img product-container-img">
-                                                <a href="~/book/?id=@Model.bpsTec[i+j].BOOKID"><img src="@Model.bpsTec[i+j].PATH"  style="width:162px; height:236px" alt="" /></a>
+                                                <a href="~/book/?id=@Model.bpsTec[i+j].BOOKID"><img src="@Model.bpsTec[i+j].PATH" style="width:162px; height:236px" alt="" /></a>
                                             </div>
                                             <div class="product-content product-i">
                                                 <div class="pro-title">
@@ -585,8 +729,22 @@
                                                     <span class="price-2"><del>￥@Model.bpsTec[i + j].PRICE</del></span>
                                                 </div>
                                                 <div class="product-icon">
-                                                    <div class="product-icon-left f-left">
+                                                    <div class="product-icon-left f-left" id="bpsTec1">
                                                         <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                        <script>
+                                                            $("#bpsTec1").click(function()
+                                                            {
+                                                                $.ajax({
+                                                                    type: "POST",
+                                                                    url: "/Account/AddCart",
+                                                                    data: { bookId: @Model.bpsTec[i+j].BOOKID},
+                                                                    success: function (result) {
+                                                                        var res = String($.trim(result));
+                                                                        alert(res);
+                                                                    }
+                                                                });
+                                                            })
+                                                        </script>
                                                     </div>
                                                     <div class="product-icon-right floatright">
                                                         <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
@@ -646,8 +804,22 @@
                                                 <span class="price product-price">￥@bestsellerBook.PRICE</span>
                                             </div>
                                             <div class="product-icon">
-                                                <div class="product-icon-left f-left">
+                                                <div class="product-icon-left f-left" id="bestseller">
                                                     <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                    <script>
+                                                        $("#bestseller").click(function()
+                                                        {
+                                                            $.ajax({
+                                                                type: "POST",
+                                                                url: "/Account/AddCart",
+                                                                data: { bookId: @bestsellerBook.BOOKID},
+                                                                success: function (result) {
+                                                                    var res = String($.trim(result));
+                                                                    alert(res);
+                                                                }
+                                                            });
+                                                        })
+                                                    </script>
                                                 </div>
                                             </div>
                                         </div>
@@ -684,8 +856,22 @@
                                     <span class="price product-price">￥@Model.bpsRcm[9].PRICE</span>
                                 </div>
                                 <div class="product-icon">
-                                    <div class="product-icon-left f-left">
+                                    <div class="product-icon-left f-left" id="bpsRcm9">
                                         <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                        <script>
+                                            $("#bpsRcm9").click(function()
+                                            {
+                                                $.ajax({
+                                                    type: "POST",
+                                                    url: "/Account/AddCart",
+                                                    data: { bookId: @Model.bpsRcm[9].BOOKID},
+                                                    success: function (result) {
+                                                        var res = String($.trim(result));
+                                                        alert(res);
+                                                    }
+                                                });
+                                            })
+                                        </script>
                                     </div>
                                     <div class="product-icon-right floatright">
                                         <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
@@ -714,8 +900,22 @@
                                     <span class="price product-price">￥@Model.bpsRcm[8].PRICE</span>
                                 </div>
                                 <div class="product-icon">
-                                    <div class="product-icon-left f-left">
+                                    <div class="product-icon-left f-left" id="bpsRcm8">
                                         <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                        <script>
+                                            $("#bpsRcm8").click(function()
+                                            {
+                                                $.ajax({
+                                                    type: "POST",
+                                                    url: "/Account/AddCart",
+                                                    data: { bookId: @Model.bpsRcm[8].BOOKID},
+                                                    success: function (result) {
+                                                        var res = String($.trim(result));
+                                                        alert(res);
+                                                    }
+                                                });
+                                            })
+                                        </script>
                                     </div>
                                     <div class="product-icon-right floatright">
                                         <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
@@ -794,8 +994,22 @@
                                         <span class="price product-price">￥@featureBook.PRICE</span>
                                     </div>
                                     <div class="product-icon">
-                                        <div class="product-icon-left f-left">
+                                        <div class="product-icon-left f-left" id="feature">
                                             <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                            <script>
+                                                $("#feature").click(function()
+                                                {
+                                                    $.ajax({
+                                                        type: "POST",
+                                                        url: "/Account/AddCart",
+                                                        data: { bookId: @featureBook.BOOKID},
+                                                        success: function (result) {
+                                                            var res = String($.trim(result));
+                                                            alert(res);
+                                                        }
+                                                    });
+                                                })
+                                            </script>
                                         </div>
                                         <div class="product-icon-right floatright">
                                             <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>
@@ -848,8 +1062,22 @@
                                                 <span class="price product-price">￥@newBook.PRICE</span>
                                             </div>
                                             <div class="product-icon">
-                                                <div class="product-icon-left f-left">
+                                                <div class="product-icon-left f-left" id="new">
                                                     <a href="#"><i class="fa fa-shopping-cart"></i>加入购物车</a>
+                                                    <script>
+                                                        $("#new").click(function()
+                                                        {
+                                                            $.ajax({
+                                                                type: "POST",
+                                                                url: "/Account/AddCart",
+                                                                data: { bookId: @newBook.BOOKID},
+                                                                success: function (result) {
+                                                                    var res = String($.trim(result));
+                                                                    alert(res);
+                                                                }
+                                                            });
+                                                        })
+                                                    </script>
                                                 </div>
                                                 <div class="product-icon-right floatright">
                                                     <a href="#" data-toggle="tooltip" title="Wishlist"><i class="fa fa-heart"></i></a>

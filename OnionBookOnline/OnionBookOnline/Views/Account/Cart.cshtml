@@ -30,17 +30,20 @@
                                     <th class="product-remove">删除</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="goods">
                                 @for (int i = 0; i < Model.GOODS.Count; i++)
                                 {
                                     var good = Model.GOODS[i];
                                     <tr>
                                         <td class="product-thumbnail"><a href="#"><img src=@good.PICTURE alt="" /></a></td>
                                         <td class="product-name"><a href="product-details.html">@good.NAME</a></td>
-                                        <td class="product-price"><span class="amount">$@good.PRICE</span></td>
-                                        <td class="product-quantity"><input type="number" value="@good.AMOUNT" /></td>
-                                        <td class="product-subtotal">@good.SUBCOUNT</td>
-                                        <td class="product-remove" id="@i"><a href="#"><i class="fa fa-times"></i></a></td>
+                                        <td class="product-price">￥<span class="amount" id="price @i">@good.PRICE</span></td>
+                                        <td class="product-quantity"><input type="number" value="@good.AMOUNT" min="1" id="quantity @i" onchange="ChangeSubtotal(@i)" /></td>
+                                        <td class="product-subtotal" id="subtotal @i" onp="">￥@good.SUBCOUNT</td>
+                                        <td class="product-remove" id="remove @i">
+                                            <a href="#"><i class="fa fa-times" onclick="javascript:RemoveItem(@i)"></i></a>
+                                        </td>
+                                        <td class="product-content" style="display:none" id="bookId @i">@good.BOOKID</td>
                                     </tr>
 
                                 }
@@ -54,7 +57,7 @@
                                     <tr class="order-total">
                                         <th>合计</th>
                                         <td>
-                                            <strong><span class="amount">$@Model.TOTAL</span></strong>
+                                            <strong><span class="amount"id="totalMoney">￥@Model.TOTAL</span></strong>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -71,3 +74,28 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    function ChangeSubtotal(i) {
+        var x = parseInt(document.getElementById("quantity " + i.toString()).value);
+        var y = parseFloat(document.getElementById("price " + i.toString()).innerHTML);
+        var z = document.getElementById("subtotal " + i.toString());
+        var w = document.getElementById("totalMoney");
+        var m = parseFloat(z.innerHTML.substr(1));
+        var t = parseFloat(w.innerHTML.substr(1));
+        t -= m;
+        t += x * y;
+        z.innerHTML = "￥" + (x * y).toFixed(2).toString();
+        w.innerHTML = "￥" + t.toFixed(2).toString();
+    }
+</script>
+<script type="text/javascript">
+    function RemoveItem(x) {
+        var i = document.getElementById("bookId " + x.toString()).innerHTML;
+        $.ajax({
+            type: "POST",
+            url: "/Account/RemoveCart",
+            data: { bookId: i, returnUrl: "/Account/Cart" },
+            success: location.reload(true),
+        })
+    }
+</script>

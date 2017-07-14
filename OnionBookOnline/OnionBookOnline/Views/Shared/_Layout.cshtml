@@ -1,9 +1,5 @@
 ﻿@using OnionBookOnline.Models
-@{
-    ViewBag.count = "1";
-    ViewBag.prize = "244元";
-    ViewBag.item = new string[] { "假装是一本书", "数量：1", "244元" };
-}
+
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -127,11 +123,11 @@
                                         <div class="top-cart-title">
                                             <a href="~/account/cart">
                                                 <span class="title-cart">购物车</span>
-                                                <span class="count-item">@ViewBag.count 个项目</span>
-                                                <span class="price">@ViewBag.prize </span>
+                                                @*<span class="count-item">@ViewBag.count 个项目</span>
+                                                <span class="price">@ViewBag.prize </span>*@
                                             </a>
                                         </div>
-                                        <div class="top-cart-content" id="cart">
+                                        @*<div class="top-cart-content" id="cart">
                                             <ol class="mini-products-list">
                                                 <!-- single item -->
                                                 <li>
@@ -160,7 +156,7 @@
                                             </div>
 
 
-                                        </div>
+                                        </div>*@
 
                                     </div>
                                 </div>
@@ -365,7 +361,7 @@
                                         <li> <a href="~/book/type/?typename=photography/">摄影</a></li>
                                         <li> <a href="~/book/type/?typename=food/">美食</a></li>
                                         <li> <a href="~/book/type/?typename=health/">健康</a></li>
-                                        <li> <a href="~/book/type/?typename=education" />教育</a></li>
+                                        <li> <a href="~/book/type/?typename=education" >教育</a></li>
                                         <li> <a href="~/book/type/?typename=home/">家居</a></li>
                                         <li> <a href="~/book/type/?typename=workplace/">职场</a></li>
                                         <li> <a href="~/book/type/?typename=gender/">两性</a></li>
